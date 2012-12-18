@@ -1,0 +1,89 @@
+
+<html>
+<body>
+    <center>
+        <table width='581' border='0' cellspacing='0' cellpadding='0'>
+            <tr bgcolor='#00573c'>
+                <td width='616' height='59' bgcolor='#FFFFFF'>
+                    <img src='http://www.orangeleap.com/images/logo_orangeleap.gif' alt='MPX' height='89'
+                        width='174' />
+                </td>
+            </tr>
+            <tr>
+                <td height='5'>
+                </td>
+            </tr>
+            <tr bgcolor='#FFFF99'>
+                <td height='15'>
+                    <div style='background-color: #FF9; border: 1px solid #FC0; padding: 10px; font-family: Verdana, Helvetica, Arial, sans-serif;
+                        font-size: 85%; color: #000000;'>
+                        Your new Password is: NEWPASSWORD
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td height='10'>
+                </td>
+            </tr>
+            <tr>
+                <td height='16'>
+                    <img src='http://wellnessconnection.csuchico.edu/images/email/img_mid.jpg' alt='MPX'
+                        height='16' width='581' />
+                </td>
+            </tr>
+            <tr>
+                <td height='5'>
+                </td>
+            </tr>
+            <tr>
+                <td align='left'>
+                    <div style='font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 85%; color: #000000;
+                        padding: 10px;'>
+                       
+                        <p>
+                            MPX is the first full-feature, open-source constituent management software built
+                            specifically to grow nonprofit organizations of all shapes and sizes. Hundreds of
+                            nonprofits all over the world -- including some of the savviest direct-response
+                            fundraisers - rely on our powerful and full-feature solution to run their organizations
+                            more efficiently and effectively. Here are some other resources for coping:</p>
+                        
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td height='5'>
+                </td>
+            </tr>
+            <tr>
+                <td height='16'>
+                    <img src='http://wellnessconnection.csuchico.edu/images/email/img_mid.jpg' alt='MPX'
+                        height='16' width='581' />
+                </td>
+            </tr>
+        </table>
+       
+        <table id='email-footer' border='0' width='581' style='margin: 10px 0px;'>
+            <tr>
+                <td>
+                   
+                    <p style='font-size: 11px; color: #666; text-align: center;'>
+                        You can opt out of this program at any time by clicking the unsubscribe link provided
+                        in this message or by contacting:
+                    </p>
+                    <p style='font-size: 11px; color: #666; text-align: center;'>
+                        MPX<br />
+                        400 West First Street<br />
+                        Chico, CA 95929-0725<br />
+                        Phone: 530-898-6345
+                    </p>
+                    <p style='font-size: 11px; color: #666; text-align: center;'>
+                        <a style='color: blue; visited: blue;' href='http://wellnessconnection.csuchico.edu/account/opt-out?t=rMQqr'>
+                            Now</a>. Trouble with the link? Please copy and paste the following into the
+                        address bar of your browser: http://wellnessconnection.csuchico.edu/account/opt-out?t=rMQqr
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </center>
+</body>
+</html>

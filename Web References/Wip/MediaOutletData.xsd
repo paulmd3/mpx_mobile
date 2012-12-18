@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://mpowersystems.com/MediaOutletData.xsd" xmlns="http://mpowersystems.com/MediaOutletData.xsd" elementFormDefault="qualified" targetNamespace="http://mpowersystems.com/MediaOutletData.xsd" id="MediaOutletData" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="mediaOutlet">
+    <xs:sequence>
+      <xs:element name="mediaOutletId" nillable="true" type="xs:long" />
+      <xs:element name="mediaCode" type="xs:string" />
+      <xs:element name="address1" type="xs:string" />
+      <xs:element name="address2" type="xs:string" />
+      <xs:element name="address3" type="xs:string" />
+      <xs:element name="city" type="xs:string" />
+      <xs:element name="state" type="xs:string" />
+      <xs:element name="zipCode" type="xs:string" />
+      <xs:element name="country" type="xs:string" />
+      <xs:element name="emailAddress" type="xs:string" />
+      <xs:element name="webPageAddress" type="xs:string" />
+      <xs:element name="flagshipMediaOutletId" nillable="true" type="xs:long" />
+      <xs:element name="translator" type="xs:boolean" />
+      <xs:element name="tagLine" type="xs:string" />
+      <xs:element name="frequency" type="xs:string" />
+      <xs:element name="mediumTypeId" type="xs:long" />
+      <xs:element name="mediumSubTypeId" nillable="true" type="xs:long" />
+      <xs:element name="commercial" type="xs:boolean" />
+      <xs:element name="outputPower" type="xs:string" />
+      <xs:element name="deliveryMethodId" nillable="true" type="xs:long" />
+      <xs:element name="formatId" nillable="true" type="xs:long" />
+      <xs:element name="timeZoneId" type="xs:long" />
+      <xs:element name="coverageAreaId" type="xs:long" />
+      <xs:element name="targetROI" type="xs:string" />
+      <xs:element name="note" type="xs:string" />
+      <xs:element name="addDate" type="xs:date" />
+      <xs:element name="addUserId" type="xs:int" />
+      <xs:element name="modifiedDate" nillable="true" type="xs:date" />
+      <xs:element name="modifiedUserId" nillable="true" type="xs:int" />
+      <xs:element name="active" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mediaOutlets">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="mediaOutletList" type="mstns:mediaOutlet" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mediaOutletPlacement">
+    <xs:sequence>
+      <xs:element name="placementId" nillable="true" type="xs:long" />
+      <xs:element name="mediaId" type="xs:long" />
+      <xs:element name="contractType" type="mstns:enumMediaOutletPlacementContractType" />
+      <xs:element name="defaultPlacement" type="xs:boolean" />
+      <xs:element name="beginDate" nillable="true" type="xs:date" />
+      <xs:element name="endDate" nillable="true" type="xs:date" />
+      <xs:element name="programId" type="xs:long" />
+      <xs:element default="false" name="sunday" type="xs:boolean" />
+      <xs:element default="false" name="monday" type="xs:boolean" />
+      <xs:element default="false" name="tuesday" type="xs:boolean" />
+      <xs:element default="false" name="wednesday" type="xs:boolean" />
+      <xs:element default="false" name="thursday" type="xs:boolean" />
+      <xs:element default="false" name="friday" type="xs:boolean" />
+      <xs:element default="false" name="saturday" type="xs:boolean" />
+      <xs:element default="0" name="airTime" nillable="true" type="xs:long" />
+      <xs:element name="deliveryId" nillable="true" type="xs:long" />
+      <xs:element name="leadIn" type="xs:string" />
+      <xs:element name="leadOut" type="xs:string" />
+      <xs:element name="agencyId" nillable="true" type="xs:long" />
+      <xs:element name="notes" type="xs:string" />
+      <xs:element default="true" name="active" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mediaOutletPlacements">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="mediaOutletPlacementList" type="mstns:mediaOutletPlacement" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="enumMediaOutletPlacementContractType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Paid" />
+      <xs:enumeration value="Share" />
+      <xs:enumeration value="Free" />
+      <xs:enumeration value="Other" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="mediaProgram">
+    <xs:sequence>
+      <xs:element name="programId" nillable="true" type="xs:long" />
+      <xs:element name="name" type="xs:string" />
+      <xs:element name="notes" type="xs:string" />
+      <xs:element name="length" nillable="true" type="xs:int" />
+      <xs:element name="lengthType" type="mstns:enumMediaProgramLengthType" />
+      <xs:element default="true" name="active" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mediaPrograms">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="mediaProgramList" type="mstns:mediaProgram" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="enumMediaProgramLengthType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Seconds" />
+      <xs:enumeration value="Minutes" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

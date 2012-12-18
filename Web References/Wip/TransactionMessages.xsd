@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://mpowersystems.com/TransactionMessages.xsd" xmlns:import="http://mpowersystems.com/TransactionData.xsd" xmlns="http://mpowersystems.com/TransactionMessages.xsd" elementFormDefault="qualified" targetNamespace="http://mpowersystems.com/TransactionMessages.xsd" id="TransactionMessages" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="TransactionData.xsd" namespace="http://mpowersystems.com/TransactionData.xsd" />
+  <xs:element name="getGiftSummariesRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="accountId" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getGiftSummariesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="giftSummaries" type="import:giftSummaries" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getGiftAnnualSummariesRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="accountId" type="xs:long" />
+        <xs:element name="year" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getGiftAnnualSummariesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="giftAnnualSummaries" type="import:giftAnnualSummaries" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getOrderSummariesRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="accountId" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getOrderSummariesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="orderSummaries" type="import:orderSummaries" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getOrderAnnualSummariesRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="accountId" type="xs:long" />
+        <xs:element name="year" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getOrderAnnualSummariesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="orderAnnualSummaries" type="import:orderAnnualSummaries" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getTransactionsRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="startingResultNumber" nillable="true" type="xs:int" />
+        <xs:element name="maxResultCount" nillable="true" type="xs:int" />
+        <xs:element name="transactionType" nillable="true" type="import:enumTransactionType" />
+        <xs:element name="accountIdRangeStart" nillable="true" type="xs:long" />
+        <xs:element name="accountIdRangeEnd" nillable="true" type="xs:long" />
+        <xs:element name="batchId" nillable="true" type="xs:long" />
+        <xs:element name="transactionDateRangeStart" nillable="true" type="xs:dateTime" />
+        <xs:element name="transactionDateRangeEnd" nillable="true" type="xs:dateTime" />
+        <xs:element name="orderIdRangeStart" nillable="true" type="xs:long" />
+        <xs:element name="orderIdRangeEnd" nillable="true" type="xs:long" />
+        <xs:element name="giftIdRangeStart" nillable="true" type="xs:long" />
+        <xs:element name="giftIdRangeEnd" nillable="true" type="xs:long" />
+        <xs:element name="amount" nillable="true" type="xs:decimal" />
+        <xs:element name="motivationCode" type="xs:string" />
+        <xs:element name="projectCode" type="xs:string" />
+        <xs:element name="mediaCode" type="xs:string" />
+        <xs:element name="pledgeCode" type="xs:string" />
+        <xs:element name="category" type="xs:string" />
+        <xs:element name="productCode" type="xs:string" />
+        <xs:element name="accountZipCode" type="xs:string" />
+        <xs:element name="accountLastName" type="xs:string" />
+        <xs:element name="accountFirstName" type="xs:string" />
+        <xs:element name="accountOrganizationName" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getTransactionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="transactions" type="import:transactions" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getSubscriptionsRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="subscriptionId" nillable="true" type="xs:long" />
+        <xs:element name="accountId" nillable="true" type="xs:long" />
+        <xs:element name="originatingOrderId" nillable="true" type="xs:long" />
+        <xs:element name="originatingOrderDetailId" nillable="true" type="xs:long" />
+        <xs:element name="productId" nillable="true" type="xs:long" />
+        <xs:element name="status" nillable="true" type="import:enumSubscriptionStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getSubscriptionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="subscriptions" type="import:subscriptions" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getBatchesRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="startingResultNumber" nillable="true" type="xs:int" />
+        <xs:element name="maxResultCount" nillable="true" type="xs:int" />
+        <xs:element name="batchStatus" nillable="true" type="import:enumBatchStatus" />
+        <xs:element name="batchIdRangeStart" nillable="true" type="xs:long" />
+        <xs:element name="batchIdRangeEnd" nillable="true" type="xs:long" />
+        <xs:element name="batchDateRangeStart" nillable="true" type="xs:date" />
+        <xs:element name="batchDateRangeEnd" nillable="true" type="xs:date" />
+        <xs:element name="batchType1RangeStart" type="xs:string" />
+        <xs:element name="batchType1RangeEnd" type="xs:string" />
+        <xs:element name="batchType2RangeStart" type="xs:string" />
+        <xs:element name="batchType2RangeEnd" type="xs:string" />
+        <xs:element name="controlAmount" nillable="true" type="xs:decimal" />
+        <xs:element name="actualAmount" nillable="true" type="xs:decimal" />
+        <xs:element name="depositDate" nillable="true" type="xs:date" />
+        <xs:element name="batchOwnerUserId" nillable="true" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getBatchesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="batches" type="import:batches" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="insertBatchRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="batch" type="import:batch" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="insertBatchResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="batchId" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updateBatchRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="batch" type="import:batch" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updateBatchResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="result" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="deleteBatchRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="batchId" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="deleteBatchResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="result" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="closeBatchRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="batchId" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="closeBatchResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="result" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="postBatchRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="batchId" type="xs:long" />
+        <xs:element name="bank" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="postBatchResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="result" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="openBatchRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="batchId" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="openBatchResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="result" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getARTransactionsRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="accountId" nillable="true" type="xs:long" />
+        <xs:element name="orderId" nillable="true" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getARTransactionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="arTransactions" type="import:arTransactions" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getARMonthlySummariesRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="arMonthlySummaryId" nillable="true" type="xs:long" />
+        <xs:element name="accountId" nillable="true" type="xs:long" />
+        <xs:element name="month" nillable="true" type="xs:int" />
+        <xs:element name="year" nillable="true" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getARMonthlySummariesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="arMonthlySummaries" type="import:arMonthlySummaries" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

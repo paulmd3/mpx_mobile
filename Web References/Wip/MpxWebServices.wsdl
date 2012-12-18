@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="mpowersystems.com/MpxWebServices" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="mpowersystems.com/MpxWebServices" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import namespace="mpowersystems.com/MpxWebServices" location="Contract/MpxWebServices.wsdl" />
+  <wsdl:types />
+  <wsdl:service name="MpxWebServicesPort">
+    <wsdl:port name="MpxWebServices" binding="tns:MpxWebServices">
+      <soap:address location="http://173.204.88.34:1674/MpxWebServices.asmx" />
+    </wsdl:port>
+    <wsdl:port name="MpxWebServices1" binding="tns:MpxWebServices">
+      <soap12:address location="http://173.204.88.34:1674/MpxWebServices.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

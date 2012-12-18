@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://mpowersystems.com/KTABData.xsd" xmlns="http://mpowersystems.com/KTABData.xsd" elementFormDefault="qualified" targetNamespace="http://mpowersystems.com/KTABData.xsd" id="KTABData" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="donor_AccountRecord">
+    <xs:sequence>
+      <xs:element name="cstAcctNbr" type="xs:string" />
+      <xs:element name="lnkAcctNbr" type="xs:string" />
+      <xs:element name="donorTitleName" type="xs:string" />
+      <xs:element name="donorFirstName" type="xs:string" />
+      <xs:element name="donorMI" type="xs:string" />
+      <xs:element name="donorLastName" type="xs:string" />
+      <xs:element name="donorSuffix" type="xs:string" />
+      <xs:element name="spouseFirstName" type="xs:string" />
+      <xs:element name="organizationName" type="xs:string" />
+      <xs:element name="addressLines" type="xs:string" />
+      <xs:element name="city" type="xs:string" />
+      <xs:element name="state" type="xs:string" />
+      <xs:element name="zip" type="xs:string" />
+      <xs:element name="county" type="xs:string" />
+      <xs:element name="country" type="xs:string" />
+      <xs:element name="cstAddDate" type="xs:string" />
+      <xs:element name="cstUserId" type="xs:string" />
+      <xs:element name="cstSourceCode" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="donor_AlternateAddressRecord">
+    <xs:sequence>
+      <xs:element name="lnkAcctNbr" type="xs:string" />
+      <xs:element name="addressCategory" type="xs:string" />
+      <xs:element name="addressLines" type="xs:string" />
+      <xs:element name="city" type="xs:string" />
+      <xs:element name="state" type="xs:string" />
+      <xs:element name="zip" type="xs:string" />
+      <xs:element name="county" type="xs:string" />
+      <xs:element name="country" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="donor_EmailAddressRecord">
+    <xs:sequence>
+      <xs:element name="lnkAcctNbr" type="xs:string" />
+      <xs:element name="emailCategory" type="xs:string" />
+      <xs:element name="emailAddress" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="donor_MailListCodesRecord">
+    <xs:sequence>
+      <xs:element name="lnkAcctNbr" type="xs:string" />
+      <xs:element name="cstMailListValue" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="donor_MailRestrictCodesRecord">
+    <xs:sequence>
+      <xs:element name="lnkAcctNbr" type="xs:string" />
+      <xs:element name="cstMailCodeValue" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="donor_MediaCodeRecord">
+    <xs:sequence>
+      <xs:element name="lnkAcctNbr" type="xs:string" />
+      <xs:element name="cstMediaCode" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="donor_NotesRecord">
+    <xs:sequence>
+      <xs:element name="lnkAcctNbr" type="xs:string" />
+      <xs:element name="noteCategory" type="xs:string" />
+      <xs:element name="noteBody" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="donor_OtherCodeRecord">
+    <xs:sequence>
+      <xs:element name="lnkAcctNbr" type="xs:string" />
+      <xs:element name="cstCodeCategory" type="xs:string" />
+      <xs:element name="cstCodeValue" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="donor_TelephoneNumberRecord">
+    <xs:sequence>
+      <xs:element name="lnkAcctNbr" type="xs:string" />
+      <xs:element name="isPrimary" type="xs:string" />
+      <xs:element name="phoneCategory" type="xs:string" />
+      <xs:element name="phoneNumber" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="gift_MasterRecord">
+    <xs:sequence>
+      <xs:element name="lnkAcctNbr" type="xs:string" />
+      <xs:element name="lnkGiftRef" type="xs:string" />
+      <xs:element name="cstGiftRef" type="xs:string" />
+      <xs:element name="giftDate" type="xs:string" />
+      <xs:element name="payMethodCode" type="xs:string" />
+      <xs:element name="ccType" type="xs:string" />
+      <xs:element name="ccExpiry" type="xs:string" />
+      <xs:element name="payRefNum" type="xs:string" />
+      <xs:element name="ccAuth" type="xs:string" />
+      <xs:element name="ccAuthDate" type="xs:string" />
+      <xs:element name="receiptNumber" type="xs:string" />
+      <xs:element name="currencyCode" type="xs:string" />
+      <xs:element name="mediaCode" type="xs:string" />
+      <xs:element name="comment" type="xs:string" />
+      <xs:element name="giftAmt" type="xs:string" />
+      <xs:element name="motivationCode" type="xs:string" />
+      <xs:element name="fundID" type="xs:string" />
+      <xs:element name="pledgeCode" type="xs:string" />
+      <xs:element name="deductible" type="xs:string" />
+      <xs:element name="anonymous" type="xs:string" />
+      <xs:element name="batchType" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="gift_DetailRecord">
+    <xs:sequence>
+      <xs:element name="lnkGiftRef" type="xs:string" />
+      <xs:element name="giftAmt" type="xs:string" />
+      <xs:element name="motivationCode" type="xs:string" />
+      <xs:element name="fundID" type="xs:string" />
+      <xs:element name="pledgeCode" type="xs:string" />
+      <xs:element name="deductible" type="xs:string" />
+      <xs:element name="anonymous" type="xs:string" />
+      <xs:element name="comments" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="order_MasterRecord">
+    <xs:sequence>
+      <xs:element name="lnkAcctNbr" type="xs:string" />
+      <xs:element name="lnkOrdRef" type="xs:string" />
+      <xs:element name="cstOrdNbr" type="xs:string" />
+      <xs:element name="orderDate" type="xs:string" />
+      <xs:element name="payMethodCode" type="xs:string" />
+      <xs:element name="ccType" type="xs:string" />
+      <xs:element name="ccExpiry" type="xs:string" />
+      <xs:element name="payRefNum" type="xs:string" />
+      <xs:element name="ccAuth" type="xs:string" />
+      <xs:element name="ccAuthDate" type="xs:string" />
+      <xs:element name="currencyCode" type="xs:string" />
+      <xs:element name="mediaCode" type="xs:string" />
+      <xs:element name="motivationCode" type="xs:string" />
+      <xs:element name="purchaseLocation" type="xs:string" />
+      <xs:element name="freeLocation" type="xs:string" />
+      <xs:element name="comment" type="xs:string" />
+      <xs:element name="totalFunds" type="xs:string" />
+      <xs:element name="shipperTotal" type="xs:string" />
+      <xs:element name="discount" type="xs:string" />
+      <xs:element name="orderTax" type="xs:string" />
+      <xs:element name="ship_Name" type="xs:string" />
+      <xs:element name="ship_AddressLines" type="xs:string" />
+      <xs:element name="ship_City" type="xs:string" />
+      <xs:element name="ship_State" type="xs:string" />
+      <xs:element name="ship_Zip" type="xs:string" />
+      <xs:element name="shipCounty" type="xs:string" />
+      <xs:element name="shipCountry" type="xs:string" />
+      <xs:element name="shipperCode" type="xs:string" />
+      <xs:element name="batchType" type="xs:string" />
+      <xs:element name="giftMotvCode" type="xs:string" />
+      <xs:element name="giftPledgeCode" type="xs:string" />
+      <xs:element name="giftFundId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="order_DetailRecord">
+    <xs:sequence>
+      <xs:element name="lnkOrdRef" type="xs:string" />
+      <xs:element name="prodCode" type="xs:string" />
+      <xs:element name="priceCode" type="xs:string" />
+      <xs:element name="price" type="xs:string" />
+      <xs:element name="purQty" type="xs:string" />
+      <xs:element name="freeQty" type="xs:string" />
+      <xs:element name="tax" type="xs:string" />
+      <xs:element name="secondTax" type="xs:string" />
+      <xs:element name="taxable" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="pledge_MasterRecord">
+    <xs:sequence>
+      <xs:element name="lnkAcctNbr" type="xs:string" />
+      <xs:element name="lnkPldgRef" type="xs:string" />
+      <xs:element name="pledgeCode" type="xs:string" />
+      <xs:element name="action" type="xs:string" />
+      <xs:element name="startDate" type="xs:string" />
+      <xs:element name="endDate" type="xs:string" />
+      <xs:element name="pledgeAmt" type="xs:string" />
+      <xs:element name="frequency" type="xs:string" />
+      <xs:element name="nbrPayments" type="xs:string" />
+      <xs:element name="motivationCode" type="xs:string" />
+      <xs:element name="amountGiven" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="donor_AccountTable">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="donor_AccountRecordList" type="mstns:donor_AccountRecord" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="donor_AlternateAddressTable">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="donor_AlternateAddressRecordList" type="mstns:donor_AlternateAddressRecord" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="donor_EmailAddressTable">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="donor_EmailAddressRecordList" type="mstns:donor_EmailAddressRecord" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="donor_MailListCodesTable">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="donor_MailListCodeRecordList" type="mstns:donor_MailListCodesRecord" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="donor_MailRestrictCodesTable">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="donor_MailRestrictCodeRecordList" type="mstns:donor_MailRestrictCodesRecord" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="donor_MediaCodeTable">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="donor_MediaCodeRecordList" type="mstns:donor_MediaCodeRecord" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="donor_NotesTable">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="donor_NoteRecordList" type="mstns:donor_NotesRecord" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="donor_OtherCodeTable">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="donor_OtherCodeRecordList" type="mstns:donor_OtherCodeRecord" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="donor_TelephoneNumberTable">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="donor_TelephoneNumberRecordList" type="mstns:donor_TelephoneNumberRecord" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="gift_MasterTable">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="gift_MasterRecordList" type="mstns:gift_MasterRecord" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="gift_DetailTable">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="gift_DetailRecordList" type="mstns:gift_DetailRecord" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="order_MasterTable">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="order_MasterRecordList" type="mstns:order_MasterRecord" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="order_DetailTable">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="order_DetailRecordList" type="mstns:order_DetailRecord" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="pledge_MasterTable">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="pledge_MasterRecordList" type="mstns:pledge_MasterRecord" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ktabData">
+    <xs:sequence>
+      <xs:element name="importDescription" type="xs:string" />
+      <xs:element name="donor_Account" type="mstns:donor_AccountTable" />
+      <xs:element name="donor_AlternateAddress" type="mstns:donor_AlternateAddressTable" />
+      <xs:element name="donor_EmailAddress" type="mstns:donor_EmailAddressTable" />
+      <xs:element name="donor_MailListCodes" type="mstns:donor_MailListCodesTable" />
+      <xs:element name="donor_MailRestrictCodes" type="mstns:donor_MailRestrictCodesTable" />
+      <xs:element name="donor_MediaCode" type="mstns:donor_MediaCodeTable" />
+      <xs:element name="donor_Notes" type="mstns:donor_NotesTable" />
+      <xs:element name="donor_OtherCode" type="mstns:donor_OtherCodeTable" />
+      <xs:element name="donor_TelephoneNumber" type="mstns:donor_TelephoneNumberTable" />
+      <xs:element name="gift_Master" type="mstns:gift_MasterTable" />
+      <xs:element name="gift_Detail" type="mstns:gift_DetailTable" />
+      <xs:element name="order_Master" type="mstns:order_MasterTable" />
+      <xs:element name="order_Detail" type="mstns:order_DetailTable" />
+      <xs:element name="pledge_Master" type="mstns:pledge_MasterTable" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

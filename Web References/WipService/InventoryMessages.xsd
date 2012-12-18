@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://mpowersystems.com/InventoryMessages.xsd" xmlns:import="http://mpowersystems.com/InventoryData.xsd" xmlns="http://mpowersystems.com/InventoryMessages.xsd" elementFormDefault="qualified" targetNamespace="http://mpowersystems.com/InventoryMessages.xsd" id="InventoryMessages" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="InventoryData.xsd" namespace="http://mpowersystems.com/InventoryData.xsd" />
+  <xs:element name="getProductsRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="productId" nillable="true" type="xs:long" />
+        <xs:element name="productCode" type="xs:string" />
+        <xs:element name="description" type="xs:string" />
+        <xs:element name="type" nillable="true" type="import:enumProductType" />
+        <xs:element name="designation" type="xs:string" />
+        <xs:element name="keyword" type="xs:string" />
+        <xs:element name="location" type="xs:string" />
+        <xs:element name="note" type="xs:string" />
+        <xs:element name="inventoryCodeType" type="xs:string" />
+        <xs:element name="inventoryCodeValue" type="xs:string" />
+        <xs:element default="false" name="includeInactiveRecords" type="xs:boolean" />
+        <xs:element default="false" name="includeSuspendedRecords" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getProductsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="products" type="import:products" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getProductLocationsRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="productLocationId" nillable="true" type="xs:long" />
+        <xs:element name="productId" nillable="true" type="xs:long" />
+        <xs:element name="locationCode" type="xs:string" />
+        <xs:element default="false" name="includeInactiveRecords" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getProductLocationsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="productLocations" type="import:productLocations" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,623 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C60B3760-4845-4329-AE6A-F688EFAA3172}</ProjectGuid>
+    <ProjectTypeGuids>{F85E285D-A4E0-4152-9332-AB1D724D3325};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MPXMobile</RootNamespace>
+    <AssemblyName>MPXMobile</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files\Microsoft ASP.NET\ASP.NET MVC 2\Assemblies\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AgentController.cs" />
+    <Compile Include="Controllers\AppCacheController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\DashboardController.cs" />
+    <Compile Include="Controllers\DonorsController.cs" />
+    <Compile Include="Controllers\ErrorsController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\OfflineController.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AgentInformation.cs" />
+    <Compile Include="Models\NoteTypes.cs" />
+    <Compile Include="Models\Donors.cs" />
+    <Compile Include="Models\Gifts.cs" />
+    <Compile Include="Models\Notes.cs" />
+    <Compile Include="Models\Util.cs" />
+    <Compile Include="Models\UsersAut.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UsersAut.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="Web References\WipService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\iPhone\iui-default-theme.css" />
+    <Content Include="Content\iPhone\iui-panel-list.css" />
+    <Content Include="Content\iPhone\iui.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\iui.js" />
+    <Content Include="Scripts\jquery.history.js" />
+    <Content Include="Scripts\jquery.scrollto.min.js" />
+    <Content Include="Scripts\touch\src\jqtouch-jquery.min.js" />
+    <Content Include="Scripts\touch\src\jqtouch.js" />
+    <Content Include="Scripts\touch\themes\css\jqtouch.css" />
+    <Content Include="Scripts\touch\themes\img\jqt\activeButton.png" />
+    <Content Include="Scripts\touch\themes\img\jqt\back_button.png" />
+    <Content Include="Scripts\touch\themes\img\jqt\back_button_clicked.png" />
+    <Content Include="Scripts\touch\themes\img\jqt\blueButton.png" />
+    <Content Include="Scripts\touch\themes\img\jqt\button.png" />
+    <Content Include="Scripts\touch\themes\img\jqt\button_clicked.png" />
+    <Content Include="Scripts\touch\themes\img\jqt\chevron.png" />
+    <Content Include="Scripts\touch\themes\img\jqt\chevron_circle.png" />
+    <Content Include="Scripts\touch\themes\img\jqt\grayButton.png" />
+    <Content Include="Scripts\touch\themes\img\jqt\greenButton.png" />
+    <Content Include="Scripts\touch\themes\img\jqt\loading.gif" />
+    <Content Include="Scripts\touch\themes\img\jqt\on_off.png" />
+    <Content Include="Scripts\touch\themes\img\jqt\redButton.png" />
+    <Content Include="Scripts\touch\themes\img\jqt\rowhead.png" />
+    <Content Include="Scripts\touch\themes\img\jqt\toggle.png" />
+    <Content Include="Scripts\touch\themes\img\jqt\toggleOn.png" />
+    <Content Include="Scripts\touch\themes\img\jqt\toolbar.png" />
+    <Content Include="Scripts\touch\themes\img\jqt\whiteButton.png" />
+    <Content Include="Views\AppCache\Manifest.aspx" />
+    <Content Include="Views\Dashboard\Index.aspx" />
+    <Content Include="Views\Dashboard\_Index.ascx" />
+    <Content Include="Views\Errors\Http404.aspx" />
+    <Content Include="Views\Errors\Http500.aspx" />
+    <Content Include="Views\Home\_BookMarked.ascx" />
+    <Content Include="Views\Home\BookmarkedDonors.aspx" />
+    <Content Include="Views\Home\DonorInformation.aspx" />
+    <Content Include="Views\Home\_Gift.ascx" />
+    <Content Include="Views\Home\_Recently.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Views\Home\RecentlyDonors.aspx" />
+    <Content Include="Views\Home\Search.aspx" />
+    <Content Include="Views\Home\SearchDonors.aspx" />
+    <Content Include="Views\Offline\Index.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Content\css\base.css" />
+    <Content Include="Scripts\jquery-1.3.2.js" />
+    <Content Include="Scripts\jquery-1.3.2.min.js" />
+    <Content Include="Views\Account\ChangePassword.aspx" />
+    <Content Include="Views\Account\ChangePasswordSuccess.aspx" />
+    <Content Include="Views\Account\LogOn.aspx" />
+    <Content Include="Views\Account\Register.aspx" />
+    <Content Include="Views\Home\About.aspx" />
+    <Content Include="Views\Home\Index.aspx" />
+    <Content Include="Views\Shared\LogOnUserControl.ascx" />
+    <Content Include="Views\Shared\Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Models\UsersAut.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>UsersAut.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DatabaseScript.sql" />
+    <None Include="Models\UsersAut.dbml.layout">
+      <DependentUpon>UsersAut.dbml</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\AccountData.xsd" />
+    <None Include="Web References\WipService\AccountMessages.xsd" />
+    <None Include="Web References\WipService\AdminMessages.xsd" />
+    <None Include="Web References\WipService\AnalysisData.xsd" />
+    <None Include="Web References\WipService\AnalysisMessages.xsd" />
+    <None Include="Web References\WipService\closeBatchResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\CodeMessages.xsd" />
+    <None Include="Web References\WipService\deleteAccountCodeResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\deleteAccountEmailAddressResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\deleteAccountNoteResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\deleteAccountPhoneNumberResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\deleteAccountSalutationResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\deleteBatchResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\deleteCodeTypeResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\deleteCurrencyTypeResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\deleteReportResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\exportReportResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\getAccountAddressesResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\getAccountCodesResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\getAccountDatesResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\getAccountDuplicatesCustomResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\getAccountEmailAddressesResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\getAccountFinancialsResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\getAccountNotesResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\getAccountPhoneNumbersResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\getAccountPledgesResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\getAccountRelationshipsResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\getAccountResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\getAccountSalutationsResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\getAccountsResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\getAddressTypesResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\getARMonthlySummariesResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\getARTransactionsResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\getBanksResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\getBatchesResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\getCodesResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\getCodeTypesResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\getCreditCardTypesResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\getCurrencyTypesResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\getFinanceCodesResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\getGiftAnnualSummariesResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\getGiftSummariesResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\getMediaOutletPlacementsResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\getMediaOutletsResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\getMediaProgramsResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\getMotivationCodesResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\getNoteTypesResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\getOrderAnnualSummariesResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\getOrderSummariesResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\getOrganizationSettingsResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\getPaymentTypesResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\getPhoneTypesResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\getProductLocationsResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\getProductsResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\getProjectCategoriesResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\getProjectCodesResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\getRelationshipTypesResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\getReportExportStatusResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\getReportsResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\getSalutationTypesResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\getSegmentationGroupResultsResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\getSegmentationGroupsResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\getSegmentationsResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\getServerStatusResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\getSourceCodesResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\getSubscriptionsResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\getTransactionsResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\getUsersResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\HeaderData.xsd" />
+    <None Include="Web References\WipService\insertAccountAddressResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\insertAccountCodeResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\insertAccountEmailAddressResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\insertAccountNoteResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\insertAccountPhoneNumberResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\insertAccountResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\insertAccountSalutationResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\insertAddressTypeResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\insertBankResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\insertBatchResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\insertCodeTypeResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\insertCurrencyTypeResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\insertNoteTypeResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\insertPaymentTypeResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\insertReportResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\insertSourceCodeResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\insertTIHoldingTankResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\invalidateCacheResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\Inventory.xsd" />
+    <None Include="Web References\WipService\InventoryMessages.xsd" />
+    <None Include="Web References\WipService\KTABData.xsd" />
+    <None Include="Web References\WipService\KTABMessages.xsd" />
+    <None Include="Web References\WipService\MediaOutletData.xsd" />
+    <None Include="Web References\WipService\MediaOutletMessages.xsd" />
+    <None Include="Web References\WipService\MpxWebServices.wsdl" />
+    <None Include="Web References\WipService\MpxWebServices0.wsdl" />
+    <None Include="Web References\WipService\openBatchResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\OrganizationData.xsd" />
+    <None Include="Web References\WipService\postBatchResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\ProjectData.xsd" />
+    <None Include="Web References\WipService\ProjectMessages.xsd" />
+    <None Include="Web References\WipService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\WipService\searchMediaOutletsResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\TransactionData.xsd" />
+    <None Include="Web References\WipService\TransactionMessages.xsd" />
+    <Content Include="Content\images\address.png" />
+    <Content Include="Content\iPhone\address.png" />
+    <Content Include="Content\iPhone\ajax-loader.gif" />
+    <Content Include="Content\iPhone\arrow_fromto.png" />
+    <Content Include="Content\iPhone\backButton.png" />
+    <Content Include="Content\iPhone\backButtonBack.png" />
+    <Content Include="Content\iPhone\backButtonBrdr.png" />
+    <Content Include="Content\iPhone\blueButton.png" />
+    <Content Include="Content\iPhone\bookmark.png" />
+    <Content Include="Content\iPhone\btn_back.png" />
+    <Content Include="Content\iPhone\btn_calendar.png" />
+    <Content Include="Content\iPhone\btn_cancel.png" />
+    <Content Include="Content\iPhone\btn_confirm.png" />
+    <Content Include="Content\iPhone\btn_next.png" />
+    <Content Include="Content\iPhone\btn_padlock.png" />
+    <Content Include="Content\iPhone\cancel.png" />
+    <Content Include="Content\iPhone\grayButton.png" />
+    <Content Include="Content\iPhone\icon_refresh.png" />
+    <Content Include="Content\iPhone\iui-mpx.css" />
+    <Content Include="Content\iPhone\list-icon-2.png" />
+    <Content Include="Content\iPhone\listArrow.png" />
+    <Content Include="Content\iPhone\listArrowSel.png" />
+    <Content Include="Content\iPhone\listGroup.png" />
+    <Content Include="Content\iPhone\mail.png" />
+    <Content Include="Content\iPhone\orange.png" />
+    <Content Include="Content\iPhone\phone.png" />
+    <Content Include="Content\iPhone\selection.png" />
+    <Content Include="Content\iPhone\summary_date.png" />
+    <Content Include="Content\iPhone\summary_time.png" />
+    <Content Include="Content\iPhone\thumb.png" />
+    <Content Include="Content\iPhone\toggle.png" />
+    <Content Include="Content\iPhone\toggleOn.png" />
+    <Content Include="Content\iPhone\toolbar.png" />
+    <Content Include="Content\iPhone\toolButton.png" />
+    <Content Include="Content\iPhone\orange.v2.png" />
+    <Content Include="Content\iPhone\whiteButton.png" />
+    <Content Include="Content\css\jquery.alerts.css" />
+    <Content Include="Content\images\mail.png" />
+    <Content Include="Content\mail.txt" />
+    <Content Include="Content\images\phone.png" />
+    <Content Include="Scripts\jquery.tmpl.min.js" />
+    <Content Include="Scripts\mpx-localstorage.js" />
+    <Content Include="Content\images\up.png" />
+    <Content Include="NoteTypes.xml" />
+    <None Include="README" />
+    <Content Include="Scripts\jquery.md5.js" />
+    <Content Include="Scripts\jquery.alerts.js" />
+    <Content Include="Scripts\application.js" />
+    <Content Include="Views\Account\ForgotPassword.aspx" />
+    <Content Include="Views\Agent\iPhoneAgent.ascx" />
+    <Content Include="Views\Home\GiftInformation.aspx" />
+    <Content Include="Views\Home\InsertNotesInformation.aspx" />
+    <Content Include="Views\Home\_Notes.ascx" />
+    <Content Include="Views\Home\NotesInformation.aspx" />
+    <Content Include="Views\Home\ValidationError.aspx" />
+    <Content Include="Views\Home\_Donor.ascx" />
+    <Content Include="Views\Home\_Search.ascx" />
+    <Content Include="Views\Home\_SearchDonors.ascx" />
+    <Content Include="Views\Shared\DefaultMenu.aspx" />
+    <Content Include="Views\Shared\NavWeb.ascx" />
+    <Content Include="Views\Web.config" />
+    <None Include="Web References\WipService\MpxWebServices.disco" />
+    <None Include="Web References\WipService\updateAccountAddressResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\updateAccountCodeResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\updateAccountEmailAddressResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\updateAccountNoteResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\updateAccountPhoneNumberResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\updateAccountResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\updateAccountSalutationResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\updateAddressTypeResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\updateBankResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\updateBatchResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\updateCodeTypeResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\updateCurrencyTypeResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\updateNoteTypeResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\updatePaymentTypeResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\updateReportResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\updateSourceCodeResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://174.129.220.124:1700/MpxWebServices.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WipService\</RelPath>
+      <UpdateFromURL>http://174.129.220.124:1700/MpxWebServices.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>MPXMobile_WipService_MpxWebServicesPort</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Logs\" />
+    <Folder Include="Scripts\touch\css\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target> -->
+  <Target Name="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(ProjectDir)\..\$(ProjectName)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49808</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://mpx-mobile.morph5.com/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://173.204.88.34:1674/MpxWebServices.asmx?wsdl" docRef="http://173.204.88.34:1674/MpxWebServices.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://173.204.88.34:1674/MpxWebServices.asmx" xmlns:q1="mpowersystems.com/MpxWebServices" binding="q1:MpxWebServices" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://173.204.88.34:1674/MpxWebServices.asmx" xmlns:q2="mpowersystems.com/MpxWebServices" binding="q2:MpxWebServices" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

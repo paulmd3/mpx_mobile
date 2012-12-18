@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="MobileMPX" Class="UsersAutDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=28069_2_299863\MPX;Initial Catalog=MobileMPX;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="MobileMPXConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.BookmarkedDonors" Member="BookmarkedDonors">
+    <Type Name="BookmarkedDonor">
+      <Column Name="Bookmarked_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="User_ID" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="Donor_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LocalUser" Member="LocalUsers">
+    <Type Name="LocalUser">
+      <Column Name="First_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Last_name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="Created_at" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Updated_at" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LogActions" Member="LogActions">
+    <Type Name="LogAction">
+      <Column Name="Log_ActionsId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserId" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="Action" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="ActionDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LogSessions" Member="LogSessions">
+    <Type Name="LogSession">
+      <Column Name="Log_sessionId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserId" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="SessionDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

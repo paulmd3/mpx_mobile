@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://mpowersystems.com/AccountData.xsd" xmlns="http://mpowersystems.com/AccountData.xsd" elementFormDefault="qualified" targetNamespace="http://mpowersystems.com/AccountData.xsd" id="AccountData" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="account">
+    <xs:sequence>
+      <xs:element name="accountId" nillable="true" type="xs:long">
+        <xs:annotation>
+          <xs:documentation>Account number for the account.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="isOrganization" type="xs:boolean" />
+      <xs:element name="organizationName" type="xs:string" />
+      <xs:element name="includeOrganizationNameInAddress" type="xs:boolean" />
+      <xs:element name="title" type="xs:string" />
+      <xs:element name="firstName" type="xs:string" />
+      <xs:element name="middleName" type="xs:string" />
+      <xs:element name="lastName" type="xs:string" />
+      <xs:element name="suffix" type="xs:string" />
+      <xs:element name="jobTitle" type="xs:string" />
+      <xs:element name="maritalStatus" type="xs:string" />
+      <xs:element name="spouse" type="xs:string" />
+      <xs:element name="address1" type="xs:string" />
+      <xs:element name="address2" type="xs:string" />
+      <xs:element name="address3" type="xs:string" />
+      <xs:element name="city" type="xs:string" />
+      <xs:element name="state" type="xs:string" />
+      <xs:element name="zipCode" type="xs:string" />
+      <xs:element name="country" type="xs:string" />
+      <xs:element name="defaultEmailAddress" type="xs:string" />
+      <xs:element name="defaultPhoneNumber" type="xs:string" />
+      <xs:element name="defaultSalutation" type="xs:string" />
+      <xs:element default="true" name="active" type="xs:boolean" />
+      <xs:element name="webSite" type="xs:string" />
+      <xs:element name="addDate" type="xs:date" />
+      <xs:element name="addUserId" type="xs:int" />
+      <xs:element name="modifiedDate" nillable="true" type="xs:date" />
+      <xs:element name="modifiedUserId" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="accountInsert">
+    <xs:complexContent mixed="false">
+      <xs:extension base="mstns:account">
+        <xs:sequence>
+          <xs:element name="sourceCode" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="accountSalutation">
+    <xs:sequence>
+      <xs:element name="salutationId" nillable="true" type="xs:long" />
+      <xs:element name="accountId" type="xs:long" />
+      <xs:element name="isDefaultSalutation" type="xs:boolean" />
+      <xs:element name="salutationType" type="xs:string" />
+      <xs:element name="salutation" type="xs:string" />
+      <xs:element name="addDate" type="xs:date" />
+      <xs:element name="addUserId" type="xs:int" />
+      <xs:element name="modifiedDate" nillable="true" type="xs:date" />
+      <xs:element name="modifiedUserId" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="accountEmailAddress">
+    <xs:sequence>
+      <xs:element name="emailId" nillable="true" type="xs:long" />
+      <xs:element name="accountId" type="xs:long" />
+      <xs:element name="isDefaultEmailAddress" type="xs:boolean" />
+      <xs:element name="emailAddress" type="xs:string" />
+      <xs:element name="note" type="xs:string" />
+      <xs:element name="addDate" type="xs:date" />
+      <xs:element name="addUserId" type="xs:int" />
+      <xs:element name="modifiedDate" nillable="true" type="xs:date" />
+      <xs:element name="modifiedUserId" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="accounts">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="accountList" type="mstns:account" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="accountSalutations">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="accountSalutationList" type="mstns:accountSalutation" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="accountEmailAddresses">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="accountEmailAddressList" type="mstns:accountEmailAddress" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="accountPhoneNumber">
+    <xs:sequence>
+      <xs:element name="phoneId" nillable="true" type="xs:long" />
+      <xs:element name="accountId" type="xs:long" />
+      <xs:element name="phoneType" type="xs:string" />
+      <xs:element name="isDefaultPhone" type="xs:boolean" />
+      <xs:element name="phoneNumber" type="xs:string" />
+      <xs:element name="activeDate" type="xs:date" />
+      <xs:element name="inactiveDate" type="xs:date" />
+      <xs:element name="addDate" type="xs:date" />
+      <xs:element name="addUserId" type="xs:int" />
+      <xs:element name="modifiedDate" nillable="true" type="xs:date" />
+      <xs:element name="modifiedUserId" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="accountPhoneNumbers">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="accountPhoneNumberList" type="mstns:accountPhoneNumber" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="accountAddress">
+    <xs:sequence>
+      <xs:element name="addressId" nillable="true" type="xs:long" />
+      <xs:element name="accountId" type="xs:long" />
+      <xs:element name="addressType" type="xs:string" />
+      <xs:element name="useAlternateName" type="xs:boolean" />
+      <xs:element name="alternateTitle" type="xs:string" />
+      <xs:element name="alternateFirstName" type="xs:string" />
+      <xs:element name="alternateLastName" type="xs:string" />
+      <xs:element name="alternateSuffix" type="xs:string" />
+      <xs:element name="includeOrganizationNameInAddress" type="xs:boolean" />
+      <xs:element name="address1" type="xs:string" />
+      <xs:element name="address2" type="xs:string" />
+      <xs:element name="address3" type="xs:string" />
+      <xs:element name="city" type="xs:string" />
+      <xs:element name="state" type="xs:string" />
+      <xs:element name="zipCode" type="xs:string" />
+      <xs:element name="country" type="xs:string" />
+      <xs:element name="dateActivated" type="xs:boolean" />
+      <xs:element name="addressActiveDate" nillable="true" type="xs:date" />
+      <xs:element name="addressInactiveDate" nillable="true" type="xs:date" />
+      <xs:element name="recurrance" type="xs:int" />
+      <xs:element name="addDate" type="xs:date" />
+      <xs:element name="addUserId" type="xs:int" />
+      <xs:element name="modifiedDate" nillable="true" type="xs:date" />
+      <xs:element name="modifiedUserId" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="accountAddresses">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="accountAddressList" type="mstns:accountAddress" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="accountNote">
+    <xs:sequence>
+      <xs:element name="noteId" nillable="true" type="xs:long" />
+      <xs:element name="accountId" type="xs:long" />
+      <xs:element name="noteType" type="xs:string" />
+      <xs:element name="note" type="xs:string" />
+      <xs:element name="nextDate" nillable="true" type="xs:date" />
+      <xs:element name="nextActionNote" type="xs:string" />
+      <xs:element name="addDate" type="xs:date" />
+      <xs:element name="addUserId" type="xs:int" />
+      <xs:element name="modifiedDate" nillable="true" type="xs:date" />
+      <xs:element name="modifiedUserId" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="accountNotes">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="accountNoteList" type="mstns:accountNote" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="accountCode">
+    <xs:sequence>
+      <xs:element name="codeId" nillable="true" type="xs:long" />
+      <xs:element name="accountId" type="xs:long" />
+      <xs:element name="codeType" type="xs:string" />
+      <xs:element name="codeTypeDescription" type="xs:string" />
+      <xs:element name="codeValue" type="xs:string" />
+      <xs:element name="codeValueDescription" type="xs:string" />
+      <xs:element name="addDate" type="xs:date" />
+      <xs:element name="addUserId" type="xs:int" />
+      <xs:element name="modifiedDate" nillable="true" type="xs:date" />
+      <xs:element name="modifiedUserId" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="accountCodes">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="accountCodeList" type="mstns:accountCode" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="accountFinancials">
+    <xs:sequence>
+      <xs:element name="accountId" nillable="true" type="xs:long" />
+      <xs:element name="projectedFutureGiving" nillable="true" type="xs:decimal" />
+      <xs:element name="projectedFutureGivingNote" type="xs:string" />
+      <xs:element name="capacityToGive" nillable="true" type="xs:decimal" />
+      <xs:element name="capacityToGiveNote" type="xs:string" />
+      <xs:element name="propensityToGive" nillable="true" type="xs:int" />
+      <xs:element name="philanthropicInterests" type="xs:string" />
+      <xs:element name="financialNotes" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="accountRelationship">
+    <xs:sequence>
+      <xs:element name="relationshipId" nillable="true" type="xs:long" />
+      <xs:element name="accountId" type="xs:long" />
+      <xs:element name="relatedAccountId" type="xs:long" />
+      <xs:element name="relationshipType" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="accountRelationships">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="accountRelationshipList" type="mstns:accountRelationship" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="accountPledge">
+    <xs:sequence>
+      <xs:element name="pledgeId" nillable="true" type="xs:long" />
+      <xs:element name="accountId" type="xs:long" />
+      <xs:element name="pledgeCode" type="xs:string" />
+      <xs:element name="status" type="mstns:enumPledgeStatus" />
+      <xs:element name="startDate" type="xs:date" />
+      <xs:element name="endDate" type="xs:date" />
+      <xs:element name="totalAmountPledged" type="xs:decimal" />
+      <xs:element name="amountPerGift" type="xs:decimal" />
+      <xs:element name="numberOfGifts" type="xs:int" />
+      <xs:element name="frequency" type="mstns:enumPledgeFrequency" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="enumPledgeStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Active" />
+      <xs:enumeration value="Cancelled" />
+      <xs:enumeration value="Expired" />
+      <xs:enumeration value="Fulfilled" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="enumPledgeFrequency">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Monthly" />
+      <xs:enumeration value="Quarterly" />
+      <xs:enumeration value="Semi-Annually" />
+      <xs:enumeration value="Annually" />
+      <xs:enumeration value="Weekly" />
+      <xs:enumeration value="Semi-Monthly" />
+      <xs:enumeration value="Other" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="accountPledges">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="accountPledgeList" type="mstns:accountPledge" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="accountDate">
+    <xs:sequence>
+      <xs:element name="accountDateId" nillable="true" type="xs:long" />
+      <xs:element name="accountDate" type="xs:long" />
+      <xs:element name="dateType" type="xs:string" />
+      <xs:element name="dateValue" type="xs:string" />
+      <xs:element name="description" type="xs:string" />
+      <xs:element name="note" type="xs:string" />
+      <xs:element name="addDate" type="xs:date" />
+      <xs:element name="addUserId" type="xs:int" />
+      <xs:element name="modifiedDate" nillable="true" type="xs:date" />
+      <xs:element name="modifiedUserId" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="accountDates">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="accountDateList" type="mstns:accountDate" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAccountDuplicatesCustomParameter">
+    <xs:sequence>
+      <xs:element name="parameterName" type="xs:string" />
+      <xs:element name="parameterValue" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAccountDuplicatesCustomParameters">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="getAccountDuplicatesCustomParameterList" type="mstns:getAccountDuplicatesCustomParameter" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="accountDuplicateCustomFieldNameValuePair">
+    <xs:sequence>
+      <xs:element name="fieldName" type="xs:string" />
+      <xs:element name="fieldValue" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="accountDuplicateCustom">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="accountDuplicateCustomFieldNameValuePairList" type="mstns:accountDuplicateCustomFieldNameValuePair" />
+      <xs:element name="count" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="accountDuplicatesCustom">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="accountDuplicateCustomList" type="mstns:accountDuplicateCustom" />
+      <xs:element name="count" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

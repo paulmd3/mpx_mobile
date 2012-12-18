@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://mpowersystems.com/OrganizationData.xsd" xmlns="http://mpowersystems.com/OrganizationData.xsd" elementFormDefault="qualified" targetNamespace="http://mpowersystems.com/OrganizationData.xsd" id="OrganizationData" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="codeType">
+    <xs:sequence>
+      <xs:element name="dataTypeValue" type="xs:string" />
+      <xs:element name="codeTypeValue" type="xs:string" />
+      <xs:element name="description" type="xs:string" />
+      <xs:element name="active" type="xs:boolean" />
+      <xs:element name="note" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="codeTypes">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="codeTypeList" type="mstns:codeType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="code">
+    <xs:sequence>
+      <xs:element name="codeValue" type="xs:string" />
+      <xs:element name="description" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="codes">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="codeList" type="mstns:code" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="addressType">
+    <xs:sequence>
+      <xs:element name="addressTypeId" nillable="true" type="xs:long" />
+      <xs:element name="addressTypeValue" type="xs:string" />
+      <xs:element name="description" type="xs:string" />
+      <xs:element name="active" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="addressTypes">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="addressTypeList" type="mstns:addressType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="phoneType">
+    <xs:sequence>
+      <xs:element name="phoneTypeId" nillable="true" type="xs:long" />
+      <xs:element name="phoneTypeValue" type="xs:string" />
+      <xs:element name="description" type="xs:string" />
+      <xs:element name="active" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="phoneTypes">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="phoneTypeList" type="mstns:phoneType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="relationshipType">
+    <xs:sequence>
+      <xs:element name="relationshipTypeId" nillable="true" type="xs:long" />
+      <xs:element name="relationshipTypeValue" type="xs:string" />
+      <xs:element name="description" type="xs:string" />
+      <xs:element name="inverseType" type="xs:string" />
+      <xs:element name="active" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="relationshipTypes">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="relationshipTypeList" type="mstns:relationshipType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="salutationType">
+    <xs:sequence>
+      <xs:element name="salutationTypeId" nillable="true" type="xs:long" />
+      <xs:element name="salutationTypeValue" type="xs:string" />
+      <xs:element name="defaultSalutationType" type="xs:string" />
+      <xs:element name="description" type="xs:string" />
+      <xs:element name="active" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="salutationTypes">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="salutationTypeList" type="mstns:salutationType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="financeCode">
+    <xs:sequence>
+      <xs:element name="codeType" type="xs:string" />
+      <xs:element name="financeCodeValue" type="xs:string" />
+      <xs:element name="description" type="xs:string" />
+      <xs:element name="active" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="financeCodes">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="financeCodeList" type="mstns:financeCode" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="noteType">
+    <xs:sequence>
+      <xs:element name="noteTypeValue" type="xs:string" />
+      <xs:element name="description" type="xs:string" />
+      <xs:element name="active" type="xs:boolean" />
+      <xs:element default="false" name="secured" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="noteTypes">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="noteTypeList" type="mstns:noteType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="projectCode">
+    <xs:sequence>
+      <xs:element name="projectCodeId" nillable="true" type="xs:long" />
+      <xs:element name="projectCodeValue" type="xs:string" />
+      <xs:element name="description" type="xs:string" />
+      <xs:element name="netAssetType" type="mstns:enumProjectRestrictionType" />
+      <xs:element name="accountId" nillable="true" type="xs:long" />
+      <xs:element name="reportOutputPreference" type="mstns:enumProjectReportOutputPreference" />
+      <xs:element name="active" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="enumProjectRestrictionType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unrestricted" />
+      <xs:enumeration value="Temporarily Restricted" />
+      <xs:enumeration value="Permanently Restricted" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="enumProjectReportOutputPreference">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Email" />
+      <xs:enumeration value="Mail" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="projectCodes">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="projectCodeList" type="mstns:projectCode" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="projectCategory">
+    <xs:sequence>
+      <xs:element name="projectCategoryId" nillable="true" type="xs:long" />
+      <xs:element name="categoryCode" type="xs:string" />
+      <xs:element name="projectId" type="xs:long" />
+      <xs:element name="fund" type="xs:string" />
+      <xs:element name="glAccount" type="xs:string" />
+      <xs:element name="costCenter" type="xs:string" />
+      <xs:element name="defaultProjectCategory" type="xs:boolean" />
+      <xs:element name="active" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="projectCategories">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="projectCategoryList" type="mstns:projectCategory" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="organizationSetting">
+    <xs:sequence>
+      <xs:element name="settingId" type="xs:long" />
+      <xs:element name="settingName" type="xs:string" />
+      <xs:element name="settingValue" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="organizationSettings">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="organizationSettingList" type="mstns:organizationSetting" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="user">
+    <xs:sequence>
+      <xs:element name="userId" type="xs:int" />
+      <xs:element name="userName" type="xs:string" />
+      <xs:element name="fullName" type="xs:string" />
+      <xs:element name="description" type="xs:string" />
+      <xs:element name="active" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="users">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="userList" type="mstns:user" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="motivationCode">
+    <xs:sequence>
+      <xs:element name="motivationCodeId" nillable="true" type="xs:long" />
+      <xs:element name="motivationCodeValue" type="xs:string" />
+      <xs:element name="description" type="xs:string" />
+      <xs:element name="numberMailed" nillable="true" type="xs:long" />
+      <xs:element name="mailingDate" nillable="true" type="xs:date" />
+      <xs:element name="cost" nillable="true" type="xs:decimal" />
+      <xs:element name="defaultProjectcode" type="xs:string" />
+      <xs:element name="motivationCategory" type="xs:string" />
+      <xs:element name="motivationCampaign" type="xs:string" />
+      <xs:element name="motivationKit" type="xs:string" />
+      <xs:element name="costPer" nillable="true" type="xs:decimal" />
+      <xs:element name="userField1" type="xs:string" />
+      <xs:element name="userField2" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="motivationCodes">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="motivationCodeList" type="mstns:motivationCode" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="sourceCode">
+    <xs:sequence>
+      <xs:element name="sourceCodeValue" type="xs:string" />
+      <xs:element name="description" type="xs:string" />
+      <xs:element name="processingInstruction" type="xs:string" />
+      <xs:element name="note" type="xs:string" />
+      <xs:element name="active" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="sourceCodes">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="sourceCodeList" type="mstns:sourceCode" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="paymentType">
+    <xs:sequence>
+      <xs:element name="paymentTypeValue" type="xs:string" />
+      <xs:element name="description" type="xs:string" />
+      <xs:element name="active" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="paymentTypes">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="paymentTypeList" type="mstns:paymentType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="bank">
+    <xs:sequence>
+      <xs:element name="bankId" nillable="true" type="xs:long" />
+      <xs:element name="bankName" type="xs:string" />
+      <xs:element name="bankDescription" type="xs:string" />
+      <xs:element name="default" type="xs:boolean" />
+      <xs:element name="active" type="xs:boolean" />
+      <xs:element name="fund" type="xs:string" />
+      <xs:element name="glAccount" type="xs:string" />
+      <xs:element name="projectCode" type="xs:string" />
+      <xs:element name="category" type="xs:string" />
+      <xs:element name="costCenter" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="banks">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="bankList" type="mstns:bank" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="creditCardType">
+    <xs:sequence>
+      <xs:element name="creditCardTypeName" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="creditCardTypes">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="creditCardTypeList" type="mstns:creditCardType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="currencyType">
+    <xs:sequence>
+      <xs:element name="currencyCode" type="xs:string" />
+      <xs:element name="description" nillable="true" type="xs:string" />
+      <xs:element name="rate" type="xs:double" />
+      <xs:element name="symbol" nillable="true" type="xs:string" />
+      <xs:element name="homeCurrency" type="xs:boolean" />
+      <xs:element default="false" name="active" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="currencyTypes">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="currencyTypeList" type="mstns:currencyType" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

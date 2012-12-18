@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://mpowersystems.com/AnalysisMessages.xsd" xmlns:import="http://mpowersystems.com/AnalysisData.xsd" xmlns="http://mpowersystems.com/AnalysisMessages.xsd" elementFormDefault="qualified" targetNamespace="http://mpowersystems.com/AnalysisMessages.xsd" id="AnalysisMessages" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="AnalysisData.xsd" namespace="http://mpowersystems.com/AnalysisData.xsd" />
+  <xs:element name="getReportsRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="reportId" nillable="true" type="xs:long" />
+        <xs:element name="reportType" nillable="true" type="import:enumReportTypes" />
+        <xs:element name="title" nillable="true" type="xs:string" />
+        <xs:element name="description" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getReportsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="reports" type="import:reports" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updateReportRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="report" type="import:report" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updateReportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="result" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="insertReportRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="report" type="import:report" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="insertReportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="reportId" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="deleteReportRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="reportId" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="deleteReportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="result" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="exportReportRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="reportId" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="exportReportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="reportRunId" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getReportExportStatusRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="reportRunId" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getReportExportStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="reportRunId" type="xs:string" />
+        <xs:element name="status" type="import:enumReportExportStatus" />
+        <xs:element name="statusDescription" type="xs:string" />
+        <xs:element name="outputFile" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

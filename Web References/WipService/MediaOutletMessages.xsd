@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://mpowersystems.com/MediaOutletMessages.xsd" xmlns:import="http://mpowersystems.com/MediaOutletData.xsd" xmlns="http://mpowersystems.com/MediaOutletMessages.xsd" elementFormDefault="qualified" targetNamespace="http://mpowersystems.com/MediaOutletMessages.xsd" id="MediaOutletMessages" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="MediaOutletData.xsd" namespace="http://mpowersystems.com/MediaOutletData.xsd" />
+  <xs:element name="getMediaOutletsRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="mediaCodeId" nillable="true" type="xs:long" />
+        <xs:element name="mediaCode" type="xs:string" />
+        <xs:element name="mediumTypeId" nillable="true" type="xs:long" />
+        <xs:element name="mediumTypeName" type="xs:string" />
+        <xs:element name="mediumSubTypeId" nillable="true" type="xs:long" />
+        <xs:element name="mediumSubTypeName" type="xs:string" />
+        <xs:element name="city" type="xs:string" />
+        <xs:element name="state" type="xs:string" />
+        <xs:element name="country" type="xs:string" />
+        <xs:element name="frequency" type="xs:string" />
+        <xs:element name="tagLine" type="xs:string" />
+        <xs:element name="coverageAreaId" nillable="true" type="xs:long" />
+        <xs:element name="contractType" nillable="true" type="import:enumMediaOutletPlacementContractType" />
+        <xs:element name="programName" type="xs:string" />
+        <xs:element name="networkName" type="xs:string" />
+        <xs:element name="episodeNumber" nillable="true" type="xs:int" />
+        <xs:element name="episodeName" type="xs:string" />
+        <xs:element name="premium" type="xs:string" />
+        <xs:element name="airDate" nillable="true" type="xs:date" />
+        <xs:element default="false" name="includeInactive" type="xs:boolean" />
+        <xs:element default="true" name="includeTranslators" type="xs:boolean" />
+        <xs:element name="zipCode" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getMediaOutletsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="mediaOutlets" type="import:mediaOutlets" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getMediaOutletPlacementsRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="placementId" nillable="true" type="xs:long" />
+        <xs:element name="mediaId" nillable="true" type="xs:long" />
+        <xs:element default="false" name="includeInactive" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getMediaOutletPlacementsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="mediaOutletPlacements" type="import:mediaOutletPlacements" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getMediaProgramsRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="programId" nillable="true" type="xs:long" />
+        <xs:element name="mediaId" nillable="true" type="xs:long" />
+        <xs:element default="false" name="includeInactive" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getMediaProgramsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="mediaPrograms" type="import:mediaPrograms" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="searchMediaOutletsRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="placementSearchDate" nillable="true" type="xs:date" />
+        <xs:element name="zipCode" type="xs:string" />
+        <xs:element name="mediaType" type="xs:string" />
+        <xs:element name="frequency" type="xs:string" />
+        <xs:element name="mediaCode" type="xs:string" />
+        <xs:element name="country" type="xs:string" />
+        <xs:element name="airDate" nillable="true" type="xs:date" />
+        <xs:element name="state" type="xs:string" />
+        <xs:element name="city" type="xs:string" />
+        <xs:element name="tagLine" type="xs:string" />
+        <xs:element name="programName" type="xs:string" />
+        <xs:element name="episodeName" type="xs:string" />
+        <xs:element name="episodeNumber" type="xs:string" />
+        <xs:element name="premiumCode" type="xs:string" />
+        <xs:element name="premiumDescription" type="xs:string" />
+        <xs:element name="coverageArea" type="xs:string" />
+        <xs:element default="false" name="includeInactive" type="xs:boolean" />
+        <xs:element name="recordCount" nillable="true" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="searchMediaOutletsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="searchMediaOutletResults" type="import:mediaOutletSearchResults" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

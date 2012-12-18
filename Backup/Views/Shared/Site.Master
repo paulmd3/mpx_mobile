@@ -1,0 +1,114 @@
+<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<!-- HTML5 DocType --> 
+<!DOCTYPE html> 
+<html manifest="Home/Manifest">
+<head runat="server">
+    <meta charset="UTF-8">
+    <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
+    <link rel="apple-touch-icon-precomposed" href="/Content/iPhone/v2.orange.png" />
+    <link rel="apple-touch-startup-image" href="/Content/iPhone/v2.orange.png">
+    
+    <script type="text/javascript" src="<%= Url.Content("~/Scripts/jquery-1.3.2.min.js") %>"></script>
+    <script type="text/javascript" src="<%= Url.Content("~/Scripts/jquery.md5.js") %>"></script>
+    
+    <script type="text/javascript" charset="utf-8">
+        if (navigator.userAgent.indexOf('iPhone') != -1) {
+            addEventListener("load", function() {
+                setTimeout(function() { window.scrollTo(0, 1); }, 0);
+            }, false);
+        }    
+    </script>
+
+    <%var agent = Request.UserAgent;%>
+    <%if (agent.ToString().Contains(System.Configuration.ConfigurationSettings.AppSettings["Device"]))
+      {
+          Html.RenderPartial("~/Views/Agent/iPhoneAgent.ascx");
+      } 
+      else 
+      {
+    %>
+    <link href="/Content/base.css" rel="stylesheet" type="text/css" />
+    <link href="/Content/jquery.alerts.css" rel="stylesheet" type="text/css" />
+    <%}%>
+    
+    <script type="text/javascript" src="/Scripts/jquery.tmpl.min.js"></script>
+    <script type="text/javascript" src="/Scripts/mpx-localstorage.js"></script>
+    <script type="text/javascript" src="/Scripts/jquery.alerts.js" charset="utf-8"></script>
+  
+</head>
+<% //to address viewdata from jquery
+    var serializer = new System.Web.Script.Serialization.JavaScriptSerializer(); 
+%>
+<body id="<%= ViewContext.Controller.ValueProvider["controller"].RawValue + "-" + ViewContext.Controller.ValueProvider["action"].RawValue %>">
+
+<%var agent = Request.UserAgent;%>
+<div class="toolbar">
+    <h1 id="pageTitle">
+        <%
+            if (agent.ToString().Contains(System.Configuration.ConfigurationSettings.AppSettings["Device"]))
+            {
+        %>
+        <a class="forward" href="/Home/DefaultMenu" id="title1">
+            <%=System.Configuration.ConfigurationSettings.AppSettings["ApplicationName"].ToString()%></a>
+        <%  }
+            else
+            {
+        %>
+        <a class="forward" href="/Home/DefaultMenu"><span id="first">
+            <%=System.Configuration.ConfigurationSettings.AppSettings["ApplicationName"].ToString() %>
+        </span></a>
+        <%
+            }
+        %>
+    </h1>
+    <%
+        if (agent.ToString().Contains(System.Configuration.ConfigurationSettings.AppSettings["Device"]))
+        {
+    %>
+    <a id="backButton" class="backwards button">
+        <img alt="MPX" src="/Content/iPhone/icon_arrow_left.png" style="margin-top: 3px; margin-left: -3px;" />
+    </a>
+    <% 
+        var url = Request.Url.ToString();
+        if (!url.Contains("Account"))
+        { 
+    %>
+    <!--href="javascript: history.go(-1);"-->
+    <a id="clear" class="clear button">
+        <img alt="MPX" src="/Content/iPhone/icon_refresh.png" style="margin-top: 3px; margin-left: -3px;" />
+    </a>
+    <% 
+            }
+        }
+    %>
+</div>
+
+
+    <% // we'll put everyting inside the page container for storage/recall %>
+    <%if (agent.ToString().Contains(System.Configuration.ConfigurationSettings.AppSettings["Device"])) {%>
+        <% Html.RenderPartial("LogOnUserControl"); %>
+    <%} %>
+    
+    <%
+        // if it's not an iphone, etc, and if it's authenticated
+        if (!agent.ToString().Contains(System.Configuration.ConfigurationSettings.AppSettings["Device"])
+            && Request.IsAuthenticated) 
+        { 
+    %>
+
+    <% Html.RenderPartial("MenuWewH"); %>
+    <% } %>
+<div class="page" id="page">    
+    <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+</div>
+
+<div id="logo">
+    <img alt="MPX" src="/Content/iPhone/orangeleap_lg.gif" />
+</div>
+
+<div id="loading" style="display: none;">
+    Loading...
+</div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="MPXMobile.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="MPXMobile_WipReference_MpxWebServicesPort" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://184.106.251.111:1674/MpxWebServices.asmx</Value>
+    </Setting>
+    <Setting Name="MPXMobile_WipService_MpxWebServicesPort" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://184.106.251.111:1674/MpxWebServices.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

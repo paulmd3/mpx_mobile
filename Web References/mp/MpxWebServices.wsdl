@@ -1,0 +1,3667 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:import2="http://mpowersystems.com/HeaderData.xsd" xmlns:import9="http://mpowersystems.com/InventoryData.xsd" xmlns:import14="http://mpowersystems.com/ProjectMessages.xsd" xmlns:import12="http://mpowersystems.com/MediaOutletMessages.xsd" xmlns:import4="http://mpowersystems.com/KTABMessages.xsd" xmlns:import6="http://mpowersystems.com/OrganizationMessages.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:import1="http://mpowersystems.com/AccountData.xsd" xmlns:import15="http://mpowersystems.com/AnalysisData.xsd" xmlns:import3="http://mpowersystems.com/KTABData.xsd" xmlns:import0="http://mpowersystems.com/AccountMessages.xsd" xmlns:import16="http://mpowersystems.com/AnalysisMessages.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:import8="http://mpowersystems.com/TransactionMessages.xsd" xmlns:tns="mpowersystems.com/MpxWebServices" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:import17="http://mpowersystems.com/AdminMessages.xsd" xmlns:import5="http://mpowersystems.com/OrganizationData.xsd" xmlns:import7="http://mpowersystems.com/TransactionData.xsd" xmlns:import13="http://mpowersystems.com/ProjectData.xsd" xmlns:import10="http://mpowersystems.com/InventoryMessages.xsd" xmlns:import11="http://mpowersystems.com/MediaOutletData.xsd" name="MpxWebServices" targetNamespace="mpowersystems.com/MpxWebServices" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MpxWebServices</wsdl:documentation>
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="AccountMessages.xsd" namespace="http://mpowersystems.com/AccountMessages.xsd" />
+      <xsd:import schemaLocation="AccountData.xsd" namespace="http://mpowersystems.com/AccountData.xsd" />
+      <xsd:import schemaLocation="HeaderData.xsd" namespace="http://mpowersystems.com/HeaderData.xsd" />
+      <xsd:import schemaLocation="KTABData.xsd" namespace="http://mpowersystems.com/KTABData.xsd" />
+      <xsd:import schemaLocation="KTABMessages.xsd" namespace="http://mpowersystems.com/KTABMessages.xsd" />
+      <xsd:import schemaLocation="OrganizationData.xsd" namespace="http://mpowersystems.com/OrganizationData.xsd" />
+      <xsd:import schemaLocation="OrganizationMessages.xsd" namespace="http://mpowersystems.com/OrganizationMessages.xsd" />
+      <xsd:import schemaLocation="TransactionData.xsd" namespace="http://mpowersystems.com/TransactionData.xsd" />
+      <xsd:import schemaLocation="TransactionMessages.xsd" namespace="http://mpowersystems.com/TransactionMessages.xsd" />
+      <xsd:import schemaLocation="InventoryData.xsd" namespace="http://mpowersystems.com/InventoryData.xsd" />
+      <xsd:import schemaLocation="InventoryMessages.xsd" namespace="http://mpowersystems.com/InventoryMessages.xsd" />
+      <xsd:import schemaLocation="MediaOutletData.xsd" namespace="http://mpowersystems.com/MediaOutletData.xsd" />
+      <xsd:import schemaLocation="MediaOutletMessages.xsd" namespace="http://mpowersystems.com/MediaOutletMessages.xsd" />
+      <xsd:import schemaLocation="ProjectData.xsd" namespace="http://mpowersystems.com/ProjectData.xsd" />
+      <xsd:import schemaLocation="ProjectMessages.xsd" namespace="http://mpowersystems.com/ProjectMessages.xsd" />
+      <xsd:import schemaLocation="AnalysisData.xsd" namespace="http://mpowersystems.com/AnalysisData.xsd" />
+      <xsd:import schemaLocation="AnalysisMessages.xsd" namespace="http://mpowersystems.com/AnalysisMessages.xsd" />
+      <xsd:import schemaLocation="AdminMessages.xsd" namespace="http://mpowersystems.com/AdminMessages.xsd" />
+    </xsd:schema>
+  </types>
+  <message name="getAccountIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import0:getAccountRequest" />
+  </message>
+  <message name="getAccountOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import0:getAccountResponse" />
+  </message>
+  <message name="getAccountInHeader">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="getAccountSalutationsIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import0:getAccountSalutationsRequest" />
+  </message>
+  <message name="getAccountSalutationsOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import0:getAccountSalutationsResponse" />
+  </message>
+  <message name="getAccountSalutationsInHeader">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="getAccountEmailAddressesIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import0:getAccountEmailAddressesRequest" />
+  </message>
+  <message name="getAccountEmailAddressesOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import0:getAccountEmailAddressesResponse" />
+  </message>
+  <message name="getAccountEmailAddressesInHeader">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="getAccountPhoneNumbersIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import0:getAccountPhoneNumbersRequest" />
+  </message>
+  <message name="getAccountPhoneNumbersOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import0:getAccountPhoneNumbersResponse" />
+  </message>
+  <message name="getAccountPhoneNumbersInHeader">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="getAccountAddressesIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import0:getAccountAddressesRequest" />
+  </message>
+  <message name="getAccountAddressesOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import0:getAccountAddressesResponse" />
+  </message>
+  <message name="getAccountAddressesInHeader">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="getAccountNotesIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import0:getAccountNotesRequest" />
+  </message>
+  <message name="getAccountNotesOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import0:getAccountNotesResponse" />
+  </message>
+  <message name="getAccountNotesInHeader">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="getAccountCodesIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import0:getAccountCodesRequest" />
+  </message>
+  <message name="getAccountCodesOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import0:getAccountCodesResponse" />
+  </message>
+  <message name="getAccountCodesInHeader">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="getAccountFinancialsIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import0:getAccountFinancialsRequest" />
+  </message>
+  <message name="getAccountFinancialsOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import0:getAccountFinancialsResponse" />
+  </message>
+  <message name="getAccountFinancialsInHeader">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="getAccountRelationshipsIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import0:getAccountRelationshipsRequest" />
+  </message>
+  <message name="getAccountRelationshipsOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import0:getAccountRelationshipsResponse" />
+  </message>
+  <message name="getAccountRelationshipsInHeader">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="getAccountPledgesIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import0:getAccountPledgesRequest" />
+  </message>
+  <message name="getAccountPledgesOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import0:getAccountPledgesResponse" />
+  </message>
+  <message name="getAccountPledgesInHeader">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="getAccountDatesIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import0:getAccountDatesRequest" />
+  </message>
+  <message name="getAccountDatesOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import0:getAccountDatesResponse" />
+  </message>
+  <message name="getAccountDatesInHeader">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="insertAccountIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import0:insertAccountRequest" />
+  </message>
+  <message name="insertAccountOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import0:insertAccountResponse" />
+  </message>
+  <message name="insertAccountInHeader">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="updateAccountIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import0:updateAccountRequest" />
+  </message>
+  <message name="updateAccountOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import0:updateAccountResponse" />
+  </message>
+  <message name="updateAccountInHeader">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="getCodeTypesIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import6:getCodeTypesRequest" />
+  </message>
+  <message name="getCodeTypesOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import6:getCodeTypesResponse" />
+  </message>
+  <message name="getCodeTypesInHeader">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="getAddressTypesIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import6:getAddressTypesRequest" />
+  </message>
+  <message name="getAddressTypesOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import6:getAddressTypesResponse" />
+  </message>
+  <message name="getAddressTypesInHeader">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="getPhoneTypesIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import6:getPhoneTypesRequest" />
+  </message>
+  <message name="getPhoneTypesOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import6:getPhoneTypesResponse" />
+  </message>
+  <message name="getPhoneTypesInHeader">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="getRelationshipTypesIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import6:getRelationshipTypesRequest" />
+  </message>
+  <message name="getRelationshipTypesOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import6:getRelationshipTypesResponse" />
+  </message>
+  <message name="getRelationshipTypesInHeader">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="getSalutationTypesIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import6:getSalutationTypesRequest" />
+  </message>
+  <message name="getSalutationTypesOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import6:getSalutationTypesResponse" />
+  </message>
+  <message name="getSalutationTypesInHeader">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="getFinanceCodesIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import6:getFinanceCodesRequest" />
+  </message>
+  <message name="getFinanceCodesOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import6:getFinanceCodesResponse" />
+  </message>
+  <message name="getFinanceCodesInHeader">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="getNoteTypesIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import6:getNoteTypesRequest" />
+  </message>
+  <message name="getNoteTypesOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import6:getNoteTypesResponse" />
+  </message>
+  <message name="getNoteTypesInHeader">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="getProjectCategoriesIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import6:getProjectCategoriesRequest" />
+  </message>
+  <message name="getProjectCategoriesOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import6:getProjectCategoriesResponse" />
+  </message>
+  <message name="getProjectCategoriesInHeader">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="getOrganizationSettingsIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import6:getOrganizationSettingsRequest" />
+  </message>
+  <message name="getOrganizationSettingsOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import6:getOrganizationSettingsResponse" />
+  </message>
+  <message name="getOrganizationSettingsInHeader">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="getGiftSummariesIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import8:getGiftSummariesRequest" />
+  </message>
+  <message name="getGiftSummariesOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import8:getGiftSummariesResponse" />
+  </message>
+  <message name="getGiftSummariesInHeader">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="getGiftAnnualSummariesIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import8:getGiftAnnualSummariesRequest" />
+  </message>
+  <message name="getGiftAnnualSummariesOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import8:getGiftAnnualSummariesResponse" />
+  </message>
+  <message name="getGiftAnnualSummariesInHeader">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="getOrderSummariesIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import8:getOrderSummariesRequest" />
+  </message>
+  <message name="getOrderSummariesOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import8:getOrderSummariesResponse" />
+  </message>
+  <message name="getOrderSummariesInHeader">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="getOrderAnnualSummariesIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import8:getOrderAnnualSummariesRequest" />
+  </message>
+  <message name="getOrderAnnualSummariesOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import8:getOrderAnnualSummariesResponse" />
+  </message>
+  <message name="getOrderAnnualSummariesInHeader">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="getProjectCodesIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import6:getProjectCodesRequest" />
+  </message>
+  <message name="getProjectCodesOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import6:getProjectCodesResponse" />
+  </message>
+  <message name="getProjectCodesInHeader">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="getMotivationCodesIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import6:getMotivationCodesRequest" />
+  </message>
+  <message name="getMotivationCodesOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import6:getMotivationCodesResponse" />
+  </message>
+  <message name="getMotivationCodesInHeader">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="insertAccountCodeIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import0:insertAccountCodeRequest" />
+  </message>
+  <message name="insertAccountCodeOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import0:insertAccountCodeResponse" />
+  </message>
+  <message name="insertAccountCodeInHeader">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="updateAccountCodeIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import0:updateAccountCodeRequest" />
+  </message>
+  <message name="updateAccountCodeOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import0:updateAccountCodeResponse" />
+  </message>
+  <message name="updateAccountCodeInHeader">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="insertAccountAddressIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import0:insertAccountAddressRequest" />
+  </message>
+  <message name="insertAccountAddressOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import0:insertAccountAddressResponse" />
+  </message>
+  <message name="insertAccountAddressInHeader">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="updateAccountAddressIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import0:updateAccountAddressRequest" />
+  </message>
+  <message name="updateAccountAddressOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import0:updateAccountAddressResponse" />
+  </message>
+  <message name="updateAccountAddressInHeader">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="getUsersIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import6:getUsersRequest" />
+  </message>
+  <message name="getUsersOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import6:getUsersResponse" />
+  </message>
+  <message name="getUsersInHeader">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="getAccountsIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import0:getAccountsRequest" />
+  </message>
+  <message name="getAccountsOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import0:getAccountsResponse" />
+  </message>
+  <message name="getAccountsInHeader">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="getProductsIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import10:getProductsRequest" />
+  </message>
+  <message name="getProductsOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import10:getProductsResponse" />
+  </message>
+  <message name="getProductsInHeader">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="getMediaOutletsIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import12:getMediaOutletsRequest" />
+  </message>
+  <message name="getMediaOutletsOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import12:getMediaOutletsResponse" />
+  </message>
+  <message name="getMediaOutletsInHeader">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="getSourceCodesIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import6:getSourceCodesRequest" />
+  </message>
+  <message name="getSourceCodesOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import6:getSourceCodesResponse" />
+  </message>
+  <message name="getSourceCodesInHeader">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="getSegmentationsIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import14:getSegmentationsRequest" />
+  </message>
+  <message name="getSegmentationsOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import14:getSegmentationsResponse" />
+  </message>
+  <message name="getSegmentationsInHeader">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="getSegmentationGroupsIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import14:getSegmentationGroupsRequest" />
+  </message>
+  <message name="getSegmentationGroupsOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import14:getSegmentationGroupsResponse" />
+  </message>
+  <message name="getSegmentationGroupsInHeader">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="getReportsIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import16:getReportsRequest" />
+  </message>
+  <message name="getReportsOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import16:getReportsResponse" />
+  </message>
+  <message name="getReportsInHeader">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="updateReportIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import16:updateReportRequest" />
+  </message>
+  <message name="updateReportOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import16:updateReportResponse" />
+  </message>
+  <message name="updateReportInHeader">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="insertReportIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import16:insertReportRequest" />
+  </message>
+  <message name="insertReportOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import16:insertReportResponse" />
+  </message>
+  <message name="insertReportInHeader">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="deleteReportIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import16:deleteReportRequest" />
+  </message>
+  <message name="deleteReportOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import16:deleteReportResponse" />
+  </message>
+  <message name="deleteReportInHeader">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="exportReportIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import16:exportReportRequest" />
+  </message>
+  <message name="exportReportOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import16:exportReportResponse" />
+  </message>
+  <message name="exportReportInHeader">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="getReportExportStatusIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import16:getReportExportStatusRequest" />
+  </message>
+  <message name="getReportExportStatusOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import16:getReportExportStatusResponse" />
+  </message>
+  <message name="getReportExportStatusInHeader">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="getServerStatusIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import17:getServerStatusRequest" />
+  </message>
+  <message name="getServerStatusOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import17:getServerStatusResponse" />
+  </message>
+  <message name="getServerStatusInHeader">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="invalidateCacheIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import17:invalidateCacheRequest" />
+  </message>
+  <message name="invalidateCacheOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import17:invalidateCacheResponse" />
+  </message>
+  <message name="invalidateCacheInHeader">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="getAccountDuplicatesCustomIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import0:getAccountDuplicatesCustomRequest" />
+  </message>
+  <message name="getAccountDuplicatesCustomOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import0:getAccountDuplicatesCustomResponse" />
+  </message>
+  <message name="getAccountDuplicatesCustomInHeader">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="insertTIHoldingTankIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import4:insertTIHoldingTankRequest" />
+  </message>
+  <message name="insertTIHoldingTankOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import4:insertTIHoldingTankResponse" />
+  </message>
+  <message name="insertTIHoldingTankInHeader">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="getSegmentationGroupResultsIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import14:getSegmentationGroupResultsRequest" />
+  </message>
+  <message name="getSegmentationGroupResultsOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import14:getSegmentationGroupResultsResponse" />
+  </message>
+  <message name="getSegmentationGroupResultsInHeader">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="insertSourceCodeIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Inserts a new source code</wsdl:documentation>
+    <part name="messagePart" element="import6:insertSourceCodeRequest" />
+  </message>
+  <message name="insertSourceCodeOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import6:insertSourceCodeResponse" />
+  </message>
+  <message name="insertSourceCodeInHeader1">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="updateSourceCodeIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import6:updateSourceCodeRequest" />
+  </message>
+  <message name="updateSourceCodeOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import6:updateSourceCodeResponse" />
+  </message>
+  <message name="updateSourceCodeInHeader1">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="insertAddressTypeIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import6:insertAddressTypeRequest" />
+  </message>
+  <message name="insertAddressTypeOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import6:insertAddressTypeResponse" />
+  </message>
+  <message name="insertAddressTypeInHeader1">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="updateAddressTypeIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import6:updateAddressTypeRequest" />
+  </message>
+  <message name="updateAddressTypeOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import6:updateAddressTypeResponse" />
+  </message>
+  <message name="updateAddressTypeInHeader1">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="insertAccountNoteIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import0:insertAccountNoteRequest" />
+  </message>
+  <message name="insertAccountNoteOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import0:insertAccountNoteResponse" />
+  </message>
+  <message name="insertAccountNoteInHeader1">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="updateAccountNoteIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import0:updateAccountNoteRequest" />
+  </message>
+  <message name="updateAccountNoteOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import0:updateAccountNoteResponse" />
+  </message>
+  <message name="updateAccountNoteInHeader1">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="insertNoteTypeIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import6:insertNoteTypeRequest" />
+  </message>
+  <message name="insertNoteTypeOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import6:insertNoteTypeResponse" />
+  </message>
+  <message name="insertNoteTypeInHeader1">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="updateNoteTypeIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import6:updateNoteTypeRequest" />
+  </message>
+  <message name="updateNoteTypeOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import6:updateNoteTypeResponse" />
+  </message>
+  <message name="updateNoteTypeInHeader1">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="deleteAccountNoteIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import0:deleteAccountNoteRequest" />
+  </message>
+  <message name="deleteAccountNoteOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import0:deleteAccountNoteResponse" />
+  </message>
+  <message name="deleteAccountNoteInHeader1">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="deleteAccountCodeIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import0:deleteAccountCodeRequest" />
+  </message>
+  <message name="deleteAccountCodeOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import0:deleteAccountCodeResponse" />
+  </message>
+  <message name="deleteAccountCodeInHeader1">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="updateCodeTypeIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import6:updateCodeTypeRequest" />
+  </message>
+  <message name="updateCodeTypeOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import6:updateCodeTypeResponse" />
+  </message>
+  <message name="updateCodeTypeInHeader1">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="insertCodeTypeIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import6:insertCodeTypeRequest" />
+  </message>
+  <message name="insertCodeTypeOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import6:insertCodeTypeResponse" />
+  </message>
+  <message name="insertCodeTypeInHeader1">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="deleteCodeTypeIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import6:deleteCodeTypeRequest" />
+  </message>
+  <message name="deleteCodeTypeOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import6:deleteCodeTypeResponse" />
+  </message>
+  <message name="deleteCodeTypeInHeader1">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="getCodesIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import6:getCodesRequest" />
+  </message>
+  <message name="getCodesOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import6:getCodesResponse" />
+  </message>
+  <message name="getCodesInHeader1">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="getTransactionsIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import8:getTransactionsRequest" />
+  </message>
+  <message name="getTransactionsOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import8:getTransactionsResponse" />
+  </message>
+  <message name="getTransactionsInHeader1">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="getSubscriptionsIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import8:getSubscriptionsRequest" />
+  </message>
+  <message name="getSubscriptionsOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import8:getSubscriptionsResponse" />
+  </message>
+  <message name="getSubscriptionsInHeader1">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="getPaymentTypesIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import6:getPaymentTypesRequest" />
+  </message>
+  <message name="getPaymentTypesOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import6:getPaymentTypesResponse" />
+  </message>
+  <message name="getPaymentTypesInHeader1">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="updatePaymentTypeIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import6:updatePaymentTypeRequest" />
+  </message>
+  <message name="updatePaymentTypeOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import6:updatePaymentTypeResponse" />
+  </message>
+  <message name="updatePaymentTypeInHeader1">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="insertPaymentTypeIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import6:insertPaymentTypeRequest" />
+  </message>
+  <message name="insertPaymentTypeOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import6:insertPaymentTypeResponse" />
+  </message>
+  <message name="insertPaymentTypeInHeader1">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="getBatchesIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import8:getBatchesRequest" />
+  </message>
+  <message name="getBatchesOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import8:getBatchesResponse" />
+  </message>
+  <message name="getBatchesInHeader1">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="insertBatchIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import8:insertBatchRequest" />
+  </message>
+  <message name="insertBatchOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import8:insertBatchResponse" />
+  </message>
+  <message name="insertBatchInHeader1">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="updateBatchIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import8:updateBatchRequest" />
+  </message>
+  <message name="updateBatchOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import8:updateBatchResponse" />
+  </message>
+  <message name="updateBatchInHeader1">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="deleteBatchIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import8:deleteBatchRequest" />
+  </message>
+  <message name="deleteBatchOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import8:deleteBatchResponse" />
+  </message>
+  <message name="deleteBatchInHeader1">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="closeBatchIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import8:closeBatchRequest" />
+  </message>
+  <message name="closeBatchOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import8:closeBatchResponse" />
+  </message>
+  <message name="closeBatchInHeader1">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="postBatchIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import8:postBatchRequest" />
+  </message>
+  <message name="postBatchOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import8:postBatchResponse" />
+  </message>
+  <message name="postBatchInHeader1">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="openBatchIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import8:openBatchRequest" />
+  </message>
+  <message name="openBatchOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import8:openBatchResponse" />
+  </message>
+  <message name="openBatchInHeader1">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="getBanksIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import6:getBanksRequest" />
+  </message>
+  <message name="getBanksOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import6:getBanksResponse" />
+  </message>
+  <message name="getBanksInHeader1">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="updateBankIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import6:updateBankRequest" />
+  </message>
+  <message name="updateBankOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import6:updateBankResponse" />
+  </message>
+  <message name="updateBankInHeader1">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="insertBankIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import6:insertBankRequest" />
+  </message>
+  <message name="insertBankOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import6:insertBankResponse" />
+  </message>
+  <message name="insertBankInHeader1">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="getARTransactionsIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import8:getARTransactionsRequest" />
+  </message>
+  <message name="getARTransactionsOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import8:getARTransactionsResponse" />
+  </message>
+  <message name="getARTransactionsInHeader1">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="getARMonthlySummariesIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import8:getARMonthlySummariesRequest" />
+  </message>
+  <message name="getARMonthlySummariesOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import8:getARMonthlySummariesResponse" />
+  </message>
+  <message name="getARMonthlySummariesInHeader1">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="getCreditCardTypesIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import6:getCreditCardTypesRequest" />
+  </message>
+  <message name="getCreditCardTypesOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import6:getCreditCardTypesResponse" />
+  </message>
+  <message name="getCreditCardTypesInHeader1">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="getCurrencyTypesIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import6:getCurrencyTypesRequest" />
+  </message>
+  <message name="getCurrencyTypesOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import6:getCurrencyTypesResponse" />
+  </message>
+  <message name="getCurrencyTypesInHeader1">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="insertCurrencyTypeIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import6:insertCurrencyTypeRequest" />
+  </message>
+  <message name="insertCurrencyTypeOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import6:insertCurrencyTypeResponse" />
+  </message>
+  <message name="insertCurrencyTypeInHeader1">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="updateCurrencyTypeIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import6:updateCurrencyTypeRequest" />
+  </message>
+  <message name="updateCurrencyTypeOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import6:updateCurrencyTypeResponse" />
+  </message>
+  <message name="updateCurrencyTypeInHeader1">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="deleteCurrencyTypeIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import6:deleteCurrencyTypeRequest" />
+  </message>
+  <message name="deleteCurrencyTypeOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import6:deleteCurrencyTypeResponse" />
+  </message>
+  <message name="deleteCurrencyTypeInHeader1">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="getMediaOutletPlacementsIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import12:getMediaOutletPlacementsRequest" />
+  </message>
+  <message name="getMediaOutletPlacementsOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import12:getMediaOutletPlacementsResponse" />
+  </message>
+  <message name="getMediaOutletPlacementsInHeader1">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="getMediaProgramsIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import12:getMediaProgramsRequest" />
+  </message>
+  <message name="getMediaProgramsOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import12:getMediaProgramsResponse" />
+  </message>
+  <message name="getMediaProgramsInHeader1">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="getProductLocationsIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import10:getProductLocationsRequest" />
+  </message>
+  <message name="getProductLocationsOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import10:getProductLocationsResponse" />
+  </message>
+  <message name="getProductLocationsInHeader1">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="updateAccountEmailAddressIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import0:updateAccountEmailAddressRequest" />
+  </message>
+  <message name="updateAccountEmailAddressOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import0:updateAccountEmailAddressResponse" />
+  </message>
+  <message name="updateAccountEmailAddressInHeader1">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="insertAccountEmailAddressIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import0:insertAccountEmailAddressRequest" />
+  </message>
+  <message name="insertAccountEmailAddressOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import0:insertAccountEmailAddressResponse" />
+  </message>
+  <message name="insertAccountEmailAddressInHeader1">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="deleteAccountEmailAddressIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import0:deleteAccountEmailAddressRequest" />
+  </message>
+  <message name="deleteAccountEmailAddressOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import0:deleteAccountEmailAddressResponse" />
+  </message>
+  <message name="deleteAccountEmailAddressInHeader1">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="insertAccountSalutationIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import0:insertAccountSalutationRequest" />
+  </message>
+  <message name="insertAccountSalutationOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import0:insertAccountSalutationResponse" />
+  </message>
+  <message name="insertAccountSalutationInHeader1">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="updateAccountSalutationIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import0:updateAccountSalutationRequest" />
+  </message>
+  <message name="updateAccountSalutationOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import0:updateAccountSalutationResponse" />
+  </message>
+  <message name="updateAccountSalutationInHeader1">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="deleteAccountSalutationIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import0:deleteAccountSalutationRequest" />
+  </message>
+  <message name="deleteAccountSalutationOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import0:deleteAccountSalutationResponse" />
+  </message>
+  <message name="deleteAccountSalutationInHeader1">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="insertAccountPhoneNumberIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import0:insertAccountPhoneNumberRequest" />
+  </message>
+  <message name="insertAccountPhoneNumberOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import0:insertAccountPhoneNumberResponse" />
+  </message>
+  <message name="insertAccountPhoneNumberInHeader1">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="updateAccountPhoneNumberIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import0:updateAccountPhoneNumberRequest" />
+  </message>
+  <message name="updateAccountPhoneNumberOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import0:updateAccountPhoneNumberResponse" />
+  </message>
+  <message name="updateAccountPhoneNumberInHeader1">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="deleteAccountPhoneNumberIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import0:deleteAccountPhoneNumberRequest" />
+  </message>
+  <message name="deleteAccountPhoneNumberOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import0:deleteAccountPhoneNumberResponse" />
+  </message>
+  <message name="deleteAccountPhoneNumberInHeader1">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <portType name="MpxWebServicesInterface">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MpxWebServices</wsdl:documentation>
+    <operation name="getAccount">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns an account when given the specific account number.  Note : The defaultEmailAddress, defaultPhoneNumber, and defaultSalutation fields are read only and, if they are changed, will not update the record in the database.</wsdl:documentation>
+      <input message="tns:getAccountIn" />
+      <output message="tns:getAccountOut" />
+    </operation>
+    <operation name="getAccountSalutations">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns an account's salutations.</wsdl:documentation>
+      <input message="tns:getAccountSalutationsIn" />
+      <output message="tns:getAccountSalutationsOut" />
+    </operation>
+    <operation name="getAccountEmailAddresses">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns an account's email addresses.</wsdl:documentation>
+      <input message="tns:getAccountEmailAddressesIn" />
+      <output message="tns:getAccountEmailAddressesOut" />
+    </operation>
+    <operation name="getAccountPhoneNumbers">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns an account's phone numbers.</wsdl:documentation>
+      <input message="tns:getAccountPhoneNumbersIn" />
+      <output message="tns:getAccountPhoneNumbersOut" />
+    </operation>
+    <operation name="getAccountAddresses">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Return an account's addresses.</wsdl:documentation>
+      <input message="tns:getAccountAddressesIn" />
+      <output message="tns:getAccountAddressesOut" />
+    </operation>
+    <operation name="getAccountNotes">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns an account's notes.</wsdl:documentation>
+      <input message="tns:getAccountNotesIn" />
+      <output message="tns:getAccountNotesOut" />
+    </operation>
+    <operation name="getAccountCodes">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns an account's codes.</wsdl:documentation>
+      <input message="tns:getAccountCodesIn" />
+      <output message="tns:getAccountCodesOut" />
+    </operation>
+    <operation name="getAccountFinancials">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns an account's miscellaneous financial information (capacity to give, propensity to give, etc.).</wsdl:documentation>
+      <input message="tns:getAccountFinancialsIn" />
+      <output message="tns:getAccountFinancialsOut" />
+    </operation>
+    <operation name="getAccountRelationships">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns accounts that are related to a particular account.</wsdl:documentation>
+      <input message="tns:getAccountRelationshipsIn" />
+      <output message="tns:getAccountRelationshipsOut" />
+    </operation>
+    <operation name="getAccountPledges">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns an account's pledge information.</wsdl:documentation>
+      <input message="tns:getAccountPledgesIn" />
+      <output message="tns:getAccountPledgesOut" />
+    </operation>
+    <operation name="getAccountDates">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns an account's date information.</wsdl:documentation>
+      <input message="tns:getAccountDatesIn" />
+      <output message="tns:getAccountDatesOut" />
+    </operation>
+    <operation name="insertAccount">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Inserts an account.  Note : The defaultEmailAddress, defaultPhoneNumber, and defaultSalutation fields are read only and, if they are changed, will not update the record in the database.</wsdl:documentation>
+      <input message="tns:insertAccountIn" />
+      <output message="tns:insertAccountOut" />
+    </operation>
+    <operation name="updateAccount">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Updates an account.  Note : The defaultEmailAddress, defaultPhoneNumber, and defaultSalutation fields are read only and, if they are changed, will not update the record in the database.</wsdl:documentation>
+      <input message="tns:updateAccountIn" />
+      <output message="tns:updateAccountOut" />
+    </operation>
+    <operation name="getCodeTypes">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns the code types in MPX.</wsdl:documentation>
+      <input message="tns:getCodeTypesIn" />
+      <output message="tns:getCodeTypesOut" />
+    </operation>
+    <operation name="getAddressTypes">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns the address types for account addresses.</wsdl:documentation>
+      <input message="tns:getAddressTypesIn" />
+      <output message="tns:getAddressTypesOut" />
+    </operation>
+    <operation name="getPhoneTypes">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns the phone types for account phone numbers.</wsdl:documentation>
+      <input message="tns:getPhoneTypesIn" />
+      <output message="tns:getPhoneTypesOut" />
+    </operation>
+    <operation name="getRelationshipTypes">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns relationship types for related accounts.</wsdl:documentation>
+      <input message="tns:getRelationshipTypesIn" />
+      <output message="tns:getRelationshipTypesOut" />
+    </operation>
+    <operation name="getSalutationTypes">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns the salutation types for accounts salutations.</wsdl:documentation>
+      <input message="tns:getSalutationTypesIn" />
+      <output message="tns:getSalutationTypesOut" />
+    </operation>
+    <operation name="getFinanceCodes">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns the finance codes.</wsdl:documentation>
+      <input message="tns:getFinanceCodesIn" />
+      <output message="tns:getFinanceCodesOut" />
+    </operation>
+    <operation name="getNoteTypes">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns the note types for account notes.</wsdl:documentation>
+      <input message="tns:getNoteTypesIn" />
+      <output message="tns:getNoteTypesOut" />
+    </operation>
+    <operation name="getProjectCategories">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns the categories for project codes.</wsdl:documentation>
+      <input message="tns:getProjectCategoriesIn" />
+      <output message="tns:getProjectCategoriesOut" />
+    </operation>
+    <operation name="getOrganizationSettings">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns the various organiztion settings.</wsdl:documentation>
+      <input message="tns:getOrganizationSettingsIn" />
+      <output message="tns:getOrganizationSettingsOut" />
+    </operation>
+    <operation name="getGiftSummaries">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns the overall gift summary records for an account.</wsdl:documentation>
+      <input message="tns:getGiftSummariesIn" />
+      <output message="tns:getGiftSummariesOut" />
+    </operation>
+    <operation name="getGiftAnnualSummaries">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns the annual gift summary records for an account.</wsdl:documentation>
+      <input message="tns:getGiftAnnualSummariesIn" />
+      <output message="tns:getGiftAnnualSummariesOut" />
+    </operation>
+    <operation name="getOrderSummaries">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns the overall order summary records for an account.</wsdl:documentation>
+      <input message="tns:getOrderSummariesIn" />
+      <output message="tns:getOrderSummariesOut" />
+    </operation>
+    <operation name="getOrderAnnualSummaries">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns the annual order summary records for an account.</wsdl:documentation>
+      <input message="tns:getOrderAnnualSummariesIn" />
+      <output message="tns:getOrderAnnualSummariesOut" />
+    </operation>
+    <operation name="getProjectCodes">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns project codes based on the selected criteria.</wsdl:documentation>
+      <input message="tns:getProjectCodesIn" />
+      <output message="tns:getProjectCodesOut" />
+    </operation>
+    <operation name="getMotivationCodes">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns motivation codes based on the selected criteria.</wsdl:documentation>
+      <input message="tns:getMotivationCodesIn" />
+      <output message="tns:getMotivationCodesOut" />
+    </operation>
+    <operation name="insertAccountCode">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Inserts a code onto an account.</wsdl:documentation>
+      <input message="tns:insertAccountCodeIn" />
+      <output message="tns:insertAccountCodeOut" />
+    </operation>
+    <operation name="updateAccountCode">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Updates a code on an account.</wsdl:documentation>
+      <input message="tns:updateAccountCodeIn" />
+      <output message="tns:updateAccountCodeOut" />
+    </operation>
+    <operation name="insertAccountAddress">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Inserts an alternate address onto an account.</wsdl:documentation>
+      <input message="tns:insertAccountAddressIn" />
+      <output message="tns:insertAccountAddressOut" />
+    </operation>
+    <operation name="updateAccountAddress">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Updates an alternate address on an account.</wsdl:documentation>
+      <input message="tns:updateAccountAddressIn" />
+      <output message="tns:updateAccountAddressOut" />
+    </operation>
+    <operation name="getUsers">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns the MPX users and their details.</wsdl:documentation>
+      <input message="tns:getUsersIn" />
+      <output message="tns:getUsersOut" />
+    </operation>
+    <operation name="getAccounts">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns accounts based on the selected criteria.  Note : The defaultEmailAddress, defaultPhoneNumber, and defaultSalutation fields are read only and, if they are changed, will not update the record in the database.</wsdl:documentation>
+      <input message="tns:getAccountsIn" />
+      <output message="tns:getAccountsOut" />
+    </operation>
+    <operation name="getProducts">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns products based on the selected criteria.</wsdl:documentation>
+      <input message="tns:getProductsIn" />
+      <output message="tns:getProductsOut" />
+    </operation>
+    <operation name="getMediaOutlets">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns media codes based on the selected criteria.</wsdl:documentation>
+      <input message="tns:getMediaOutletsIn" />
+      <output message="tns:getMediaOutletsOut" />
+    </operation>
+    <operation name="getSourceCodes">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns MPX source codes.</wsdl:documentation>
+      <input message="tns:getSourceCodesIn" />
+      <output message="tns:getSourceCodesOut" />
+    </operation>
+    <operation name="getSegmentations">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns segmentation jobs based on the selected criteria.</wsdl:documentation>
+      <input message="tns:getSegmentationsIn" />
+      <output message="tns:getSegmentationsOut" />
+    </operation>
+    <operation name="getSegmentationGroups">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns segmentation groups based on the selected criteria.</wsdl:documentation>
+      <input message="tns:getSegmentationGroupsIn" />
+      <output message="tns:getSegmentationGroupsOut" />
+    </operation>
+    <operation name="getReports">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns reports based ont he selected criteria.</wsdl:documentation>
+      <input message="tns:getReportsIn" />
+      <output message="tns:getReportsOut" />
+    </operation>
+    <operation name="updateReport">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Updates a report and it's details.</wsdl:documentation>
+      <input message="tns:updateReportIn" />
+      <output message="tns:updateReportOut" />
+    </operation>
+    <operation name="insertReport">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Inserts a report and it's details.</wsdl:documentation>
+      <input message="tns:insertReportIn" />
+      <output message="tns:insertReportOut" />
+    </operation>
+    <operation name="deleteReport">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Deletes the specified report.</wsdl:documentation>
+      <input message="tns:deleteReportIn" />
+      <output message="tns:deleteReportOut" />
+    </operation>
+    <operation name="exportReport">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Runs the selected report and exports it to a csv file.</wsdl:documentation>
+      <input message="tns:exportReportIn" />
+      <output message="tns:exportReportOut" />
+    </operation>
+    <operation name="getReportExportStatus">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns the status of a report export request.</wsdl:documentation>
+      <input message="tns:getReportExportStatusIn" />
+      <output message="tns:getReportExportStatusOut" />
+    </operation>
+    <operation name="getServerStatus">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns whether the WIP could connect to the MPX application server.</wsdl:documentation>
+      <input message="tns:getServerStatusIn" />
+      <output message="tns:getServerStatusOut" />
+    </operation>
+    <operation name="invalidateCache">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Forces the WIP to reload any configuration data.</wsdl:documentation>
+      <input message="tns:invalidateCacheIn" />
+      <output message="tns:invalidateCacheOut" />
+    </operation>
+    <operation name="getAccountDuplicatesCustom">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns potential duplicate accounts based on the CheckDuplicateAccountsCustom stored procedure.</wsdl:documentation>
+      <input message="tns:getAccountDuplicatesCustomIn" />
+      <output message="tns:getAccountDuplicatesCustomOut" />
+    </operation>
+    <operation name="insertTIHoldingTank">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Inserts data into the TI holding tank.</wsdl:documentation>
+      <input message="tns:insertTIHoldingTankIn" />
+      <output message="tns:insertTIHoldingTankOut" />
+    </operation>
+    <operation name="getSegmentationGroupResults">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retrieves the population, or a subset of the population, of a segmentation group.</wsdl:documentation>
+      <input message="tns:getSegmentationGroupResultsIn" />
+      <output message="tns:getSegmentationGroupResultsOut" />
+    </operation>
+    <operation name="insertSourceCode">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Inserts a source code into the MPX database</wsdl:documentation>
+      <input message="tns:insertSourceCodeIn" />
+      <output message="tns:insertSourceCodeOut" />
+    </operation>
+    <operation name="updateSourceCode">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Updates an existing source code.
+NOTE : The properties of a source code can be modified, but the actual code itself can not be changed.</wsdl:documentation>
+      <input message="tns:updateSourceCodeIn" />
+      <output message="tns:updateSourceCodeOut" />
+    </operation>
+    <operation name="insertAddressType">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Inserts an address type into the MPX database</wsdl:documentation>
+      <input message="tns:insertAddressTypeIn" />
+      <output message="tns:insertAddressTypeOut" />
+    </operation>
+    <operation name="updateAddressType">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Updates an existing address type</wsdl:documentation>
+      <input message="tns:updateAddressTypeIn" />
+      <output message="tns:updateAddressTypeOut" />
+    </operation>
+    <operation name="insertAccountNote">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Inserts a note onto an account</wsdl:documentation>
+      <input message="tns:insertAccountNoteIn" />
+      <output message="tns:insertAccountNoteOut" />
+    </operation>
+    <operation name="updateAccountNote">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Updates an existing note on an account</wsdl:documentation>
+      <input message="tns:updateAccountNoteIn" />
+      <output message="tns:updateAccountNoteOut" />
+    </operation>
+    <operation name="insertNoteType">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Inserts a new note type</wsdl:documentation>
+      <input message="tns:insertNoteTypeIn" />
+      <output message="tns:insertNoteTypeOut" />
+    </operation>
+    <operation name="updateNoteType">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Updates an existing note type</wsdl:documentation>
+      <input message="tns:updateNoteTypeIn" />
+      <output message="tns:updateNoteTypeOut" />
+    </operation>
+    <operation name="deleteAccountNote">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Deletes an existing note from an account.</wsdl:documentation>
+      <input message="tns:deleteAccountNoteIn" />
+      <output message="tns:deleteAccountNoteOut" />
+    </operation>
+    <operation name="deleteAccountCode">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Deletes an existing code from an account.</wsdl:documentation>
+      <input message="tns:deleteAccountCodeIn" />
+      <output message="tns:deleteAccountCodeOut" />
+    </operation>
+    <operation name="updateCodeType">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Updates an existing code type.  Note : The Code Type value can not be changed.</wsdl:documentation>
+      <input message="tns:updateCodeTypeIn" />
+      <output message="tns:updateCodeTypeOut" />
+    </operation>
+    <operation name="insertCodeType">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Inserts a code type.</wsdl:documentation>
+      <input message="tns:insertCodeTypeIn" />
+      <output message="tns:insertCodeTypeOut" />
+    </operation>
+    <operation name="deleteCodeType">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Call to delete a code type.  If the code type is in use on an account, it can not be deleted.</wsdl:documentation>
+      <input message="tns:deleteCodeTypeIn" />
+      <output message="tns:deleteCodeTypeOut" />
+    </operation>
+    <operation name="getCodes">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Generic call to retrieve the code values and descriptions for a particular code type</wsdl:documentation>
+      <input message="tns:getCodesIn" />
+      <output message="tns:getCodesOut" />
+    </operation>
+    <operation name="getTransactions">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retrieves transaction information</wsdl:documentation>
+      <input message="tns:getTransactionsIn" />
+      <output message="tns:getTransactionsOut" />
+    </operation>
+    <operation name="getSubscriptions">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retrieves subscription information</wsdl:documentation>
+      <input message="tns:getSubscriptionsIn" />
+      <output message="tns:getSubscriptionsOut" />
+    </operation>
+    <operation name="getPaymentTypes">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retrieves payment type information</wsdl:documentation>
+      <input message="tns:getPaymentTypesIn" />
+      <output message="tns:getPaymentTypesOut" />
+    </operation>
+    <operation name="updatePaymentType">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Update information for a payment type.  Note : The payment type value itself can not be modified.  Only the properties for the payment type can be changed.</wsdl:documentation>
+      <input message="tns:updatePaymentTypeIn" />
+      <output message="tns:updatePaymentTypeOut" />
+    </operation>
+    <operation name="insertPaymentType">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Inserts a payment type.</wsdl:documentation>
+      <input message="tns:insertPaymentTypeIn" />
+      <output message="tns:insertPaymentTypeOut" />
+    </operation>
+    <operation name="getBatches">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retrieves batches based on the selected criteria.</wsdl:documentation>
+      <input message="tns:getBatchesIn" />
+      <output message="tns:getBatchesOut" />
+    </operation>
+    <operation name="insertBatch">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Inserts an open batch.</wsdl:documentation>
+      <input message="tns:insertBatchIn" />
+      <output message="tns:insertBatchOut" />
+    </operation>
+    <operation name="updateBatch">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Updates a batch.  Note : This can not be used to change a batch's status to closed or posted.  CloseBatch or PostBatch must be called to perform those actions.</wsdl:documentation>
+      <input message="tns:updateBatchIn" />
+      <output message="tns:updateBatchOut" />
+    </operation>
+    <operation name="deleteBatch">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Delete's a batch and it's corresponding transactions.</wsdl:documentation>
+      <input message="tns:deleteBatchIn" />
+      <output message="tns:deleteBatchOut" />
+    </operation>
+    <operation name="closeBatch">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Closes a batch.  To close a batch, the control number and actual number, and the control amount and actual amount must be equal.</wsdl:documentation>
+      <input message="tns:closeBatchIn" />
+      <output message="tns:closeBatchOut" />
+    </operation>
+    <operation name="postBatch">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Posts a closed batch.</wsdl:documentation>
+      <input message="tns:postBatchIn" />
+      <output message="tns:postBatchOut" />
+    </operation>
+    <operation name="openBatch">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Opens a closed batch.</wsdl:documentation>
+      <input message="tns:openBatchIn" />
+      <output message="tns:openBatchOut" />
+    </operation>
+    <operation name="getBanks">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retrieves bank information based on the selected criteria.</wsdl:documentation>
+      <input message="tns:getBanksIn" />
+      <output message="tns:getBanksOut" />
+    </operation>
+    <operation name="updateBank">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Updates a bank record.</wsdl:documentation>
+      <input message="tns:updateBankIn" />
+      <output message="tns:updateBankOut" />
+    </operation>
+    <operation name="insertBank">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Inserts a bank record.</wsdl:documentation>
+      <input message="tns:insertBankIn" />
+      <output message="tns:insertBankOut" />
+    </operation>
+    <operation name="getARTransactions">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns AR transaction information including payments, adjustments and amounts due.</wsdl:documentation>
+      <input message="tns:getARTransactionsIn" />
+      <output message="tns:getARTransactionsOut" />
+    </operation>
+    <operation name="getARMonthlySummaries">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns the monthly AR summary records for accounts.</wsdl:documentation>
+      <input message="tns:getARMonthlySummariesIn" />
+      <output message="tns:getARMonthlySummariesOut" />
+    </operation>
+    <operation name="getCreditCardTypes">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns valid credit card types.</wsdl:documentation>
+      <input message="tns:getCreditCardTypesIn" />
+      <output message="tns:getCreditCardTypesOut" />
+    </operation>
+    <operation name="getCurrencyTypes">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retrieve valid currency types.</wsdl:documentation>
+      <input message="tns:getCurrencyTypesIn" />
+      <output message="tns:getCurrencyTypesOut" />
+    </operation>
+    <operation name="insertCurrencyType">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Insert the specified currency type.</wsdl:documentation>
+      <input message="tns:insertCurrencyTypeIn" />
+      <output message="tns:insertCurrencyTypeOut" />
+    </operation>
+    <operation name="updateCurrencyType">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Updates the select currency type.</wsdl:documentation>
+      <input message="tns:updateCurrencyTypeIn" />
+      <output message="tns:updateCurrencyTypeOut" />
+    </operation>
+    <operation name="deleteCurrencyType">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Deletes the specified currency type.</wsdl:documentation>
+      <input message="tns:deleteCurrencyTypeIn" />
+      <output message="tns:deleteCurrencyTypeOut" />
+    </operation>
+    <operation name="getMediaOutletPlacements">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns media placement information based on the selected criteria.</wsdl:documentation>
+      <input message="tns:getMediaOutletPlacementsIn" />
+      <output message="tns:getMediaOutletPlacementsOut" />
+    </operation>
+    <operation name="getMediaPrograms">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns media programs based on the selected criteria.</wsdl:documentation>
+      <input message="tns:getMediaProgramsIn" />
+      <output message="tns:getMediaProgramsOut" />
+    </operation>
+    <operation name="getProductLocations">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retrieves product location information including on hand, allocated and backordered quantity counts.  Either product ID or product location ID must be specified.</wsdl:documentation>
+      <input message="tns:getProductLocationsIn" />
+      <output message="tns:getProductLocationsOut" />
+    </operation>
+    <operation name="updateAccountEmailAddress">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Updates an email address record for an account.</wsdl:documentation>
+      <input message="tns:updateAccountEmailAddressIn" />
+      <output message="tns:updateAccountEmailAddressOut" />
+    </operation>
+    <operation name="insertAccountEmailAddress">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Inserts an email address record for an account.</wsdl:documentation>
+      <input message="tns:insertAccountEmailAddressIn" />
+      <output message="tns:insertAccountEmailAddressOut" />
+    </operation>
+    <operation name="deleteAccountEmailAddress">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Deletes an email address record from an account.</wsdl:documentation>
+      <input message="tns:deleteAccountEmailAddressIn" />
+      <output message="tns:deleteAccountEmailAddressOut" />
+    </operation>
+    <operation name="insertAccountSalutation">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Inserts a salutation record for an account.</wsdl:documentation>
+      <input message="tns:insertAccountSalutationIn" />
+      <output message="tns:insertAccountSalutationOut" />
+    </operation>
+    <operation name="updateAccountSalutation">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Updates a salutation record for an account</wsdl:documentation>
+      <input message="tns:updateAccountSalutationIn" />
+      <output message="tns:updateAccountSalutationOut" />
+    </operation>
+    <operation name="deleteAccountSalutation">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Deletes a salutation record from an account.</wsdl:documentation>
+      <input message="tns:deleteAccountSalutationIn" />
+      <output message="tns:deleteAccountSalutationOut" />
+    </operation>
+    <operation name="insertAccountPhoneNumber">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Inserts a phone number record for an account.</wsdl:documentation>
+      <input message="tns:insertAccountPhoneNumberIn" />
+      <output message="tns:insertAccountPhoneNumberOut" />
+    </operation>
+    <operation name="updateAccountPhoneNumber">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Updates a phone number record for an account</wsdl:documentation>
+      <input message="tns:updateAccountPhoneNumberIn" />
+      <output message="tns:updateAccountPhoneNumberOut" />
+    </operation>
+    <operation name="deleteAccountPhoneNumber">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Deletes a phone number record from an account.</wsdl:documentation>
+      <input message="tns:deleteAccountPhoneNumberIn" />
+      <output message="tns:deleteAccountPhoneNumberOut" />
+    </operation>
+  </portType>
+  <binding name="MpxWebServices" type="tns:MpxWebServicesInterface">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getAccount">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:getAccountIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getAccountInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getAccountSalutations">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:getAccountSalutationsIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getAccountSalutationsInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getAccountEmailAddresses">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:getAccountEmailAddressesIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getAccountEmailAddressesInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getAccountPhoneNumbers">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:getAccountPhoneNumbersIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getAccountPhoneNumbersInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getAccountAddresses">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:getAccountAddressesIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getAccountAddressesInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getAccountNotes">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:getAccountNotesIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getAccountNotesInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getAccountCodes">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:getAccountCodesIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getAccountCodesInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getAccountFinancials">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:getAccountFinancialsIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getAccountFinancialsInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getAccountRelationships">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:getAccountRelationshipsIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getAccountRelationshipsInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getAccountPledges">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:getAccountPledgesIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getAccountPledgesInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getAccountDates">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:getAccountDatesIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getAccountDatesInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertAccount">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:insertAccountIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:insertAccountInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="updateAccount">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:updateAccountIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:updateAccountInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getCodeTypes">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:getCodeTypesIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getCodeTypesInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getAddressTypes">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:getAddressTypesIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getAddressTypesInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getPhoneTypes">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:getPhoneTypesIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getPhoneTypesInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getRelationshipTypes">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:getRelationshipTypesIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getRelationshipTypesInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getSalutationTypes">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:getSalutationTypesIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getSalutationTypesInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getFinanceCodes">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:getFinanceCodesIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getFinanceCodesInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getNoteTypes">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:getNoteTypesIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getNoteTypesInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getProjectCategories">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:getProjectCategoriesIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getProjectCategoriesInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getOrganizationSettings">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:getOrganizationSettingsIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getOrganizationSettingsInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getGiftSummaries">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:getGiftSummariesIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getGiftSummariesInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getGiftAnnualSummaries">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:getGiftAnnualSummariesIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getGiftAnnualSummariesInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getOrderSummaries">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:getOrderSummariesIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getOrderSummariesInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getOrderAnnualSummaries">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:getOrderAnnualSummariesIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getOrderAnnualSummariesInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getProjectCodes">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:getProjectCodesIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getProjectCodesInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getMotivationCodes">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:getMotivationCodesIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getMotivationCodesInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertAccountCode">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:insertAccountCodeIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:insertAccountCodeInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="updateAccountCode">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:updateAccountCodeIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:updateAccountCodeInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertAccountAddress">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:insertAccountAddressIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:insertAccountAddressInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="updateAccountAddress">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:updateAccountAddressIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:updateAccountAddressInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getUsers">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:getUsersIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getUsersInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getAccounts">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:getAccountsIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getAccountsInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getProducts">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:getProductsIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getProductsInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getMediaOutlets">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:getMediaOutletsIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getMediaOutletsInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getSourceCodes">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:getSourceCodesIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getSourceCodesInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getSegmentations">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:getSegmentationsIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getSegmentationsInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getSegmentationGroups">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:getSegmentationGroupsIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getSegmentationGroupsInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getReports">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:getReportsIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getReportsInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="updateReport">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:updateReportIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:updateReportInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertReport">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:insertReportIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:insertReportInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="deleteReport">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:deleteReportIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:deleteReportInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="exportReport">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:exportReportIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:exportReportInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getReportExportStatus">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:getReportExportStatusIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getReportExportStatusInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getServerStatus">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:getServerStatusIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getServerStatusInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="invalidateCache">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:invalidateCacheIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:invalidateCacheInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getAccountDuplicatesCustom">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:getAccountDuplicatesCustomIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getAccountDuplicatesCustomInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertTIHoldingTank">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:insertTIHoldingTankIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:insertTIHoldingTankInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getSegmentationGroupResults">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:getSegmentationGroupResultsIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getSegmentationGroupResultsInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertSourceCode">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:insertSourceCodeIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:insertSourceCodeInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="updateSourceCode">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:updateSourceCodeIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:updateSourceCodeInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertAddressType">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:insertAddressTypeIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:insertAddressTypeInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="updateAddressType">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:updateAddressTypeIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:updateAddressTypeInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertAccountNote">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:insertAccountNoteIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:insertAccountNoteInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="updateAccountNote">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:updateAccountNoteIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:updateAccountNoteInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertNoteType">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:insertNoteTypeIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:insertNoteTypeInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="updateNoteType">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:updateNoteTypeIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:updateNoteTypeInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="deleteAccountNote">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:deleteAccountNoteIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:deleteAccountNoteInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="deleteAccountCode">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:deleteAccountCodeIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:deleteAccountCodeInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="updateCodeType">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:updateCodeTypeIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:updateCodeTypeInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertCodeType">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:insertCodeTypeIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:insertCodeTypeInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="deleteCodeType">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:deleteCodeTypeIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:deleteCodeTypeInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getCodes">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:getCodesIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getCodesInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getTransactions">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:getTransactionsIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getTransactionsInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getSubscriptions">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:getSubscriptionsIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getSubscriptionsInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getPaymentTypes">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:getPaymentTypesIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getPaymentTypesInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="updatePaymentType">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:updatePaymentTypeIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:updatePaymentTypeInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertPaymentType">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:insertPaymentTypeIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:insertPaymentTypeInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getBatches">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:getBatchesIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getBatchesInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertBatch">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:insertBatchIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:insertBatchInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="updateBatch">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:updateBatchIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:updateBatchInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="deleteBatch">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:deleteBatchIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:deleteBatchInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="closeBatch">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:closeBatchIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:closeBatchInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="postBatch">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:postBatchIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:postBatchInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="openBatch">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:openBatchIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:openBatchInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getBanks">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:getBanksIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getBanksInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="updateBank">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:updateBankIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:updateBankInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertBank">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:insertBankIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:insertBankInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getARTransactions">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:getARTransactionsIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getARTransactionsInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getARMonthlySummaries">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:getARMonthlySummariesIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getARMonthlySummariesInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getCreditCardTypes">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:getCreditCardTypesIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getCreditCardTypesInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getCurrencyTypes">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:getCurrencyTypesIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getCurrencyTypesInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertCurrencyType">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:insertCurrencyTypeIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:insertCurrencyTypeInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="updateCurrencyType">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:updateCurrencyTypeIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:updateCurrencyTypeInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="deleteCurrencyType">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:deleteCurrencyTypeIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:deleteCurrencyTypeInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getMediaOutletPlacements">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:getMediaOutletPlacementsIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getMediaOutletPlacementsInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getMediaPrograms">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:getMediaProgramsIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getMediaProgramsInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getProductLocations">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:getProductLocationsIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getProductLocationsInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="updateAccountEmailAddress">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:updateAccountEmailAddressIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:updateAccountEmailAddressInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertAccountEmailAddress">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:insertAccountEmailAddressIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:insertAccountEmailAddressInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="deleteAccountEmailAddress">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:deleteAccountEmailAddressIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:deleteAccountEmailAddressInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertAccountSalutation">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:insertAccountSalutationIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:insertAccountSalutationInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="updateAccountSalutation">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:updateAccountSalutationIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:updateAccountSalutationInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="deleteAccountSalutation">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:deleteAccountSalutationIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:deleteAccountSalutationInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertAccountPhoneNumber">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:insertAccountPhoneNumberIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:insertAccountPhoneNumberInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="updateAccountPhoneNumber">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:updateAccountPhoneNumberIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:updateAccountPhoneNumberInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="deleteAccountPhoneNumber">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:deleteAccountPhoneNumberIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:deleteAccountPhoneNumberInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="MpxWebServicesSoap12" type="tns:MpxWebServicesInterface">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getAccount">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:getAccountIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getAccountInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getAccountSalutations">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:getAccountSalutationsIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getAccountSalutationsInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getAccountEmailAddresses">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:getAccountEmailAddressesIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getAccountEmailAddressesInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getAccountPhoneNumbers">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:getAccountPhoneNumbersIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getAccountPhoneNumbersInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getAccountAddresses">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:getAccountAddressesIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getAccountAddressesInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getAccountNotes">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:getAccountNotesIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getAccountNotesInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getAccountCodes">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:getAccountCodesIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getAccountCodesInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getAccountFinancials">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:getAccountFinancialsIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getAccountFinancialsInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getAccountRelationships">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:getAccountRelationshipsIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getAccountRelationshipsInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getAccountPledges">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:getAccountPledgesIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getAccountPledgesInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getAccountDates">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:getAccountDatesIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getAccountDatesInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertAccount">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:insertAccountIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:insertAccountInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="updateAccount">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:updateAccountIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:updateAccountInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getCodeTypes">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:getCodeTypesIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getCodeTypesInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getAddressTypes">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:getAddressTypesIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getAddressTypesInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getPhoneTypes">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:getPhoneTypesIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getPhoneTypesInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getRelationshipTypes">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:getRelationshipTypesIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getRelationshipTypesInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getSalutationTypes">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:getSalutationTypesIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getSalutationTypesInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getFinanceCodes">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:getFinanceCodesIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getFinanceCodesInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getNoteTypes">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:getNoteTypesIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getNoteTypesInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getProjectCategories">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:getProjectCategoriesIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getProjectCategoriesInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getOrganizationSettings">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:getOrganizationSettingsIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getOrganizationSettingsInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getGiftSummaries">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:getGiftSummariesIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getGiftSummariesInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getGiftAnnualSummaries">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:getGiftAnnualSummariesIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getGiftAnnualSummariesInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getOrderSummaries">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:getOrderSummariesIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getOrderSummariesInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getOrderAnnualSummaries">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:getOrderAnnualSummariesIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getOrderAnnualSummariesInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getProjectCodes">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:getProjectCodesIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getProjectCodesInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getMotivationCodes">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:getMotivationCodesIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getMotivationCodesInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertAccountCode">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:insertAccountCodeIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:insertAccountCodeInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="updateAccountCode">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:updateAccountCodeIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:updateAccountCodeInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertAccountAddress">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:insertAccountAddressIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:insertAccountAddressInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="updateAccountAddress">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:updateAccountAddressIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:updateAccountAddressInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getUsers">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:getUsersIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getUsersInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getAccounts">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:getAccountsIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getAccountsInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getProducts">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:getProductsIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getProductsInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getMediaOutlets">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:getMediaOutletsIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getMediaOutletsInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getSourceCodes">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:getSourceCodesIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getSourceCodesInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getSegmentations">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:getSegmentationsIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getSegmentationsInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getSegmentationGroups">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:getSegmentationGroupsIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getSegmentationGroupsInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getReports">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:getReportsIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getReportsInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="updateReport">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:updateReportIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:updateReportInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertReport">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:insertReportIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:insertReportInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="deleteReport">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:deleteReportIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:deleteReportInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="exportReport">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:exportReportIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:exportReportInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getReportExportStatus">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:getReportExportStatusIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getReportExportStatusInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getServerStatus">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:getServerStatusIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getServerStatusInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="invalidateCache">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:invalidateCacheIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:invalidateCacheInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getAccountDuplicatesCustom">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:getAccountDuplicatesCustomIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getAccountDuplicatesCustomInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertTIHoldingTank">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:insertTIHoldingTankIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:insertTIHoldingTankInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getSegmentationGroupResults">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:getSegmentationGroupResultsIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getSegmentationGroupResultsInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertSourceCode">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:insertSourceCodeIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:insertSourceCodeInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="updateSourceCode">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:updateSourceCodeIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:updateSourceCodeInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertAddressType">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:insertAddressTypeIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:insertAddressTypeInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="updateAddressType">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:updateAddressTypeIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:updateAddressTypeInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertAccountNote">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:insertAccountNoteIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:insertAccountNoteInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="updateAccountNote">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:updateAccountNoteIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:updateAccountNoteInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertNoteType">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:insertNoteTypeIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:insertNoteTypeInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="updateNoteType">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:updateNoteTypeIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:updateNoteTypeInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="deleteAccountNote">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:deleteAccountNoteIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:deleteAccountNoteInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="deleteAccountCode">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:deleteAccountCodeIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:deleteAccountCodeInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="updateCodeType">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:updateCodeTypeIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:updateCodeTypeInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertCodeType">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:insertCodeTypeIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:insertCodeTypeInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="deleteCodeType">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:deleteCodeTypeIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:deleteCodeTypeInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getCodes">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:getCodesIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getCodesInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getTransactions">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:getTransactionsIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getTransactionsInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getSubscriptions">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:getSubscriptionsIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getSubscriptionsInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getPaymentTypes">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:getPaymentTypesIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getPaymentTypesInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="updatePaymentType">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:updatePaymentTypeIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:updatePaymentTypeInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertPaymentType">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:insertPaymentTypeIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:insertPaymentTypeInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getBatches">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:getBatchesIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getBatchesInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertBatch">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:insertBatchIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:insertBatchInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="updateBatch">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:updateBatchIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:updateBatchInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="deleteBatch">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:deleteBatchIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:deleteBatchInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="closeBatch">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:closeBatchIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:closeBatchInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="postBatch">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:postBatchIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:postBatchInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="openBatch">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:openBatchIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:openBatchInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getBanks">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:getBanksIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getBanksInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="updateBank">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:updateBankIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:updateBankInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertBank">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:insertBankIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:insertBankInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getARTransactions">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:getARTransactionsIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getARTransactionsInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getARMonthlySummaries">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:getARMonthlySummariesIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getARMonthlySummariesInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getCreditCardTypes">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:getCreditCardTypesIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getCreditCardTypesInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getCurrencyTypes">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:getCurrencyTypesIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getCurrencyTypesInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertCurrencyType">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:insertCurrencyTypeIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:insertCurrencyTypeInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="updateCurrencyType">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:updateCurrencyTypeIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:updateCurrencyTypeInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="deleteCurrencyType">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:deleteCurrencyTypeIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:deleteCurrencyTypeInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getMediaOutletPlacements">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:getMediaOutletPlacementsIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getMediaOutletPlacementsInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getMediaPrograms">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:getMediaProgramsIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getMediaProgramsInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getProductLocations">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:getProductLocationsIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getProductLocationsInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="updateAccountEmailAddress">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:updateAccountEmailAddressIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:updateAccountEmailAddressInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertAccountEmailAddress">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:insertAccountEmailAddressIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:insertAccountEmailAddressInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="deleteAccountEmailAddress">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:deleteAccountEmailAddressIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:deleteAccountEmailAddressInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertAccountSalutation">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:insertAccountSalutationIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:insertAccountSalutationInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="updateAccountSalutation">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:updateAccountSalutationIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:updateAccountSalutationInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="deleteAccountSalutation">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:deleteAccountSalutationIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:deleteAccountSalutationInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertAccountPhoneNumber">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:insertAccountPhoneNumberIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:insertAccountPhoneNumberInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="updateAccountPhoneNumber">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:updateAccountPhoneNumberIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:updateAccountPhoneNumberInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="deleteAccountPhoneNumber">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:deleteAccountPhoneNumberIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:deleteAccountPhoneNumberInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="MpxWebServicesPort">
+    <port name="MpxWebServicesPort" binding="tns:MpxWebServices">
+      <soap:address location="http://localhost:1674/MpxWebServices/MpxWebServices.asmx" />
+    </port>
+  </service>
+</definitions>

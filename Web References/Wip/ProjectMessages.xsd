@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://mpowersystems.com/ProjectMessages.xsd" xmlns:import="http://mpowersystems.com/ProjectData.xsd" xmlns="http://mpowersystems.com/ProjectMessages.xsd" elementFormDefault="qualified" targetNamespace="http://mpowersystems.com/ProjectMessages.xsd" id="ProjectMessages" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="ProjectData.xsd" namespace="http://mpowersystems.com/ProjectData.xsd" />
+  <xs:element name="getSegmentationsRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="segmentationId" nillable="true" type="xs:long" />
+        <xs:element name="category" type="xs:string" />
+        <xs:element name="name" type="xs:string" />
+        <xs:element name="description" type="xs:string" />
+        <xs:element name="includeInactiveRecords" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getSegmentationsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="segmentations" type="import:segmentations" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getSegmentationGroupsRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="segmentationGroupId" nillable="true" type="xs:long" />
+        <xs:element name="segmentationId" nillable="true" type="xs:long" />
+        <xs:element name="name" type="xs:string" />
+        <xs:element name="description" type="xs:string" />
+        <xs:element name="includeInactiveRecords" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getSegmentationGroupsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="segmentationGroups" type="import:segmentationGroups" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getSegmentationGroupResultsRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="segmentationId" type="xs:long" />
+        <xs:element name="segmentationGroupId" type="xs:long" />
+        <xs:element name="maxResultCount" nillable="true" type="xs:int" />
+        <xs:element name="startingResultNumber" nillable="true" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getSegmentationGroupResultsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="segmentationGroupResults" type="import:segmentationGroupResults" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

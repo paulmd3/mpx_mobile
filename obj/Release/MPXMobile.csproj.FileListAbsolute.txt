@@ -1,0 +1,7 @@
+C:\Documents and Settings\matthew\Projects\mpx-mobile\bin\MPXMobile.dll
+C:\Documents and Settings\matthew\Projects\mpx-mobile\bin\MPXMobile.XmlSerializers.dll
+C:\Documents and Settings\matthew\Projects\mpx-mobile\bin\MPXMobile.pdb
+C:\Documents and Settings\matthew\Projects\mpx-mobile\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\matthew\Projects\mpx-mobile\obj\Release\MPXMobile.dll
+C:\Documents and Settings\matthew\Projects\mpx-mobile\obj\Release\MPXMobile.pdb
+C:\Documents and Settings\matthew\Projects\mpx-mobile\obj\Release\MPXMobile.XmlSerializers.dll

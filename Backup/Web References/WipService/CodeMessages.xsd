@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://mpowersystems.com/OrganizationMessages.xsd" xmlns:import="http://mpowersystems.com/OrganizationData.xsd" xmlns="http://mpowersystems.com/OrganizationMessages.xsd" elementFormDefault="qualified" targetNamespace="http://mpowersystems.com/OrganizationMessages.xsd" id="CodeMessages" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="OrganizationData.xsd" namespace="http://mpowersystems.com/OrganizationData.xsd" />
+  <xs:element name="getUsersRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="userId" nillable="true" type="xs:long" />
+        <xs:element name="userName" type="xs:string" />
+        <xs:element name="description" type="xs:string" />
+        <xs:element name="fullName" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getUsersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="users" type="import:users" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getCodeTypesRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="codeTypeValue" type="xs:string" />
+        <xs:element name="description" type="xs:string" />
+        <xs:element default="false" name="includeInactiveRecords" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getCodeTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="codeTypes" type="import:codeTypes" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updateCodeTypeRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="codeType" type="import:codeType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updateCodeTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="result" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="insertCodeTypeRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="codeType" type="import:codeType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="insertCodeTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="result" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="deleteCodeTypeRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="codeType" type="import:codeType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="deleteCodeTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="result" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getCodesRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="codeType" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getCodesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="codes" type="import:codes" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAddressTypesRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="addressTypeId" nillable="true" type="xs:long" />
+        <xs:element name="addressTypeValue" type="xs:string" />
+        <xs:element default="false" name="includeInactiveRecords" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAddressTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="addressTypes" type="import:addressTypes" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="insertAddressTypeRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="addressType" type="import:addressType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="insertAddressTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="result" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updateAddressTypeRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="addressType" type="import:addressType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updateAddressTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="result" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getPhoneTypesRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="phoneTypeId" nillable="true" type="xs:long" />
+        <xs:element name="phoneTypeValue" type="xs:string" />
+        <xs:element default="false" name="includeInactiveRecords" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getPhoneTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="phoneTypes" type="import:phoneTypes" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getRelationshipTypesRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="relationshipTypeId" nillable="true" type="xs:long" />
+        <xs:element name="relationshipTypeValue" type="xs:string" />
+        <xs:element name="inverseType" type="xs:string" />
+        <xs:element default="false" name="includeInactiveRecords" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getRelationshipTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="relationshipTypes" type="import:relationshipTypes" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getSalutationTypesRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="salutationTypeId" nillable="true" type="xs:long" />
+        <xs:element name="salutationTypeValue" type="xs:string" />
+        <xs:element default="false" name="includeInactiveRecords" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getSalutationTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="salutationTypes" type="import:salutationTypes" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getFinanceCodesRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="financeCodeType" type="xs:string" />
+        <xs:element name="financeCodeValue" type="xs:string" />
+        <xs:element default="false" name="includeInactiveRecords" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getFinanceCodesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="financeCodes" type="import:financeCodes" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getNoteTypesRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="noteType" type="xs:string" />
+        <xs:element default="false" name="includeInactiveRecords" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getNoteTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="noteTypes" type="import:noteTypes" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="insertNoteTypeRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="noteType" type="import:noteType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="insertNoteTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="result" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updateNoteTypeRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="noteType" type="import:noteType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updateNoteTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="result" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getProjectCodesRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="projectCodeId" nillable="true" type="xs:long" />
+        <xs:element name="projectCodeValue" type="xs:string" />
+        <xs:element name="description" type="xs:string" />
+        <xs:element name="accountId" nillable="true" type="xs:long" />
+        <xs:element name="reportOutputPreference" nillable="true" type="import:enumProjectReportOutputPreference" />
+        <xs:element default="false" name="includeInactiveRecords" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getProjectCodesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="projectCodes" type="import:projectCodes" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getProjectCategoriesRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="projectCategoryId" nillable="true" type="xs:long" />
+        <xs:element name="categoryCode" type="xs:string" />
+        <xs:element name="projectId" nillable="true" type="xs:long" />
+        <xs:element default="false" name="includeInactiveRecords" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getProjectCategoriesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="projectCategories" type="import:projectCategories" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getOrganizationSettingsRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="settingId" nillable="true" type="xs:long" />
+        <xs:element name="settingName" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getOrganizationSettingsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="organizationSettings" type="import:organizationSettings" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getMotivationCodesRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="motivationCodeId" nillable="true" type="xs:long" />
+        <xs:element name="motivationCodeValue" type="xs:string" />
+        <xs:element name="description" type="xs:string" />
+        <xs:element default="false" name="includeInactiveRecords" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getMotivationCodesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="motivationCodes" type="import:motivationCodes" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getSourceCodesRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="sourceCodeValue" type="xs:string" />
+        <xs:element name="description" type="xs:string" />
+        <xs:element default="false" name="includeInactiveRecords" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getSourceCodesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="sourceCodes" type="import:sourceCodes" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="insertSourceCodeRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="sourceCode" type="import:sourceCode" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="insertSourceCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="result" type="xs:boolean" />
+        <xs:element name="message" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updateSourceCodeRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="sourceCode" type="import:sourceCode" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updateSourceCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="result" type="xs:boolean" />
+        <xs:element name="message" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getPaymentTypesRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="paymentTypeValue" type="xs:string" />
+        <xs:element name="description" type="xs:string" />
+        <xs:element default="false" name="includeInactiveRecords" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getPaymentTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="paymentTypes" type="import:paymentTypes" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updatePaymentTypeRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="paymentType" type="import:paymentType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updatePaymentTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="result" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="insertPaymentTypeRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="paymentType" type="import:paymentType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="insertPaymentTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="result" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getBanksRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="bankId" nillable="true" type="xs:long" />
+        <xs:element name="bankName" type="xs:string" />
+        <xs:element name="bankDescription" type="xs:string" />
+        <xs:element name="includeInactiveRecords" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getBanksResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="banks" type="import:banks" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updateBankRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="bank" type="import:bank" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updateBankResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="result" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="insertBankRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="bank" type="import:bank" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="insertBankResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="result" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getCreditCardTypesRequest">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getCreditCardTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="creditCardTypes" type="import:creditCardTypes" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getCurrencyTypesRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="currencyCode" type="xs:string" />
+        <xs:element default="false" name="includeInactive" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getCurrencyTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="currencyTypes" type="import:currencyTypes" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="insertCurrencyTypeRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="currencyType" type="import:currencyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="insertCurrencyTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="result" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updateCurrencyTypeRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="currencyType" type="import:currencyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updateCurrencyTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="result" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="deleteCurrencyTypeRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="currencyType" type="import:currencyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="deleteCurrencyTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="result" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://mpowersystems.com/AnalysisData.xsd" xmlns="http://mpowersystems.com/AnalysisData.xsd" elementFormDefault="qualified" targetNamespace="http://mpowersystems.com/AnalysisData.xsd" id="AnalysisData" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="report">
+    <xs:sequence>
+      <xs:element name="reportId" nillable="true" type="xs:long" />
+      <xs:element name="title" type="xs:string" />
+      <xs:element name="type" type="mstns:enumReportTypes" />
+      <xs:element name="description" type="xs:string" />
+      <xs:element name="queryType" type="mstns:enumQueryTypes" />
+      <xs:element default="Report_Template.rpt" name="reportSource" type="xs:string" />
+      <xs:element name="inputSource" type="xs:string" />
+      <xs:element default="false" name="outputUniqueRecords" type="xs:boolean" />
+      <xs:element name="addDate" type="xs:date" />
+      <xs:element name="addUserId" type="xs:int" />
+      <xs:element name="modifiedDate" nillable="true" type="xs:date" />
+      <xs:element name="modifiedUserId" nillable="true" type="xs:int" />
+      <xs:element name="criteria" nillable="true" type="mstns:reportCriteriaList" />
+      <xs:element name="fields" nillable="true" type="mstns:reportFields" />
+      <xs:element name="sortOrder" nillable="true" type="mstns:reportSorts" />
+      <xs:element name="groupBy" nillable="true" type="mstns:reportGroupBys" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="enumQueryTypes">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Basic" />
+      <xs:enumeration value="Advanced" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="reports">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="reportList" type="mstns:report" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="reportCriteria">
+    <xs:sequence>
+      <xs:element name="ordinal" type="xs:int" />
+      <xs:element name="operator" nillable="true" type="mstns:enumReportCriteriaOperators" />
+      <xs:element name="field" type="xs:string" />
+      <xs:element name="condition" type="mstns:enumReportCriteriaConditions" />
+      <xs:element name="value" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="enumReportCriteriaOperators">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="AND" />
+      <xs:enumeration value="OR" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="enumReportCriteriaConditions">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Equal_to" />
+      <xs:enumeration value="Is_not_equal_to" />
+      <xs:enumeration value="Is_less_than" />
+      <xs:enumeration value="Is_less_than_or_equal_to" />
+      <xs:enumeration value="Is_greater_than" />
+      <xs:enumeration value="Is_greater_than_or_equal_to" />
+      <xs:enumeration value="Contains" />
+      <xs:enumeration value="Does_not_contain" />
+      <xs:enumeration value="Begins_with" />
+      <xs:enumeration value="Has_any_value" />
+      <xs:enumeration value="Has_no_value" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="reportCriteriaList">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="reportCriteriaList" type="mstns:reportCriteria" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="reportField">
+    <xs:sequence>
+      <xs:element name="ordinal" type="xs:int" />
+      <xs:element name="field" type="xs:string" />
+      <xs:element name="aggregateFunction" nillable="true" type="mstns:enumReportFieldAggregateFunction" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="reportFields">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="reportFieldList" type="mstns:reportField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="reportSort">
+    <xs:sequence>
+      <xs:element name="ordinal" type="xs:int" />
+      <xs:element name="field" type="xs:string" />
+      <xs:element name="sortOrder" type="mstns:enumReportSortOrder" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="enumReportSortOrder">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Ascending" />
+      <xs:enumeration value="Descending" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="reportGroupBy">
+    <xs:sequence>
+      <xs:element name="ordinal" type="xs:int" />
+      <xs:element name="field" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="reportSorts">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="reportSortList" type="mstns:reportSort" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="reportGroupBys">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="reportGroupList" type="mstns:reportGroupBy" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="enumReportTypes">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Analysis" />
+      <xs:enumeration value="Inventory" />
+      <xs:enumeration value="Media" />
+      <xs:enumeration value="Organization" />
+      <xs:enumeration value="Other" />
+      <xs:enumeration value="People" />
+      <xs:enumeration value="Projects" />
+      <xs:enumeration value="Tasks" />
+      <xs:enumeration value="Transactions" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="enumReportFieldAggregateFunction">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Average" />
+      <xs:enumeration value="Count" />
+      <xs:enumeration value="Minimum" />
+      <xs:enumeration value="Maximum" />
+      <xs:enumeration value="Total" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="enumReportExportStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="RetrievingData" />
+      <xs:enumeration value="ExportingToFile" />
+      <xs:enumeration value="Complete" />
+      <xs:enumeration value="Pending" />
+      <xs:enumeration value="Unknown" />
+      <xs:enumeration value="Failed" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

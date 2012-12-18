@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://mpowersystems.com/KTABMessages.xsd" xmlns:ktabData="http://mpowersystems.com/KTABData.xsd" xmlns="http://mpowersystems.com/KTABMessages.xsd" elementFormDefault="qualified" targetNamespace="http://mpowersystems.com/KTABMessages.xsd" id="KTABMessages" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="KTABData.xsd" namespace="http://mpowersystems.com/KTABData.xsd" />
+  <xs:element name="insertTIHoldingTankRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="ktabData" type="ktabData:ktabData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="insertTIHoldingTankResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="tiHeaderId" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://mpowersystems.com/InventoryData.xsd" xmlns="http://mpowersystems.com/InventoryData.xsd" elementFormDefault="qualified" targetNamespace="http://mpowersystems.com/InventoryData.xsd" id="Inventory" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="product">
+    <xs:sequence>
+      <xs:element name="productId" type="xs:long" />
+      <xs:element name="productCode" type="xs:string" />
+      <xs:element name="description" type="xs:string" />
+      <xs:element name="productType" type="mstns:enumProductType" />
+      <xs:element name="designation" type="xs:string" />
+      <xs:element name="weight" type="xs:decimal" />
+      <xs:element name="class" type="xs:string" />
+      <xs:element name="preferredVendor" type="xs:string" />
+      <xs:element name="preferredVendorAccountId" type="xs:long" />
+      <xs:element name="minimumReorderQuantity" type="xs:int" />
+      <xs:element name="leadTime" type="xs:int" />
+      <xs:element name="projectedCost" type="xs:decimal" />
+      <xs:element name="actualCost" type="xs:decimal" />
+      <xs:element name="fairMarketValue" type="xs:decimal" />
+      <xs:element name="note" type="xs:string" />
+      <xs:element name="addDate" type="xs:date" />
+      <xs:element name="addUserId" type="xs:int" />
+      <xs:element name="modifiedDate" type="xs:date" />
+      <xs:element name="modifiedUserId" type="xs:int" />
+      <xs:element name="active" type="xs:boolean" />
+      <xs:element name="suspended" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="enumProductType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Standard" />
+      <xs:enumeration value="Internal" />
+      <xs:enumeration value="Miscellaneous" />
+      <xs:enumeration value="BOM" />
+      <xs:enumeration value="Subscription" />
+      <xs:enumeration value="RawMaterials" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="products">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="productList" type="mstns:product" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="productLocation">
+    <xs:sequence>
+      <xs:element name="productLocationId" nillable="true" type="xs:long" />
+      <xs:element name="productId" type="xs:long" />
+      <xs:element name="locationCode" type="xs:string" />
+      <xs:element name="locationActual" type="xs:string" />
+      <xs:element name="note" type="xs:string" />
+      <xs:element name="onHandQuantity" type="xs:int" />
+      <xs:element name="allocatedQuantity" type="xs:int" />
+      <xs:element name="backorderedQuantity" type="xs:int" />
+      <xs:element name="onOrderQuantity" type="xs:int" />
+      <xs:element name="estimatedDeliveryDate" nillable="true" type="xs:date" />
+      <xs:element default="true" name="active" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="productLocations">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="productLocationList" type="mstns:productLocation" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

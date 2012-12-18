@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://mpowersystems.com/TransactionData.xsd" xmlns="http://mpowersystems.com/TransactionData.xsd" elementFormDefault="qualified" targetNamespace="http://mpowersystems.com/TransactionData.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="batch">
+    <xs:sequence>
+      <xs:element name="batchId" nillable="true" type="xs:long" />
+      <xs:element name="batchDate" type="xs:date" />
+      <xs:element name="glDate" nillable="true" type="xs:date" />
+      <xs:element name="fund" type="xs:string" />
+      <xs:element name="glAccount" type="xs:string" />
+      <xs:element name="costCenter" type="xs:string" />
+      <xs:element name="projectCode" type="xs:string" />
+      <xs:element name="category" type="xs:string" />
+      <xs:element name="currencyCode" type="xs:string" />
+      <xs:element name="conversionRate" type="xs:double" />
+      <xs:element name="controlAmount" nillable="true" type="xs:decimal" />
+      <xs:element name="controlNumber" nillable="true" type="xs:int" />
+      <xs:element name="actualAmount" type="xs:decimal" />
+      <xs:element name="actualNumber" type="xs:int" />
+      <xs:element name="batchStatus" type="mstns:enumBatchStatus" />
+      <xs:element name="batchPostedDate" nillable="true" type="xs:date" />
+      <xs:element name="defaultMotivationCode" type="xs:string" />
+      <xs:element name="defaultProjectCode" type="xs:string" />
+      <xs:element name="defaultPledgeCode" type="xs:string" />
+      <xs:element name="defaultPaymentType" type="xs:string" />
+      <xs:element name="defaultPurchaseLocation" type="xs:string" />
+      <xs:element name="defaultFreeLocation" type="xs:string" />
+      <xs:element name="defaultPriceCode" type="xs:string" />
+      <xs:element name="batchType1" type="xs:string" />
+      <xs:element name="batchType2" type="xs:string" />
+      <xs:element name="depositDate" nillable="true" type="xs:date" />
+      <xs:element name="bankId" nillable="true" type="xs:long" />
+      <xs:element name="batchOwnerId" nillable="true" type="xs:long" />
+      <xs:element name="addUserId" type="xs:long" />
+      <xs:element name="addDate" type="xs:date" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="enumBatchStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Open" />
+      <xs:enumeration value="Closed" />
+      <xs:enumeration value="Posted" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="batches">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="batchList" type="mstns:batch" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="transactionData">
+    <xs:sequence>
+      <xs:element name="accountId" type="xs:long" />
+      <xs:element name="batchId" type="xs:long" />
+      <xs:element name="date" type="xs:date" />
+      <xs:element name="paymentType" type="xs:string" />
+      <xs:element name="paymentSubType" type="xs:string" />
+      <xs:element name="paymentNumber" type="xs:string" />
+      <xs:element name="bankRoutingNumber" type="xs:string" />
+      <xs:element name="expirationDate" nillable="true" type="xs:date" />
+      <xs:element name="currencyCode" type="xs:string" />
+      <xs:element name="conversionRate" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="transaction">
+    <xs:complexContent mixed="false">
+      <xs:extension base="mstns:transactionData">
+        <xs:sequence>
+          <xs:element name="transactionType" type="mstns:enumTransactionType" />
+          <xs:element name="amount" type="xs:decimal" />
+          <xs:element name="gift" type="mstns:giftHeader" />
+          <xs:element name="order" type="mstns:orderHeader" />
+          <xs:element name="arPayment" type="mstns:arTransaction" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="enumTransactionType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Gift" />
+      <xs:enumeration value="Gift With Premium" />
+      <xs:enumeration value="Order" />
+      <xs:enumeration value="Order With Gift" />
+      <xs:enumeration value="AR Payment" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="transactions">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="transactionList" type="mstns:transaction" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="giftHeader">
+    <xs:complexContent mixed="false">
+      <xs:extension base="mstns:transactionData">
+        <xs:sequence>
+          <xs:element name="giftId" nillable="true" type="xs:long" />
+          <xs:element name="batchPostedDate" nillable="true" type="xs:date" />
+          <xs:element name="giftStatus" type="mstns:enumGiftStatus" />
+          <xs:element name="amount" type="xs:decimal" />
+          <xs:element name="creditCardAuthorizationCode" type="xs:string" />
+          <xs:element name="receiptNumber" nillable="true" type="xs:long" />
+          <xs:element name="receiptPrintedStatus" type="mstns:enumPrintedStatus" />
+          <xs:element name="letterCode" type="xs:string" />
+          <xs:element name="letterPrintedStatus" type="mstns:enumPrintedStatus" />
+          <xs:element name="relatedOrderId" nillable="true" type="xs:long" />
+          <xs:element name="paragraphCode1" type="xs:string" />
+          <xs:element name="paragraphCode2" type="xs:string" />
+          <xs:element name="mediaCode" type="xs:string" />
+          <xs:element name="mediaPlacementId" nillable="true" type="xs:long" />
+          <xs:element name="mediaProgramId" nillable="true" type="xs:long" />
+          <xs:element name="addDate" type="xs:date" />
+          <xs:element name="addUserId" type="xs:long" />
+          <xs:element name="modifiedDate" nillable="true" type="xs:date" />
+          <xs:element name="modifiedUserId" nillable="true" type="xs:long" />
+          <xs:element name="giftComment1" nillable="true" type="mstns:giftComment" />
+          <xs:element name="giftComment2" nillable="true" type="mstns:giftComment" />
+          <xs:element maxOccurs="unbounded" name="giftDetails" type="mstns:giftDetail" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="enumGiftStatus">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="Open" />
+      <xs:enumeration value="Posted" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="enumPrintedStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Printed" />
+      <xs:enumeration value="To Be Printed" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="gifts">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="giftList" type="mstns:giftHeader" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="giftDetail">
+    <xs:sequence>
+      <xs:element name="giftDetailId" nillable="true" type="xs:long" />
+      <xs:element name="giftId" nillable="true" type="xs:long" />
+      <xs:element name="amount" type="xs:decimal" />
+      <xs:element name="motivationCode" type="xs:string" />
+      <xs:element name="projectCode" type="xs:string" />
+      <xs:element name="category" type="xs:string" />
+      <xs:element name="pledgeId" nillable="true" type="xs:long" />
+      <xs:element name="deductible" type="xs:boolean" />
+      <xs:element name="anonymous" type="xs:boolean" />
+      <xs:element name="relatedAccountId" nillable="true" type="xs:long" />
+      <xs:element name="note" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="giftDetails">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="giftDetailList" type="mstns:giftDetail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="giftSummary">
+    <xs:sequence>
+      <xs:element name="giftSummaryId" type="xs:long" />
+      <xs:element name="accountId" type="xs:long" />
+      <xs:element name="currencyCode" type="xs:string" />
+      <xs:element name="deductible" type="xs:boolean" />
+      <xs:element name="relatedGiving" type="xs:boolean" />
+      <xs:element name="amount" type="xs:decimal" />
+      <xs:element name="conversionAmount" type="xs:decimal" />
+      <xs:element name="giftCount" type="xs:long" />
+      <xs:element name="firstGiftDate" type="xs:date" />
+      <xs:element name="firstGiftAmount" type="xs:decimal" />
+      <xs:element name="firstGiftConversionAmount" type="xs:decimal" />
+      <xs:element name="firstGiftId" type="xs:long" />
+      <xs:element name="largeGiftDate" type="xs:date" />
+      <xs:element name="largeGiftAmount" type="xs:decimal" />
+      <xs:element name="largeGiftConversionAmount" type="xs:decimal" />
+      <xs:element name="largeGiftId" type="xs:long" />
+      <xs:element name="lastGiftDate" type="xs:date" />
+      <xs:element name="lastGiftAmount" type="xs:decimal" />
+      <xs:element name="lastGiftConversionAmount" type="xs:decimal" />
+      <xs:element name="lastGiftId" type="xs:decimal" />
+      <xs:element name="netGiftAmount" type="xs:decimal" />
+      <xs:element name="netGiftConversionAmount" type="xs:decimal" />
+      <xs:element name="premiumAmount" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="giftSummaries">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="giftSummaryList" type="mstns:giftSummary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="giftAnnual">
+    <xs:sequence>
+      <xs:element name="giftAnnualId" type="xs:string" />
+      <xs:element name="accountId" type="xs:long" />
+      <xs:element name="currencyCode" type="xs:string" />
+      <xs:element name="deductible" type="xs:boolean" />
+      <xs:element name="relatedGiving" type="xs:boolean" />
+      <xs:element name="giftDateYear" type="xs:int" />
+      <xs:element name="giftCount" type="xs:long" />
+      <xs:element name="amount" type="xs:decimal" />
+      <xs:element name="conversionAmount" type="xs:decimal" />
+      <xs:element name="netGiftAmount" type="xs:decimal" />
+      <xs:element name="netGiftConversionAmount" type="xs:decimal" />
+      <xs:element name="premiumAmount" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="giftAnnualSummaries">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="giftAnnualList" type="mstns:giftAnnual" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="giftComment">
+    <xs:sequence>
+      <xs:element name="giftCommentId" nillable="true" type="xs:long" />
+      <xs:element name="giftId" nillable="true" type="xs:long" />
+      <xs:element name="comment" type="xs:string" />
+      <xs:element name="printableComment" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="orderHeader">
+    <xs:complexContent mixed="false">
+      <xs:extension base="mstns:transactionData">
+        <xs:sequence>
+          <xs:element name="orderId" nillable="true" type="xs:long" />
+          <xs:element name="status" type="mstns:enumOrderHeaderStatus" />
+          <xs:element name="batchPostedDate" nillable="true" type="xs:date" />
+          <xs:element name="motivationCode" type="xs:string" />
+          <xs:element name="mediaCode" type="xs:string" />
+          <xs:element name="mediaPlacementId" nillable="true" type="xs:long" />
+          <xs:element name="mediaProgramId" nillable="true" type="xs:long" />
+          <xs:element name="receivedAmount" type="xs:decimal" />
+          <xs:element name="creditAmount" type="xs:decimal" />
+          <xs:element name="orderItemsAmount" type="xs:decimal" />
+          <xs:element name="primaryTaxAmount" type="xs:decimal" />
+          <xs:element name="secondaryTaxAmount" type="xs:decimal" />
+          <xs:element name="shippingAmount" type="xs:decimal" />
+          <xs:element name="shippingPrimaryTaxAmount" nillable="true" type="xs:decimal" />
+          <xs:element name="shippingSecondaryTaxAmount" nillable="true" type="xs:decimal" />
+          <xs:element name="refundAmount" type="xs:decimal" />
+          <xs:element name="amountDue" type="xs:decimal" />
+          <xs:element name="computePrimaryTax" type="xs:boolean" />
+          <xs:element name="computeSecondaryTax" type="xs:boolean" />
+          <xs:element name="discountPercentage" type="xs:double" />
+          <xs:element name="shippingCode" type="xs:string" />
+          <xs:element name="relatedGiftId" nillable="true" type="xs:long" />
+          <xs:element name="bank" type="xs:string" />
+          <xs:element name="letterCode" type="xs:string" />
+          <xs:element name="paragraphCode1" type="xs:string" />
+          <xs:element name="paragraphCode2" type="xs:string" />
+          <xs:element name="addressType" type="xs:string" />
+          <xs:element name="addDate" type="xs:date" />
+          <xs:element name="addUserId" type="xs:int" />
+          <xs:element name="modifiedDate" nillable="true" type="xs:date" />
+          <xs:element name="modifiedUserId" nillable="true" type="xs:int" />
+          <xs:element name="fairMarketValue" nillable="true" type="xs:decimal" />
+          <xs:element name="referenceNumber" nillable="true" type="xs:long" />
+          <xs:element name="allowPartialShipments" type="xs:boolean" />
+          <xs:element name="orderComment1" nillable="true" type="mstns:orderComment" />
+          <xs:element name="orderComment2" nillable="true" type="mstns:orderComment" />
+          <xs:element maxOccurs="unbounded" name="orderDetails" type="mstns:orderDetail" />
+          <xs:element name="orderShipToAddress" type="mstns:orderShipToAddress" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="orders">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="orderList" type="mstns:orderHeader" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="enumOrderHeaderStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Pending" />
+      <xs:enumeration value="Partial" />
+      <xs:enumeration value="Complete" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="orderDetail">
+    <xs:sequence>
+      <xs:element name="orderDetailId" nillable="true" type="xs:long" />
+      <xs:element name="orderId" nillable="true" type="xs:long" />
+      <xs:element name="productId" type="xs:long" />
+      <xs:element name="priceCode" type="xs:string" />
+      <xs:element name="price" type="xs:decimal" />
+      <xs:element default="true" name="reduceInventory" type="xs:boolean" />
+      <xs:element name="category" type="xs:string" />
+      <xs:element name="fairMarketValue" nillable="true" type="xs:decimal" />
+      <xs:element name="allocatedDate" nillable="true" type="xs:date" />
+      <xs:element name="backorderDate" nillable="true" type="xs:date" />
+      <xs:element name="cancelDate" nillable="true" type="xs:date" />
+      <xs:element name="returnDate" nillable="true" type="xs:date" />
+      <xs:element name="authorizationCode" type="xs:string" />
+      <xs:element name="voidAuthorizationCode" type="xs:string" />
+      <xs:element name="packingSlipPrintedState" type="mstns:enumPackingSlipPrintedStatus" />
+      <xs:element name="packingSlipPrintedDate" nillable="true" type="xs:date" />
+      <xs:element name="actualShipAmount" nillable="true" type="xs:decimal" />
+      <xs:element name="actualShipWeight" nillable="true" type="xs:double" />
+      <xs:element name="quantity" type="xs:int" />
+      <xs:element name="transactionType" type="mstns:enumOrderDetailTransactionType" />
+      <xs:element name="status" nillable="true" type="mstns:enumOrderDetailStatus" />
+      <xs:element name="productLocationId" type="xs:long" />
+      <xs:element name="discountAmount" nillable="true" type="xs:decimal" />
+      <xs:element name="discountPercentage" nillable="true" type="xs:double" />
+      <xs:element name="shipToPrimaryTax" nillable="true" type="xs:decimal" />
+      <xs:element name="shipToSecondaryTax" nillable="true" type="xs:decimal" />
+      <xs:element name="billToPrimaryTax" nillable="true" type="xs:decimal" />
+      <xs:element name="billToSecondaryTax" nillable="true" type="xs:decimal" />
+      <xs:element name="shippingPackageId" nillable="true" type="xs:long" />
+      <xs:element name="shippingPackage" nillable="true" type="mstns:shippingPackage" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="enumPackingSlipPrintedStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Printed" />
+      <xs:enumeration value="To Be Printed" />
+      <xs:enumeration value="Do Not Print" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="enumOrderDetailTransactionType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Purchase" />
+      <xs:enumeration value="Free" />
+      <xs:enumeration value="Premium" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="enumOrderDetailStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Allocated" />
+      <xs:enumeration value="Backordered" />
+      <xs:enumeration value="Shipped" />
+      <xs:enumeration value="Cancelled" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="orderShipToAddress">
+    <xs:sequence>
+      <xs:element name="orderShipToAddressId" nillable="true" type="xs:long" />
+      <xs:element name="orderId" nillable="true" type="xs:long" />
+      <xs:element name="name" type="xs:string" />
+      <xs:element name="title" type="xs:string" />
+      <xs:element name="firstName" type="xs:string" />
+      <xs:element name="lastName" type="xs:string" />
+      <xs:element name="suffix" type="xs:string" />
+      <xs:element name="addressLines" type="xs:string" />
+      <xs:element name="city" type="xs:string" />
+      <xs:element name="state" type="xs:string" />
+      <xs:element name="zipCode" type="xs:string" />
+      <xs:element name="country" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="shippingPackage">
+    <xs:sequence>
+      <xs:element name="shippingPackageId" nillable="true" type="xs:long" />
+      <xs:element name="shipDate" nillable="true" type="xs:dateTime" />
+      <xs:element name="trackingNumber" type="xs:string" />
+      <xs:element name="shipWeight" nillable="true" type="xs:double" />
+      <xs:element name="shipAmount" nillable="true" type="xs:decimal" />
+      <xs:element name="packageDate" type="xs:dateTime" />
+      <xs:element name="shippingCode" type="xs:string" />
+      <xs:element name="orderId" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="orderComment">
+    <xs:sequence>
+      <xs:element name="orderCommentId" nillable="true" type="xs:long" />
+      <xs:element name="orderId" nillable="true" type="xs:long" />
+      <xs:element name="comment" type="xs:string" />
+      <xs:element name="printableComment" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="orderSummary">
+    <xs:sequence>
+      <xs:element name="accountId" type="xs:long" />
+      <xs:element name="currencyCode" type="xs:string" />
+      <xs:element name="amount" type="xs:decimal" />
+      <xs:element name="conversionAmount" type="xs:decimal" />
+      <xs:element name="orderCount" type="xs:long" />
+      <xs:element name="firstOrderDate" type="xs:date" />
+      <xs:element name="firstOrderAmount" type="xs:decimal" />
+      <xs:element name="firstOrderConversionAmount" type="xs:decimal" />
+      <xs:element name="firstOrderId" type="xs:long" />
+      <xs:element name="largeOrderDate" type="xs:date" />
+      <xs:element name="largeOrderAmount" type="xs:decimal" />
+      <xs:element name="largeOrderConversionAmount" type="xs:decimal" />
+      <xs:element name="largeOrderId" type="xs:long" />
+      <xs:element name="lastOrderDate" type="xs:date" />
+      <xs:element name="lastOrderAmount" type="xs:decimal" />
+      <xs:element name="lastOrderConversionAmount" type="xs:decimal" />
+      <xs:element name="lastOrderId" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="orderSummaries">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="orderSummaryList" type="mstns:orderSummary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="orderAnnual">
+    <xs:sequence>
+      <xs:element name="accountId" type="xs:long" />
+      <xs:element name="currencyCode" type="xs:string" />
+      <xs:element name="orderDateYear" type="xs:int" />
+      <xs:element name="orderCount" type="xs:long" />
+      <xs:element name="amount" type="xs:decimal" />
+      <xs:element name="conversionAmount" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="orderAnnualSummaries">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="orderAnnualList" type="mstns:orderAnnual" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="arMonthlySummary">
+    <xs:sequence>
+      <xs:element name="arMonthlySummaryId" type="xs:long" />
+      <xs:element name="accountId" type="xs:long" />
+      <xs:element name="year" type="xs:int" />
+      <xs:element name="month" type="xs:int" />
+      <xs:element name="amount" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="arMonthlySummaries">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="arMonthlySummaryList" type="mstns:arMonthlySummary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="arTransaction">
+    <xs:sequence>
+      <xs:element name="arTransactionId" nillable="true" type="xs:long" />
+      <xs:element name="accountId" type="xs:long" />
+      <xs:element name="arTransactionType" type="mstns:enumARTransactionType" />
+      <xs:element name="transactionDate" type="xs:date" />
+      <xs:element name="amount" type="xs:decimal" />
+      <xs:element name="description" type="xs:string" />
+      <xs:element name="status" type="mstns:enumARTransactionStatus" />
+      <xs:element name="applyDate" nillable="true" type="xs:date" />
+      <xs:element name="batchId" nillable="true" type="xs:long" />
+      <xs:element name="orderId" nillable="true" type="xs:long" />
+      <xs:element name="currencyCode" type="xs:string" />
+      <xs:element name="conversionRate" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="enumARTransactionStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Posted" />
+      <xs:enumeration value="Pending" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="enumARTransactionType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Amount Due" />
+      <xs:enumeration value="Payment" />
+      <xs:enumeration value="Adjustment" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="arTransactions">
+    <xs:sequence>
+      <xs:element name="balance" type="xs:decimal" />
+      <xs:element maxOccurs="unbounded" name="arTransactionList" type="mstns:arTransaction" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="subscription">
+    <xs:sequence>
+      <xs:element name="subscriptionId" nillable="true" type="xs:long" />
+      <xs:element name="entityId" type="xs:long" />
+      <xs:element name="productId" type="xs:long" />
+      <xs:element name="originatingOrderId" type="xs:long" />
+      <xs:element name="originatingOrderDetailId" type="xs:long" />
+      <xs:element name="status" type="mstns:enumSubscriptionStatus" />
+      <xs:element name="purchaseQty" type="xs:int" />
+      <xs:element name="remainingQuantity" type="xs:int" />
+      <xs:element name="motivationCode" type="xs:string" />
+      <xs:element name="subscriptionType" type="mstns:enumSubscriptionType" />
+      <xs:element name="lastUsedUserId" nillable="true" type="xs:long" />
+      <xs:element name="lastUsedDate" nillable="true" type="xs:dateTime" />
+      <xs:element name="addressId" nillable="true" type="xs:long" />
+      <xs:element name="addressType" type="xs:string" />
+      <xs:element name="shipToTitle" type="xs:string" />
+      <xs:element name="shipToFirstName" type="xs:string" />
+      <xs:element name="shipToLastName" type="xs:string" />
+      <xs:element name="shipToSuffix" type="xs:string" />
+      <xs:element name="shipToName" type="xs:string" />
+      <xs:element name="shipToAddressLines" type="xs:string" />
+      <xs:element name="shipToCity" type="xs:string" />
+      <xs:element name="shipToState" type="xs:string" />
+      <xs:element name="shipToZip" type="xs:string" />
+      <xs:element name="shipToCountry" type="xs:string" />
+      <xs:element name="addUserId" nillable="true" type="xs:long" />
+      <xs:element name="addDate" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="enumSubscriptionStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Active" />
+      <xs:enumeration value="Expired" />
+      <xs:enumeration value="Suspended" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="enumSubscriptionType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Purchase" />
+      <xs:enumeration value="Gift" />
+      <xs:enumeration value="Alternate" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="subscriptions">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="subscriptionList" type="mstns:subscription" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

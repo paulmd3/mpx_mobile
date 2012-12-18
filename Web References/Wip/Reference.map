@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://173.204.88.34:1674/Contract/AccountData.xsd" filename="AccountData.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://173.204.88.34:1674/MpxWebServices.asmx?wsdl" filename="MpxWebServices.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://173.204.88.34:1674/Contract/OrganizationData.xsd" filename="OrganizationData.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://173.204.88.34:1674/Contract/MpxWebServices.wsdl" filename="MpxWebServices0.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://173.204.88.34:1674/Contract/MediaOutletData.xsd" filename="MediaOutletData.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://173.204.88.34:1674/Contract/AdminMessages.xsd" filename="AdminMessages.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://173.204.88.34:1674/Contract/TransactionMessages.xsd" filename="TransactionMessages.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://173.204.88.34:1674/Contract/MediaOutletMessages.xsd" filename="MediaOutletMessages.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://173.204.88.34:1674/Contract/TransactionData.xsd" filename="TransactionData.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://173.204.88.34:1674/Contract/InventoryData.xsd" filename="Inventory.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://173.204.88.34:1674/Contract/HeaderData.xsd" filename="HeaderData.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://173.204.88.34:1674/Contract/AnalysisMessages.xsd" filename="AnalysisMessages.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://173.204.88.34:1674/Contract/AnalysisData.xsd" filename="AnalysisData.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://173.204.88.34:1674/Contract/InventoryMessages.xsd" filename="InventoryMessages.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://173.204.88.34:1674/Contract/AccountMessages.xsd" filename="AccountMessages.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://173.204.88.34:1674/Contract/OrganizationMessages.xsd" filename="CodeMessages.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.DiscoveryDocumentReference" url="http://173.204.88.34:1674/MpxWebServices.asmx?disco" filename="MpxWebServices.disco" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://173.204.88.34:1674/Contract/ProjectMessages.xsd" filename="ProjectMessages.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://173.204.88.34:1674/Contract/KTABData.xsd" filename="KTABData.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://173.204.88.34:1674/Contract/KTABMessages.xsd" filename="KTABMessages.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://173.204.88.34:1674/Contract/ProjectData.xsd" filename="ProjectData.xsd" />
+  </Results>
+</DiscoveryClientResultsFile>
