@@ -4,12 +4,6 @@
     MPX Mobile
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    <%
-        var agent = Request.UserAgent;
-
-        if (agent.ToString().Contains(System.Configuration.ConfigurationSettings.AppSettings["Device"]))
-        {
-    %>
     <div id="back">
         <fieldset>
             <legend>Home</legend>
@@ -28,7 +22,4 @@
             </div>
         </fieldset>
     </div>
-    <% 
-        }
-    %>
 </asp:Content>

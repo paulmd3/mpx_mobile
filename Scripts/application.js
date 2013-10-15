@@ -88,10 +88,10 @@ var _history = ["/Dashboard/Index"];
 
 function _getPage(url) {
     $("#loading").css("display", "block");
-
+    
     History.pushState(null, null, url);
     _history.push(url);
-
+    alert();
     $.get(url.toString(), null, function (data) {
         $("#page").html(data);
         $("#page").scrollTop(0);
@@ -101,12 +101,19 @@ function _getPage(url) {
 
 // @todo error checking
 function _back() {
-    $("#loading").css("display", "block");
 
     var url = _history[_history.length - 2]; // account for the zero
+    alert(_history.length);
+    alert(_history[_history.length - 1]);
+    if (url == undefined) {
+        url = "/Dashboard/Index";
+    }
+    $("#loading").css("display", "block");
     _history.pop();
-
+    _history.pop();
+    alert(url);
     $.get(url, null, function (data) {
+
         History.pushState(null, null, url);
 
         $("#page").html(data);
@@ -118,24 +125,27 @@ function _back() {
 
 $(function () {
 
-    $('a').live('click', function (e) {
-        var elem_id = $(this).attr("id");
-        var a = $(this);
-        var href = $(this).attr("href");
+//    alert(_history.length);
 
-        if (a.is('.forward, .newforward')) {
-            _getPage(href);
-        }
-        else if (a.is(".postforward")) {
-            document.location = href;
-        }
-        else if (a.is(".mailforward")) {
-            window.location.replace = href;
-        }
-        else if (a.is(".backwards")) {
-            _back();
-        }
+//    $('a').bind('click', function (e) {
+//        var elem_id = $(this).attr("id");
+//        var a = $(this);
+//        var href = $(this).attr("href");
 
-        return false;
-    });
+//        if (a.is('.forward, .newforward')) {
+//            alert(href);
+//            _getPage(href);
+//        }
+//        else if (a.is(".postforward")) {
+//            document.location = href;
+//        }
+//        else if (a.is(".mailforward")) {
+//            window.location.replace = href;
+//        }
+//        else if (a.is(".backwards")) {
+//            _back();
+//        }
+
+//        return false;
+//    });
 });

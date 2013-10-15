@@ -5,22 +5,20 @@ else {
     window.attachEvent("onstorage", handle_storage);
 };
 
-$(function() {
-    if (navigator.offLine) {
-        $("#pageTitle").append("(Offline)");
-        $("#status").append("(Offline)");
-    }
-    else if (navigator.onLine) {
-        $("#pageTitle").append("(Online)");
-    }
-});
-
+//$(function() {
+//    if (navigator.offLine) {
+//        $("#title1").append("(Offline)");
+//        $("#status").append("(Offline)");
+//    }
+//    else if (navigator.onLine) {
+//        $("#title1").append("(Online)");
+//    }
+//});
 
 function handle_storage(e) {
     if (!e) { e = window.event; }
     console.dir(e);
 }
-
 
 var Bookmark = (function() {
     var Bookmark = function(id, last_name, first_name, address, phone, email, url) {

@@ -85,10 +85,12 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AgentInformation.cs" />
+    <Compile Include="Models\DonorDetail.cs" />
     <Compile Include="Models\NoteTypes.cs" />
     <Compile Include="Models\Donors.cs" />
     <Compile Include="Models\Gifts.cs" />
     <Compile Include="Models\Notes.cs" />
+    <Compile Include="Models\SearchCondition.cs" />
     <Compile Include="Models\Util.cs" />
     <Compile Include="Models\UsersAut.designer.cs">
       <AutoGen>True</AutoGen>
@@ -109,14 +111,21 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\images\orangeleap.gif" />
+    <Content Include="Content\iPhone\clock.png" />
+    <Content Include="Content\iPhone\home.png" />
+    <Content Include="Content\iPhone\icon_arrow_left.png" />
     <Content Include="Content\iPhone\iui-default-theme.css" />
     <Content Include="Content\iPhone\iui-panel-list.css" />
     <Content Include="Content\iPhone\iui.css" />
+    <Content Include="Content\iPhone\lupa.png" />
+    <Content Include="Content\iPhone\star.png" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\iui.js" />
     <Content Include="Scripts\jquery.history.js" />
     <Content Include="Scripts\jquery.scrollto.min.js" />
+    <Content Include="Scripts\search.js" />
     <Content Include="Scripts\touch\src\jqtouch-jquery.min.js" />
     <Content Include="Scripts\touch\src\jqtouch.js" />
     <Content Include="Scripts\touch\themes\css\jqtouch.css" />
@@ -138,15 +147,20 @@
     <Content Include="Scripts\touch\themes\img\jqt\toggleOn.png" />
     <Content Include="Scripts\touch\themes\img\jqt\toolbar.png" />
     <Content Include="Scripts\touch\themes\img\jqt\whiteButton.png" />
+    <Content Include="Views\Account\LogOn.aspx" />
+    <Content Include="Views\Account\_LogOn.ascx" />
     <Content Include="Views\AppCache\Manifest.aspx" />
     <Content Include="Views\Dashboard\Index.aspx" />
     <Content Include="Views\Dashboard\_Index.ascx" />
     <Content Include="Views\Errors\Http404.aspx" />
     <Content Include="Views\Errors\Http500.aspx" />
+    <Content Include="Views\Home\DeleteNote.aspx" />
     <Content Include="Views\Home\_BookMarked.ascx" />
     <Content Include="Views\Home\BookmarkedDonors.aspx" />
     <Content Include="Views\Home\DonorInformation.aspx" />
+    <Content Include="Views\Home\_Donor.ascx" />
     <Content Include="Views\Home\_Gift.ascx" />
+    <Content Include="Views\Home\_InsertNotes.ascx" />
     <Content Include="Views\Home\_Recently.ascx">
       <SubType>ASPXCodeBehind</SubType>
     </Content>
@@ -154,6 +168,7 @@
     <Content Include="Views\Home\Search.aspx" />
     <Content Include="Views\Home\SearchDonors.aspx" />
     <Content Include="Views\Offline\Index.aspx" />
+    <Content Include="Views\Shared\Error.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -162,7 +177,6 @@
     <Content Include="Scripts\jquery-1.3.2.min.js" />
     <Content Include="Views\Account\ChangePassword.aspx" />
     <Content Include="Views\Account\ChangePasswordSuccess.aspx" />
-    <Content Include="Views\Account\LogOn.aspx" />
     <Content Include="Views\Account\Register.aspx" />
     <Content Include="Views\Home\About.aspx" />
     <Content Include="Views\Home\Index.aspx" />
@@ -187,12 +201,29 @@
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="DatabaseScript.sql" />
     <None Include="Models\UsersAut.dbml.layout">
       <DependentUpon>UsersAut.dbml</DependentUpon>
     </None>
+    <None Include="Web References\WipService\AccountCreditCardData.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Web References\WipService\AccountData.xsd" />
+    <None Include="Web References\WipService\AccountDateMessages.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\WipService\AccountGiftPictureData.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\WipService\AccountGiftPictureMessages.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Web References\WipService\AccountMessages.xsd" />
+    <None Include="Web References\WipService\AccountRecurringGiftData.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\WipService\AccountRecurringGiftMessages.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Web References\WipService\AdminMessages.xsd" />
     <None Include="Web References\WipService\AnalysisData.xsd" />
     <None Include="Web References\WipService\AnalysisMessages.xsd" />
@@ -200,16 +231,28 @@
       <DependentUpon>Reference.map</DependentUpon>
     </None>
     <None Include="Web References\WipService\CodeMessages.xsd" />
+    <None Include="Web References\WipService\CreditCardMessages.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Web References\WipService\deleteAccountCodeResponse.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
+    <None Include="Web References\WipService\deleteAccountDateResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
     <None Include="Web References\WipService\deleteAccountEmailAddressResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\deleteAccountGiftPictureResponse.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
     <None Include="Web References\WipService\deleteAccountNoteResponse.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
     <None Include="Web References\WipService\deleteAccountPhoneNumberResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\deleteAccountRecurringGiftResponse.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
     <None Include="Web References\WipService\deleteAccountSalutationResponse.datasource">
@@ -248,6 +291,9 @@
     <None Include="Web References\WipService\getAccountFinancialsResponse.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
+    <None Include="Web References\WipService\getAccountGiftPictureByEntityIdResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
     <None Include="Web References\WipService\getAccountNotesResponse.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
@@ -255,6 +301,9 @@
       <DependentUpon>Reference.map</DependentUpon>
     </None>
     <None Include="Web References\WipService\getAccountPledgesResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\getAccountRecurringGiftsResponse.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
     <None Include="Web References\WipService\getAccountRelationshipsResponse.datasource">
@@ -390,13 +439,25 @@
     <None Include="Web References\WipService\insertAccountCodeResponse.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
+    <None Include="Web References\WipService\insertAccountCreditCardResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\insertAccountDateResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
     <None Include="Web References\WipService\insertAccountEmailAddressResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\insertAccountGiftPictureResponse.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
     <None Include="Web References\WipService\insertAccountNoteResponse.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
     <None Include="Web References\WipService\insertAccountPhoneNumberResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\insertAccountRecurringGiftResponse.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
     <None Include="Web References\WipService\insertAccountResponse.datasource">
@@ -444,7 +505,9 @@
     <None Include="Web References\WipService\KTABMessages.xsd" />
     <None Include="Web References\WipService\MediaOutletData.xsd" />
     <None Include="Web References\WipService\MediaOutletMessages.xsd" />
-    <None Include="Web References\WipService\MpxWebServices.wsdl" />
+    <None Include="Web References\WipService\MpxWebServices.wsdl">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Web References\WipService\MpxWebServices0.wsdl" />
     <None Include="Web References\WipService\openBatchResponse.datasource">
       <DependentUpon>Reference.map</DependentUpon>
@@ -458,6 +521,7 @@
     <None Include="Web References\WipService\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </None>
     <None Include="Web References\WipService\searchMediaOutletsResponse.datasource">
       <DependentUpon>Reference.map</DependentUpon>
@@ -519,26 +583,36 @@
     <Content Include="Views\Home\_Notes.ascx" />
     <Content Include="Views\Home\NotesInformation.aspx" />
     <Content Include="Views\Home\ValidationError.aspx" />
-    <Content Include="Views\Home\_Donor.ascx" />
     <Content Include="Views\Home\_Search.ascx" />
     <Content Include="Views\Home\_SearchDonors.ascx" />
     <Content Include="Views\Shared\DefaultMenu.aspx" />
     <Content Include="Views\Shared\NavWeb.ascx" />
     <Content Include="Views\Web.config" />
-    <None Include="Web References\WipService\MpxWebServices.disco" />
+    <None Include="Web References\WipService\MpxWebServices.disco">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Web References\WipService\updateAccountAddressResponse.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
     <None Include="Web References\WipService\updateAccountCodeResponse.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
+    <None Include="Web References\WipService\updateAccountDateResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
     <None Include="Web References\WipService\updateAccountEmailAddressResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\updateAccountGiftPictureResponse.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
     <None Include="Web References\WipService\updateAccountNoteResponse.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
     <None Include="Web References\WipService\updateAccountPhoneNumberResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WipService\updateAccountRecurringGiftResponse.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
     <None Include="Web References\WipService\updateAccountResponse.datasource">
@@ -576,10 +650,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <WebReferenceUrl Include="http://174.129.220.124:1700/MpxWebServices.asmx">
+    <WebReferenceUrl Include="http://184.106.251.111:1674/MpxWebServices.asmx">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\WipService\</RelPath>
-      <UpdateFromURL>http://174.129.220.124:1700/MpxWebServices.asmx</UpdateFromURL>
+      <UpdateFromURL>http://184.106.251.111:1674/MpxWebServices.asmx</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>
@@ -589,7 +663,6 @@
     </WebReferenceUrl>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Logs\" />
     <Folder Include="Scripts\touch\css\" />
   </ItemGroup>
@@ -608,7 +681,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>49808</DevelopmentServerPort>
+          <DevelopmentServerPort>4169</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://mpx-mobile.morph5.com/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>

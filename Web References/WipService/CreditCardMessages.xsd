@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://mpowersystems.com/AccountCreditCardMessages.xsd" xmlns:import="http://mpowersystems.com/AccountCreditCardData.xsd" xmlns="http://mpowersystems.com/AccountCreditCardMessages.xsd" elementFormDefault="qualified" targetNamespace="http://mpowersystems.com/AccountCreditCardMessages.xsd" id="CreditCardMessages" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="AccountCreditCardData.xsd" namespace="http://mpowersystems.com/AccountCreditCardData.xsd" />
+  <xs:element name="insertAccountCreditCardRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="entityCreditCard" type="import:entityCreditCard" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="insertAccountCreditCardResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="entityCreditCardId" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

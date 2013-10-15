@@ -1,1 +1,39 @@
-﻿<?xml version="1.0" encoding="utf-8"?><!--MPX Note Types--><types><date><modified>6/11/2010</modified></date><type><noteTypeValue>Church</noteTypeValue><description>Name of Church Donor Attends</description></type><type><noteTypeValue>Contact</noteTypeValue><description>Contact Note</description></type><type><noteTypeValue>KEY</noteTypeValue><description>Key Comment</description></type><type><noteTypeValue>Matching Gift Procedures</noteTypeValue><description>Matching Gift Procedures</description></type><type><noteTypeValue>Matching Gift Request</noteTypeValue><description>Matching Gift Request</description></type><type><noteTypeValue>Matching Gift Rules</noteTypeValue><description>Matching Gift Rules</description></type><type><noteTypeValue>Prayer Request</noteTypeValue><description>Prayer Requests</description></type><type><noteTypeValue>TI Import</noteTypeValue><description>TI Import</description></type></types>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--MPX Note Types-->
+<types>
+  <date>
+    <modified>6/11/2010</modified>
+  </date>
+  <type>
+    <noteTypeValue>Church</noteTypeValue>
+    <description>Name of Church Donor Attends</description>
+  </type>
+  <type>
+    <noteTypeValue>Contact</noteTypeValue>
+    <description>Contact Note</description>
+  </type>
+  <type>
+    <noteTypeValue>KEY</noteTypeValue>
+    <description>Key Comment</description>
+  </type>
+  <type>
+    <noteTypeValue>Matching Gift Procedures</noteTypeValue>
+    <description>Matching Gift Procedures</description>
+  </type>
+  <type>
+    <noteTypeValue>Matching Gift Request</noteTypeValue>
+    <description>Matching Gift Request</description>
+  </type>
+  <type>
+    <noteTypeValue>Matching Gift Rules</noteTypeValue>
+    <description>Matching Gift Rules</description>
+  </type>
+  <type>
+    <noteTypeValue>Prayer Request</noteTypeValue>
+    <description>Prayer Requests</description>
+  </type>
+  <type>
+    <noteTypeValue>TI Import</noteTypeValue>
+    <description>TI Import</description>
+  </type>
+</types>

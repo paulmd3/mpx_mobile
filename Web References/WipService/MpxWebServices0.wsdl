@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<definitions xmlns:import2="http://mpowersystems.com/HeaderData.xsd" xmlns:import9="http://mpowersystems.com/InventoryData.xsd" xmlns:import14="http://mpowersystems.com/ProjectMessages.xsd" xmlns:import12="http://mpowersystems.com/MediaOutletMessages.xsd" xmlns:import4="http://mpowersystems.com/KTABMessages.xsd" xmlns:import6="http://mpowersystems.com/OrganizationMessages.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:import1="http://mpowersystems.com/AccountData.xsd" xmlns:import15="http://mpowersystems.com/AnalysisData.xsd" xmlns:import3="http://mpowersystems.com/KTABData.xsd" xmlns:import0="http://mpowersystems.com/AccountMessages.xsd" xmlns:import16="http://mpowersystems.com/AnalysisMessages.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:import8="http://mpowersystems.com/TransactionMessages.xsd" xmlns:tns="mpowersystems.com/MpxWebServices" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:import17="http://mpowersystems.com/AdminMessages.xsd" xmlns:import5="http://mpowersystems.com/OrganizationData.xsd" xmlns:import7="http://mpowersystems.com/TransactionData.xsd" xmlns:import13="http://mpowersystems.com/ProjectData.xsd" xmlns:import10="http://mpowersystems.com/InventoryMessages.xsd" xmlns:import11="http://mpowersystems.com/MediaOutletData.xsd" name="MpxWebServices" targetNamespace="mpowersystems.com/MpxWebServices" xmlns="http://schemas.xmlsoap.org/wsdl/">
+<definitions xmlns:import18="http://mpowersystems.com/AccountGiftPictureData.xsd" xmlns:import22="http://mpowersystems.com/AccountDateMessages.xsd" xmlns:import11="http://mpowersystems.com/MediaOutletData.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:import17="http://mpowersystems.com/AdminMessages.xsd" xmlns:import21="http://mpowersystems.com/AccountCreditCardMessages.xsd" xmlns:import10="http://mpowersystems.com/InventoryMessages.xsd" xmlns:import16="http://mpowersystems.com/AnalysisMessages.xsd" xmlns:import0="http://mpowersystems.com/AccountMessages.xsd" xmlns:import8="http://mpowersystems.com/TransactionMessages.xsd" xmlns:import9="http://mpowersystems.com/InventoryData.xsd" xmlns:import20="http://mpowersystems.com/AccountCreditCardData.xsd" xmlns:tns="mpowersystems.com/MpxWebServices" xmlns:import6="http://mpowersystems.com/OrganizationMessages.xsd" xmlns:import7="http://mpowersystems.com/TransactionData.xsd" xmlns:import4="http://mpowersystems.com/KTABMessages.xsd" xmlns:import5="http://mpowersystems.com/OrganizationData.xsd" xmlns:import15="http://mpowersystems.com/AnalysisData.xsd" xmlns:import3="http://mpowersystems.com/KTABData.xsd" xmlns:import24="http://mpowersystems.com/AccountRecurringGiftMessages.xsd" xmlns:import1="http://mpowersystems.com/AccountData.xsd" xmlns:import2="http://mpowersystems.com/HeaderData.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:import14="http://mpowersystems.com/ProjectMessages.xsd" xmlns:import19="http://mpowersystems.com/AccountGiftPictureMessages.xsd" xmlns:import23="http://mpowersystems.com/AccountRecurringGiftData.xsd" xmlns:import12="http://mpowersystems.com/MediaOutletMessages.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:import13="http://mpowersystems.com/ProjectData.xsd" name="MpxWebServices" targetNamespace="mpowersystems.com/MpxWebServices" xmlns="http://schemas.xmlsoap.org/wsdl/">
   <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MpxWebServices</wsdl:documentation>
   <types>
     <xsd:schema>
@@ -21,8 +21,147 @@
       <xsd:import schemaLocation="AnalysisData.xsd" namespace="http://mpowersystems.com/AnalysisData.xsd" />
       <xsd:import schemaLocation="AnalysisMessages.xsd" namespace="http://mpowersystems.com/AnalysisMessages.xsd" />
       <xsd:import schemaLocation="AdminMessages.xsd" namespace="http://mpowersystems.com/AdminMessages.xsd" />
+      <xsd:import schemaLocation="AccountGiftPictureData.xsd" namespace="http://mpowersystems.com/AccountGiftPictureData.xsd" />
+      <xsd:import schemaLocation="AccountGiftPictureMessages.xsd" namespace="http://mpowersystems.com/AccountGiftPictureMessages.xsd" />
+      <xsd:import schemaLocation="AccountCreditCardData.xsd" namespace="http://mpowersystems.com/AccountCreditCardData.xsd" />
+      <xsd:import schemaLocation="AccountCreditCardMessages.xsd" namespace="http://mpowersystems.com/AccountCreditCardMessages.xsd" />
+      <xsd:import schemaLocation="AccountDateMessages.xsd" namespace="http://mpowersystems.com/AccountDateMessages.xsd" />
+      <xsd:import schemaLocation="AccountRecurringGiftData.xsd" namespace="http://mpowersystems.com/AccountRecurringGiftData.xsd" />
+      <xsd:import schemaLocation="AccountRecurringGiftMessages.xsd" namespace="http://mpowersystems.com/AccountRecurringGiftMessages.xsd" />
     </xsd:schema>
   </types>
+  <message name="getAccountGiftPictureByEntityIdIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import19:getAccountGiftPictureByEntityIdRequest" />
+  </message>
+  <message name="getAccountGiftPictureByEntityIdOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import19:getAccountGiftPictureByEntityIdResponse" />
+  </message>
+  <message name="getAccountGiftPictureByEntityIdInHeader">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="insertAccountGiftPictureIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import19:insertAccountGiftPictureRequest" />
+  </message>
+  <message name="insertAccountGiftPictureOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import19:insertAccountGiftPictureResponse" />
+  </message>
+  <message name="insertAccountGiftPictureInHeader">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="updateAccountGiftPictureIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import19:updateAccountGiftPictureRequest" />
+  </message>
+  <message name="updateAccountGiftPictureOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import19:updateAccountGiftPictureResponse" />
+  </message>
+  <message name="updateAccountGiftPictureInHeader">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="deleteAccountGiftPictureIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import19:deleteAccountGiftPictureRequest" />
+  </message>
+  <message name="deleteAccountGiftPictureOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import19:deleteAccountGiftPictureResponse" />
+  </message>
+  <message name="deleteAccountGiftPictureInHeader">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="insertAccountCreditCardIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import21:insertAccountCreditCardRequest" />
+  </message>
+  <message name="insertAccountCreditCardOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import21:insertAccountCreditCardResponse" />
+  </message>
+  <message name="insertAccountCreditCardInHeader">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="insertAccountDateIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import22:insertAccountDateRequest" />
+  </message>
+  <message name="insertAccountDateOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import22:insertAccountDateResponse" />
+  </message>
+  <message name="insertAccountDateInHeader1">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="deleteAccountDateIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import22:deleteAccountDateRequest" />
+  </message>
+  <message name="deleteAccountDateOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import22:deleteAccountDateResponse" />
+  </message>
+  <message name="deleteAccountDateInHeader1">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="updateAccountDateIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import22:updateAccountDateRequest" />
+  </message>
+  <message name="updateAccountDateOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import22:updateAccountDateResponse" />
+  </message>
+  <message name="updateAccountDateInHeader1">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="insertAccountRecurringGiftIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import24:insertAccountRecurringGiftRequest" />
+  </message>
+  <message name="insertAccountRecurringGiftOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import24:insertAccountRecurringGiftResponse" />
+  </message>
+  <message name="insertAccountRecurringGiftInHeader1">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="updateAccountRecurringGiftIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import24:updateAccountRecurringGiftRequest" />
+  </message>
+  <message name="updateAccountRecurringGiftOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import24:updateAccountRecurringGiftResponse" />
+  </message>
+  <message name="updateAccountRecurringGiftInHeader1">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
+  <message name="deleteAccountRecurringGiftIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import24:deleteAccountRecurringGiftRequest" />
+  </message>
+  <message name="deleteAccountRecurringGiftOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import24:deleteAccountRecurringGiftResponse" />
+  </message>
+  <message name="deleteAccountRecurringGiftInHeader1">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
   <message name="getAccountIn">
     <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
     <part name="messagePart" element="import0:getAccountRequest" />
@@ -1211,8 +1350,75 @@
     <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
     <part name="messagePart" element="import2:userCredentials" />
   </message>
+  <message name="getAccountRecurringGiftsIn">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import24:getAccountRecurringGiftsRequest" />
+  </message>
+  <message name="getAccountRecurringGiftsOut">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import24:getAccountRecurringGiftsResponse" />
+  </message>
+  <message name="getAccountRecurringGiftsInHeader1">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <part name="messagePart" element="import2:userCredentials" />
+  </message>
   <portType name="MpxWebServicesInterface">
     <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MpxWebServices</wsdl:documentation>
+    <operation name="getAccountGiftPictureByEntityId">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns the gift picture of the specified account</wsdl:documentation>
+      <input message="tns:getAccountGiftPictureByEntityIdIn" />
+      <output message="tns:getAccountGiftPictureByEntityIdOut" />
+    </operation>
+    <operation name="insertAccountGiftPicture">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Inserts a new gift picture for the specified account</wsdl:documentation>
+      <input message="tns:insertAccountGiftPictureIn" />
+      <output message="tns:insertAccountGiftPictureOut" />
+    </operation>
+    <operation name="updateAccountGiftPicture">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Updates the gift picture of the specified account</wsdl:documentation>
+      <input message="tns:updateAccountGiftPictureIn" />
+      <output message="tns:updateAccountGiftPictureOut" />
+    </operation>
+    <operation name="deleteAccountGiftPicture">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Deletes the gift picture of the specified account</wsdl:documentation>
+      <input message="tns:deleteAccountGiftPictureIn" />
+      <output message="tns:deleteAccountGiftPictureOut" />
+    </operation>
+    <operation name="insertAccountCreditCard">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Inserts a credit card for the specified account.</wsdl:documentation>
+      <input message="tns:insertAccountCreditCardIn" />
+      <output message="tns:insertAccountCreditCardOut" />
+    </operation>
+    <operation name="insertAccountDate">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Inserts a date onto an account</wsdl:documentation>
+      <input message="tns:insertAccountDateIn" />
+      <output message="tns:insertAccountDateOut" />
+    </operation>
+    <operation name="deleteAccountDate">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Deletes a date onto an account</wsdl:documentation>
+      <input message="tns:deleteAccountDateIn" />
+      <output message="tns:deleteAccountDateOut" />
+    </operation>
+    <operation name="updateAccountDate">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Updates a date onto an account</wsdl:documentation>
+      <input message="tns:updateAccountDateIn" />
+      <output message="tns:updateAccountDateOut" />
+    </operation>
+    <operation name="insertAccountRecurringGift">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Inserts a recurring gift batch onto an account</wsdl:documentation>
+      <input message="tns:insertAccountRecurringGiftIn" />
+      <output message="tns:insertAccountRecurringGiftOut" />
+    </operation>
+    <operation name="updateAccountRecurringGift">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Updates a recurring gift batch onto an account</wsdl:documentation>
+      <input message="tns:updateAccountRecurringGiftIn" />
+      <output message="tns:updateAccountRecurringGiftOut" />
+    </operation>
+    <operation name="deleteAccountRecurringGift">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Deletes a recurring gift batch onto an account</wsdl:documentation>
+      <input message="tns:deleteAccountRecurringGiftIn" />
+      <output message="tns:deleteAccountRecurringGiftOut" />
+    </operation>
     <operation name="getAccount">
       <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns an account when given the specific account number.  Note : The defaultEmailAddress, defaultPhoneNumber, and defaultSalutation fields are read only and, if they are changed, will not update the record in the database.</wsdl:documentation>
       <input message="tns:getAccountIn" />
@@ -1709,9 +1915,124 @@ NOTE : The properties of a source code can be modified, but the actual code itse
       <input message="tns:searchMediaOutletsIn" />
       <output message="tns:searchMediaOutletsOut" />
     </operation>
+    <operation name="getAccountRecurringGifts">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns a list of recurring gift records for a given account.</wsdl:documentation>
+      <input message="tns:getAccountRecurringGiftsIn" />
+      <output message="tns:getAccountRecurringGiftsOut" />
+    </operation>
   </portType>
   <binding name="MpxWebServices" type="tns:MpxWebServicesInterface">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getAccountGiftPictureByEntityId">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:getAccountGiftPictureByEntityIdIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getAccountGiftPictureByEntityIdInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertAccountGiftPicture">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:insertAccountGiftPictureIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:insertAccountGiftPictureInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="updateAccountGiftPicture">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:updateAccountGiftPictureIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:updateAccountGiftPictureInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="deleteAccountGiftPicture">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:deleteAccountGiftPictureIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:deleteAccountGiftPictureInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertAccountCreditCard">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:insertAccountCreditCardIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:insertAccountCreditCardInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertAccountDate">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:insertAccountDateIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:insertAccountDateInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="deleteAccountDate">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:deleteAccountDateIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:deleteAccountDateInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="updateAccountDate">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:updateAccountDateIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:updateAccountDateInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertAccountRecurringGift">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:insertAccountRecurringGiftIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:insertAccountRecurringGiftInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="updateAccountRecurringGift">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:updateAccountRecurringGiftIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:updateAccountRecurringGiftInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="deleteAccountRecurringGift">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:deleteAccountRecurringGiftIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:deleteAccountRecurringGiftInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="getAccount">
       <soap:operation soapAction="mpowersystems.com/MpxWebServices:getAccountIn" style="document" />
       <input>
@@ -2702,9 +3023,129 @@ NOTE : The properties of a source code can be modified, but the actual code itse
         <soap:body use="literal" />
       </output>
     </operation>
+    <operation name="getAccountRecurringGifts">
+      <soap:operation soapAction="mpowersystems.com/MpxWebServices:getAccountRecurringGiftsIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getAccountRecurringGiftsInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
   </binding>
   <binding name="MpxWebServicesSoap12" type="tns:MpxWebServicesInterface">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getAccountGiftPictureByEntityId">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:getAccountGiftPictureByEntityIdIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getAccountGiftPictureByEntityIdInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertAccountGiftPicture">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:insertAccountGiftPictureIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:insertAccountGiftPictureInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="updateAccountGiftPicture">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:updateAccountGiftPictureIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:updateAccountGiftPictureInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="deleteAccountGiftPicture">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:deleteAccountGiftPictureIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:deleteAccountGiftPictureInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertAccountCreditCard">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:insertAccountCreditCardIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:insertAccountCreditCardInHeader" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertAccountDate">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:insertAccountDateIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:insertAccountDateInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="deleteAccountDate">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:deleteAccountDateIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:deleteAccountDateInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="updateAccountDate">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:updateAccountDateIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:updateAccountDateInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertAccountRecurringGift">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:insertAccountRecurringGiftIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:insertAccountRecurringGiftInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="updateAccountRecurringGift">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:updateAccountRecurringGiftIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:updateAccountRecurringGiftInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="deleteAccountRecurringGift">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:deleteAccountRecurringGiftIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:deleteAccountRecurringGiftInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
     <operation name="getAccount">
       <soap12:operation soapAction="mpowersystems.com/MpxWebServices:getAccountIn" style="document" />
       <input>
@@ -3690,6 +4131,16 @@ NOTE : The properties of a source code can be modified, but the actual code itse
       <input>
         <soap12:body use="literal" />
         <soap12:header message="tns:searchMediaOutletsInHeader1" part="messagePart" use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getAccountRecurringGifts">
+      <soap12:operation soapAction="mpowersystems.com/MpxWebServices:getAccountRecurringGiftsIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getAccountRecurringGiftsInHeader1" part="messagePart" use="literal" />
       </input>
       <output>
         <soap12:body use="literal" />

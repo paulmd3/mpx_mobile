@@ -1,77 +1,70 @@
-﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
-
-<% var account = ((MPXMobile.WipService.account)ViewData["account"]); %>
-
+﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl<MPXMobile.Models.DonorDetail>" %>
 <script type="text/javascript">
-    $('a[href^=mailto]').live('click', function(event) {
-        event.preventDefault();
+    $('a[.postforward]').bind('click', function (event) {
+        //event.preventDefault();
         window.location.replace = $(this).attr('href');
         return false;
     });
 </script>
-
-<h2>Donor Information</h2>
+<h2>
+    Donor Information</h2>
 <div class="panel">
     <h3>
-        <%=account.title +" "+ account.lastName +", "+ account.firstName %>
-        <a href="<%=Url.Action("BookMarkDonor", "Home", new {accountId = account.accountId})%>" class="forward btn_chrome">Bookmark</a>
+        <%=Model.Donor.title +" "+ Model.Donor.lastName +", "+ Model.Donor.firstName %>
+        <a href="<%=(ViewData["IsBookmarked"]!=null && ((bool)ViewData["IsBookmarked"]))?Url.Action("UnBookMarkDonor", "Home", new {accountId = Model.Donor.accountId}):Url.Action("BookMarkDonor", "Home", new {accountId = Model.Donor.accountId})%>"
+            class="forward btn_chrome"><%if(ViewData["IsBookmarked"]!=null && ((bool)ViewData["IsBookmarked"])){Response.Write("Unbookmark");}else{Response.Write("Bookmark");} %></a><br />
+            <span style="font-size: 12px; font-weight: normal; margin-top: 5px">Account Number: <%=Model.Donor.accountId.ToString() %></span>
     </h3>
-    <input type="hidden" id="account" value="<%=account.accountId %>" />
+    <input type="hidden" id="account" value="<%=Model.Donor.accountId %>" />
     <ul>
-        
-        <% if (account.defaultEmailAddress != string.Empty){%>
-        <li class="arrow email">
-            <a class="postforward" href="mailto:<%=account.defaultEmailAddress %>">
-                <%=account.defaultEmailAddress.Trim()%>
-            </a>
+        <% foreach (MPXMobile.WipService.accountEmailAddress email in Model.Emails)
+           {
+               if (!string.IsNullOrEmpty(email.emailAddress.Trim()))
+               {%>
+        <li class="arrow"><a class="postforward email" href="mailto:<%=email.emailAddress.Trim() %>">
+            <%=email.emailAddress.Trim()%>
+        </a></li>
+        <%      }
+           }
+           foreach (MPXMobile.WipService.accountPhoneNumber phone in Model.Phones)
+           {
+               if (!string.IsNullOrEmpty(phone.phoneNumber))
+               {%>
+        <li class="arrow"><a class="postforward phone" href="tel:<%=phone.phoneNumber.Trim().Replace("(", "").Replace(")", "").Replace("-", "").Replace(" ", "") %>"
+            onclick="return (navigator.userAgent.indexOf('iPhone') != -1)">
+            <%=phone.phoneNumber.Trim()%>
+        </a></li>
+        <%      }
+           }
+           foreach (MPXMobile.WipService.accountAddress address in Model.Addresses)
+           {
+        %>
+        <li class="arrow"><a class="postforward address" target="_blank" href="http://maps.google.com/maps?q=<%=address.address1 + ", " + address.city + " " + address.state %>">
+            <%=address.address1%>
+            <%=address.city%>
+            <%=address.state%>
+            <%=address.zipCode%>
+            <%=address.country%>
+        </a></li>
+        <%  }
+            if (Model.Donor.isOrganization && !string.IsNullOrEmpty(Model.Donor.organizationName))
+            { %>
+        <li class="arrow"><a id="titleO" style="background-image:none;">Organization: <%=Model.Donor.organizationName%></a>
         </li>
-        <%} %>
-        
-        <%if (account.defaultPhoneNumber.Trim() != string.Empty) {%>
-        <li class="arrow phone">
-            <a class="postforward" href="tel:<%=account.defaultPhoneNumber.Trim() %>" onclick="return (navigator.userAgent.indexOf('iPhone') != -1)">
-            <%=account.defaultPhoneNumber.Trim()%>
-            </a>
-        </li>
-        <%} %>
-        
-        <li class="arrow address">
-            <%
-                var agent = Request.UserAgent;
-                var direct = account.address1 + "," + account.city;
-
-                if (agent.ToString().Contains(System.Configuration.ConfigurationSettings.AppSettings["Device"]))
-                {%>
-            <a class="postforward" href="http://maps.google.com/maps?q=<%=direct%>">
-                <%= account.address1 %> <%=account.city %> <%= account.state %> <%= account.zipCode %> <%= account.country %>
-            </a>
-            <%}
-                else
-                { %>
-            <a class="address" target="_blank" href="http://maps.google.com/maps?q=<%=direct%>">
-                <%=account.address1%> <%=account.city %> <%=account.state %> <%=account.zipCode %> <%=account.country %></a>
-            <% }%>
-        </li>
-        <%if (account.isOrganization)
-          { %>
-        <li class="arrow">
-            <span id="titleO">Organization: Name:<%=account.organizationName%></span>
-        </li>
-        <li class="arrow">
-            <span>JobTitle: <%=account.jobTitle%></span>
-        </li>
-        <%} %>
-        
-        <% if (account.webSite != string.Empty) {%>
-            <li class="arrow website">
-                <a class="postforward" target="_blank" href="http://<%=account.webSite%>">
-                    <%=account.webSite%>
-                </a>
-            </li>
+        <%  }
+            if (!string.IsNullOrEmpty( Model.Donor.jobTitle))
+            {%>
+        <li class="arrow"><a style="background-image:none;">JobTitle:
+            <%=Model.Donor.jobTitle%></a> </li>
+        <%  }
+            if (!string.IsNullOrEmpty( Model.Donor.webSite))
+            {%>
+        <li class="arrow website"><a class="postforward" target="_blank" href="http://<%=Model.Donor.webSite%>">
+            <%=Model.Donor.webSite%>
+        </a></li>
         <%} %>
     </ul>
- 
-    <a href="<%=Url.Action("GiftInformation", "Home", new {accountId = account.accountId})%>" class="forward grayButton">Gifts</a>
-
-    <a href="<%=Url.Action("NotesInformation", "Home", new {accountId = account.accountId})%>" class="forward grayButton">Notes</a>
+    <a href="<%=Url.Action("GiftInformation", "Home", new {accountId = Model.Donor.accountId})%>"
+        class="forward grayButton">Gifts</a> <a href="<%=Url.Action("NotesInformation", "Home", new {accountId = Model.Donor.accountId})%>"
+            class="forward grayButton">Notes</a>
 </div>

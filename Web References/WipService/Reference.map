@@ -1,26 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Results>
-    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://174.129.220.124:1700/Contract/AccountData.xsd" filename="AccountData.xsd" />
-    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://174.129.220.124:1700/Contract/ProjectMessages.xsd" filename="ProjectMessages.xsd" />
-    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://174.129.220.124:1700/Contract/InventoryData.xsd" filename="Inventory.xsd" />
-    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://174.129.220.124:1700/Contract/TransactionMessages.xsd" filename="TransactionMessages.xsd" />
-    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://174.129.220.124:1700/Contract/KTABData.xsd" filename="KTABData.xsd" />
-    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://174.129.220.124:1700/MpxWebServices.asmx?wsdl" filename="MpxWebServices.wsdl" />
-    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://174.129.220.124:1700/Contract/OrganizationData.xsd" filename="OrganizationData.xsd" />
-    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://174.129.220.124:1700/Contract/InventoryMessages.xsd" filename="InventoryMessages.xsd" />
-    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.DiscoveryDocumentReference" url="http://174.129.220.124:1700/MpxWebServices.asmx?disco" filename="MpxWebServices.disco" />
-    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://174.129.220.124:1700/Contract/OrganizationMessages.xsd" filename="CodeMessages.xsd" />
-    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://174.129.220.124:1700/Contract/TransactionData.xsd" filename="TransactionData.xsd" />
-    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://174.129.220.124:1700/Contract/AnalysisMessages.xsd" filename="AnalysisMessages.xsd" />
-    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://174.129.220.124:1700/Contract/AnalysisData.xsd" filename="AnalysisData.xsd" />
-    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://174.129.220.124:1700/Contract/MediaOutletData.xsd" filename="MediaOutletData.xsd" />
-    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://174.129.220.124:1700/Contract/AdminMessages.xsd" filename="AdminMessages.xsd" />
-    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://174.129.220.124:1700/Contract/HeaderData.xsd" filename="HeaderData.xsd" />
-    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://174.129.220.124:1700/Contract/MediaOutletMessages.xsd" filename="MediaOutletMessages.xsd" />
-    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://174.129.220.124:1700/Contract/KTABMessages.xsd" filename="KTABMessages.xsd" />
-    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://174.129.220.124:1700/Contract/MpxWebServices.wsdl" filename="MpxWebServices0.wsdl" />
-    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://174.129.220.124:1700/Contract/ProjectData.xsd" filename="ProjectData.xsd" />
-    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://174.129.220.124:1700/Contract/AccountMessages.xsd" filename="AccountMessages.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://184.106.251.111:1674/Contract/AnalysisData.xsd" filename="AnalysisData.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://184.106.251.111:1674/Contract/AccountCreditCardMessages.xsd" filename="CreditCardMessages.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://184.106.251.111:1674/MpxWebServices.asmx?wsdl" filename="MpxWebServices.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://184.106.251.111:1674/Contract/TransactionData.xsd" filename="TransactionData.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://184.106.251.111:1674/Contract/AdminMessages.xsd" filename="AdminMessages.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.DiscoveryDocumentReference" url="http://184.106.251.111:1674/MpxWebServices.asmx?disco" filename="MpxWebServices.disco" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://184.106.251.111:1674/Contract/MediaOutletData.xsd" filename="MediaOutletData.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://184.106.251.111:1674/Contract/OrganizationMessages.xsd" filename="CodeMessages.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://184.106.251.111:1674/Contract/KTABData.xsd" filename="KTABData.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://184.106.251.111:1674/Contract/MpxWebServices.wsdl" filename="MpxWebServices0.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://184.106.251.111:1674/Contract/KTABMessages.xsd" filename="KTABMessages.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://184.106.251.111:1674/Contract/InventoryMessages.xsd" filename="InventoryMessages.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://184.106.251.111:1674/Contract/MediaOutletMessages.xsd" filename="MediaOutletMessages.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://184.106.251.111:1674/Contract/ProjectMessages.xsd" filename="ProjectMessages.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://184.106.251.111:1674/Contract/AccountRecurringGiftMessages.xsd" filename="AccountRecurringGiftMessages.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://184.106.251.111:1674/Contract/OrganizationData.xsd" filename="OrganizationData.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://184.106.251.111:1674/Contract/AccountMessages.xsd" filename="AccountMessages.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://184.106.251.111:1674/Contract/AnalysisMessages.xsd" filename="AnalysisMessages.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://184.106.251.111:1674/Contract/AccountGiftPictureMessages.xsd" filename="AccountGiftPictureMessages.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://184.106.251.111:1674/Contract/ProjectData.xsd" filename="ProjectData.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://184.106.251.111:1674/Contract/AccountDateMessages.xsd" filename="AccountDateMessages.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://184.106.251.111:1674/Contract/AccountData.xsd" filename="AccountData.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://184.106.251.111:1674/Contract/TransactionMessages.xsd" filename="TransactionMessages.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://184.106.251.111:1674/Contract/AccountRecurringGiftData.xsd" filename="AccountRecurringGiftData.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://184.106.251.111:1674/Contract/HeaderData.xsd" filename="HeaderData.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://184.106.251.111:1674/Contract/InventoryData.xsd" filename="Inventory.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://184.106.251.111:1674/Contract/AccountGiftPictureData.xsd" filename="AccountGiftPictureData.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://184.106.251.111:1674/Contract/AccountCreditCardData.xsd" filename="AccountCreditCardData.xsd" />
   </Results>
 </DiscoveryClientResultsFile>

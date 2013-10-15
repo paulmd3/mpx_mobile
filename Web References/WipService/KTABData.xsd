@@ -92,6 +92,8 @@
       <xs:element name="ccType" type="xs:string" />
       <xs:element name="ccExpiry" type="xs:string" />
       <xs:element name="payRefNum" type="xs:string" />
+      <xs:element name="bankRoutingNumber" type="xs:string" />
+      <xs:element name="achAccountType" type="xs:string" />
       <xs:element name="ccAuth" type="xs:string" />
       <xs:element name="ccAuthDate" type="xs:string" />
       <xs:element name="receiptNumber" type="xs:string" />
@@ -129,6 +131,8 @@
       <xs:element name="ccType" type="xs:string" />
       <xs:element name="ccExpiry" type="xs:string" />
       <xs:element name="payRefNum" type="xs:string" />
+      <xs:element name="bankRoutingNumber" type="xs:string" />
+      <xs:element name="achAccountType" type="xs:string" />
       <xs:element name="ccAuth" type="xs:string" />
       <xs:element name="ccAuthDate" type="xs:string" />
       <xs:element name="currencyCode" type="xs:string" />
@@ -166,6 +170,7 @@
       <xs:element name="tax" type="xs:string" />
       <xs:element name="secondTax" type="xs:string" />
       <xs:element name="taxable" type="xs:string" />
+      <xs:element name="discountAmount" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="pledge_MasterRecord">

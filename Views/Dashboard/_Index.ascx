@@ -1,10 +1,5 @@
 ﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
 
-<%
-    var agent = Request.UserAgent;
-    if (agent.ToString().Contains(System.Configuration.ConfigurationSettings.AppSettings["Device"]))
-    {
-%>
     <div id="back">
         <fieldset>
             <legend>Home</legend>
@@ -23,12 +18,3 @@
             </div>
         </fieldset>
     </div>
-<% 
-    } else {
-%>
-
-    <p>Welcome to the <%=System.Configuration.ConfigurationSettings.AppSettings["ApplicationName"].ToString()%> Mobile app</p>
-
-<% 
-    }
-%>

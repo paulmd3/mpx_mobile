@@ -6,12 +6,42 @@ li > a[selected="progress"]{background-image:url(../default/loading.gif),url(../
 /************************************************************************************************/
 body > .toolbar{background:url(/Content/iPhone/orange-bg.png) #6d84a2 repeat-x;}
 .button{/*-webkit-border-image:url(toolButton.png) 0 5 0 5;-moz-border-image:url(toolButton.png) 0 5 0 5;*/}
-.blueButton{-webkit-border-image:url(blueButton.png) 0 5 0 5;-moz-border-image:url(blueButton.png) 0 5 0 5;}
+.blueButton
+{
+    -webkit-border-image:url(blueButton.png) 0 5 0 5;
+    -moz-border-image:url(blueButton.png) 0 5 0 5;
+    border-style:solid; 
+    border-width:0px 5px 0px 5px;
+}
 #backButton{/* -webkit-border-image:url(backButton.png) 0 8 0 14;-moz-border-image:url(backButton.png) 0 8 0 14;*/}
-.whiteButton{-webkit-border-image:url(../default/whiteButton.png) 0 12 0 12;-moz-border-image:url(../default/whiteButton.png) 0 12 0 12;text-shadow:rgba(255,255,255,0.7) 0 1px 0;}
-.redButton{-webkit-border-image:url(redButton.png) 0 12 0 12;-moz-border-image:url(redButton.png) 0 12 0 12;}
-.grayButton{-webkit-border-image:url(grayButton.png) 0 12 0 12;-moz-border-image:url(grayButton.png) 0 12 0 12;color:#FFFFFF;}
-#backButton{-webkit-border-image:url(backButtonBrdr.png) 0 8 0 14;-moz-border-image:url(backButtonBrdr.png) 0 8 0 14;background:url(backButtonBack.png) repeat-x;}
+.whiteButton
+{
+    -webkit-border-image:url(../default/whiteButton.png) 0 12 0 12;
+    -moz-border-image:url(../default/whiteButton.png) 0 12 0 12;
+    text-shadow:rgba(255,255,255,0.7) 0 1px 0;
+}
+.redButton
+{
+    -webkit-border-image:url(redButton.png) 0 12 0 12;
+    -moz-border-image:url(redButton.png) 0 12 0 12;    
+    border-style:solid; 
+    border-width:0px 12px 0px 12px;
+}
+.grayButton
+{
+    -webkit-border-image:url(grayButton.png) 0 12 0 12;
+    -moz-border-image:url(grayButton.png) 0 12 0 12;
+    color: #fff !important;
+    border-style:solid;
+}
+#backButton
+{
+    -webkit-border-image:url(backButtonBrdr.png) 0 8 0 14;
+    -moz-border-image:url(backButtonBrdr.png) 0 8 0 14;
+    background:url(backButtonBack.png) repeat-x; 
+    border-style:solid;
+    border-width:0px 8px 0px 14px;
+}
 
 /************************************************************************************************/
 body > ul > li.group{opacity:0.7;background:url(listGroup.png) repeat-x;}
@@ -48,7 +78,6 @@ h2
     margin: 10px;
     border: 1px solid #aaa
 }
-.grayButton {color: #fff !important}
 
 * {
 font-family: Arial, Helvetica, sans-serif; 
@@ -111,10 +140,10 @@ background:none;
 #loading 
 {
 -webkit-border-radius: 10px;
-background-color: rgba(0,0,0,.7);
+background-color: rgb(0,0,7);
 color: white;
 font-size: 18px;
-font-weight: bold
+font-weight: bold;
 height: 80px;
 left: 60px;
 line-height: 80px;
@@ -145,11 +174,17 @@ text-overflow: ellipsis;
 text-decoration: none;
 white-space: nowrap;
 background: none;
--webkit-border-image: url(../iPhone/toolButton.png) 0 5 0 5;               
+-webkit-border-image: url(../iPhone/toolButton.png) 0 5 0 5;
+-moz-border-image: url(../iPhone/toolButton.png) 0 5 0 5;   
+border-style:solid; 
+border-width:0px 5px 0px 5px;          
 }
 .panel > fieldset{text-align:left;}
 
 .arrow {padding-left: 5px}
+.email:before {content:url(../images/mail.png);vertical-align:middle;padding-right:4px;}
+.phone:before {content:url(../images/phone.png);vertical-align:middle;padding-right:4px;}
+.address:before {content:url(../images/address.png);vertical-align:middle;padding-right:4px;}
 
 .btn_chrome {
 	display: inline-block;

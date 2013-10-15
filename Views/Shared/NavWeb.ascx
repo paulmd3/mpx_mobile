@@ -29,7 +29,7 @@ function newmenu(cmenu)
     <li id="recently"<% if (Request.Url.ToString().Contains("Recently")){ %> class="selected" <%} %>>
         <%= Html.ActionLink("Recent", "RecentlyDonors", "Home")%>
     </li>
-    <%if (System.Threading.Thread.CurrentPrincipal.Identity.Name == (System.Configuration.ConfigurationSettings.AppSettings["Admin"]))
+    <%if (System.Threading.Thread.CurrentPrincipal.Identity.Name == (System.Configuration.ConfigurationManager.AppSettings["Admin"]))
       { %>
     <% if (Request.Url.ToString().Contains("Register"))
        { %>

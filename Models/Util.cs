@@ -94,12 +94,15 @@ namespace MPXMobile.Models
         public static void updateLogUser(string userId)
         {
             UsersAutDataContext context = new UsersAutDataContext();
-            LocalUser Base = context.LocalUsers.Single(a => a.Email == userId);
-            Base.Updated_at = DateTime.Now;
-            context.SubmitChanges();
 
+            if (context.LocalUsers.Count() > 0)
+            {
+                LocalUser Base = context.LocalUsers.Single(a => a.Email == userId);
+                Base.Updated_at = DateTime.Now;
+                context.SubmitChanges();
+
+            }
         }
-
 
         /// <summary>
         /// Change password

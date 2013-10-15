@@ -50,6 +50,18 @@ namespace MPXMobile.Controllers
 
         public ActionResult LogOn()
         {
+            string strName = string.Empty;
+            if (Request.Cookies.AllKeys.Contains("User"))
+            {
+                strName= Request.Cookies.Get("User").Value;
+            }
+
+            ViewData["User"] = strName;
+            
+            if (Request.IsAjaxRequest())
+            {
+                return View("_LogOn");
+            }
             return View();
         }
 
@@ -58,6 +70,13 @@ namespace MPXMobile.Controllers
             Justification = "Needs to take same parameter type as Controller.Redirect()")]
         public ActionResult LogOn(string userName, string password, bool rememberMe, string returnUrl)
         {
+            string strName = string.Empty;
+            if (Request.Cookies.AllKeys.Contains("User"))
+            {
+                strName = Request.Cookies.Get("User").Value;
+            }
+
+            ViewData["User"] = strName;
 
             if (!ValidateLogOn(userName.Trim(), password.Trim()))
             {
@@ -83,6 +102,13 @@ namespace MPXMobile.Controllers
                 Session.Add("user", userName.Trim());
                 Session.Add("pass", password.Trim());
 
+                if (rememberMe)
+                {
+                    HttpCookie cookie = new HttpCookie("User");
+                    cookie.Expires = DateTime.Now.AddYears(1);
+                    cookie.Value = userName.Trim();
+                    Response.Cookies.Add(cookie);
+                }
                 return RedirectToAction("Index", "Dashboard");
             }
         }

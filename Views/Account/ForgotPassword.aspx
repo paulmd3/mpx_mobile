@@ -1,7 +1,7 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage" %>
 
 <asp:Content ID="loginTitle" ContentPlaceHolderID="TitleContent" runat="server">
-    <%=System.Configuration.ConfigurationSettings.AppSettings["ApplicationName"].ToString()%>
+    <%=System.Configuration.ConfigurationManager.AppSettings["ApplicationName"].ToString()%>
 </asp:Content>
 <asp:Content ID="loginContent" ContentPlaceHolderID="MainContent" runat="server">
 
@@ -17,13 +17,6 @@
 
     </script>
 
-    <%
-        var agent = Request.UserAgent;
-        if (agent.ToString().Contains(System.Configuration.ConfigurationSettings.AppSettings["Device"]))
-        {
-    %>
-    <% 
-        }%>
     <%= Html.ValidationSummary("Please correct the errors and try again.") %>
     <% using (Html.BeginForm())
        { %>

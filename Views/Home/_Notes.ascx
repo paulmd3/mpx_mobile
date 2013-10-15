@@ -20,11 +20,13 @@
 
     </script>
 <% 
-    var accountId = Request.QueryString["accountId"].ToString();
-    var donor = MPXMobile.Models.Donors.GetAccount(accountId); 
+    var accountId = Convert.ToInt64(Request.QueryString["accountId"]);
+    var donor = new MPXMobile.Models.ApiServiceDonors().GetAccount(accountId); 
 %>
 
 <h2>Notes for <%=donor.firstName + " " + donor.lastName %></h2> 
+
+<a class="newforward grayButton" href="<%=Url.Action("InsertNotesInformation", "Home")%>" style=" margin-top:20px;" >Add a Note</a>
 <div class="panel notes">
 <fieldset>
 
@@ -40,19 +42,19 @@
 
 <ul>
 <%
-    foreach (var item in notes.accountNotes.OrderByDescending(p=>p.nextDate))
+    foreach (var item in notes.accountNotes.OrderByDescending(p=>p.addDate))
     {          
 %>
     <li>
         <% try { %>
         <%=item.note.ToString()%><br />
-        <em class="note-info"><%=item.noteType.ToString()%> note on <%//=item.nextDate.Value.ToShortDateString()%></em>
+        <em class="note-info"><%=item.noteType%> note on <%=item.addDate.ToShortDateString()%></em>
         
         <%//=item.nextActionNote.ToString()%>
         
-        <%var urlI1 = "InsertNotesInformation?noteId="+item.noteId+"&accountId=" + Request.QueryString["accountId"];%>
+        <%var urlI1 = "InsertNotesInformation?noteId="+item.noteId;%>
         
-        <% if (item.note.ToString().Split(':').First().Contains(HttpContext.Current.User.Identity.Name)) {%>
+        <% if (item.note.ToString().ToLower().Split(':').First().Contains(HttpContext.Current.User.Identity.Name.ToLower())) {%>
             <a class="forward btn_chrome" href="<%=Url.Action(urlI1, "Home")%>" >Edit</a>
             <a class="forward btn_chrome deleteNote" rel="<%=item.noteId %>">Delete</a>
         <%}%>
@@ -61,7 +63,7 @@
         catch (Exception ex)
         {
             MPXMobile.Controllers.BaseController e = new MPXMobile.Controllers.BaseController();
-            e.ErrorLog(Server.MapPath(System.Configuration.ConfigurationSettings.AppSettings["ERRORPATH"]), ex.Message);
+            e.ErrorLog(Server.MapPath(System.Configuration.ConfigurationManager.AppSettings["ERRORPATH"]), ex.Message);
         } %>
     </li>
     <%}%>
@@ -69,6 +71,3 @@
 <%} %>
 </fieldset>
 </div>
-
-<%var urlI = "InsertNotesInformation?accountId=" + Request.QueryString["accountId"];%>
-<a class="newforward grayButton" href="<%=Url.Action(urlI, "Home")%>" >Add a Note</a>

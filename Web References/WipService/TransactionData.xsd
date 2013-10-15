@@ -458,7 +458,7 @@
   <xs:complexType name="subscription">
     <xs:sequence>
       <xs:element name="subscriptionId" nillable="true" type="xs:long" />
-      <xs:element name="entityId" type="xs:long" />
+      <xs:element name="accountId" type="xs:long" />
       <xs:element name="productId" type="xs:long" />
       <xs:element name="originatingOrderId" type="xs:long" />
       <xs:element name="originatingOrderDetailId" type="xs:long" />

@@ -19,7 +19,7 @@
         <p>Try your request again or <a href="javascript: history.go(-1)">go back to the previous page</a>.</p>
     </div>
     <div id="logo">
-        <img alt="MPX" src="/Content/iPhone/orangeleap_lg.gif" />
+        <img alt="MPX" src="/Content/images/orangeleap.gif" />
     </div>
 </body>
 </html>

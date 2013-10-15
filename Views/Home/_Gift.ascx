@@ -1,46 +1,52 @@
-<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
-<%
-    var gift = ((MPXMobile.WipService.getGiftSummariesResponse)ViewData["account"]);
-    var accountId = Request.QueryString["accountId"].ToString();
-    var donor = MPXMobile.Models.Donors.GetAccount(accountId);
-%>
-
-<h2>Gift Info for <%=donor.firstName + " " + donor.lastName %></h2>
+<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl<MPXMobile.Models.GiftInfo>" %>
+<h2>
+    Gift Info for
+    <%=Model.Donor.firstName + " " + Model.Donor.lastName%></h2>
 <div class="panel gifts">
-<fieldset>
-<%
-    if (gift.giftSummaries.Count() == 0)
-    { %>
+    <fieldset>
+        <%
+            if (Model.Gifts.Count() == 0)
+            { %>
         <div id="message">
-            No gift information for <%= donor.firstName %>
+            No gift information for
+            <%= Model.Donor.firstName%>
         </div>
         <%}
-    else
-    {%>
-    
-       <% foreach (var item in gift.giftSummaries) { %>
-    <h3>
-        <%= item.amount.ToString() + " " + item.currencyCode %> on <%=item.firstGiftDate.ToShortDateString()%>
-    </h3>
-    <ul>
-        <li>Net Gift Amount: <%=item.netGiftAmount.ToString()%></li>
-        <li>Conversation Amount: <%=item.conversionAmount.ToString()%></li>
-        <li>Deductible:<%=item.deductible.ToString()%></li>
-        <li>First Gift Amount:<%=item.firstGiftAmount.ToString()%></li>
-        <li>First Gift Conversion Amount:<%=item.firstGiftConversionAmount.ToString()%></li>
-        <li>Gift Count:<%=item.giftCount.ToString()%></li>
-        <li>Large Gift Date:<%=item.largeGiftDate.ToString()%></li>
-        <li>Last Gift Conversion Amount:<%=item.lastGiftConversionAmount.ToString()%></li>
-        <li>Last Gift Date:<%=item.lastGiftDate.ToString()%></li>
-        <li>Net Gift Amount:<%=item.netGiftAmount.ToString()%></li>
-        <li>Related Giving:<%=item.relatedGiving.ToString()%></li>
-        <li>Net Conversation Amount:<%=item.netGiftConversionAmount.ToString()%></li>
-        <li>Premium Amount:<%=item.premiumAmount.ToString()%></li>
-        <li>Large Gift Amount:<%=item.largeGiftAmount.ToString()%></li>
-        <li>Large Gift Conversation Amount:<%=item.largeGiftConversionAmount.ToString()%></li>
-        <li>Last Gift Amount:<%=item.lastGiftAmount.ToString()%></li>
-    </ul>
-    <%}
-   }%>
-</fieldset>
+            else
+            {
+                foreach (var year in Model.Gifts)
+                {
+        %>
+        <h3>
+            <%= year.Key %>
+        </h3>
+        <% foreach (var item in year.Value)
+           {%>
+        <ul>
+            <li>Gift Annual ID:
+                <%=item.giftAnnualId %></li>
+            <li>Gift Amount:
+                <%=item.amount.ToString("N2")%></li>
+            <li>Currency Code:
+                <%=item.currencyCode.ToString()%></li>
+            <li>Conversion Amount:
+                <%=item.conversionAmount.ToString("N2")%></li>
+            <li>Net Gift Amount:
+                <%=item.netGiftAmount.ToString("N2")%></li>
+            <li>Net Conversion Amount:
+                <%=item.netGiftConversionAmount.ToString("N2")%></li>
+            <li>Deductible:
+                <%=item.deductible.ToString()%></li>
+            <li>Gift Count:
+                <%=item.giftCount.ToString()%></li>
+            <li>Related Giving:
+                <%=item.relatedGiving.ToString()%></li>
+            <li>Premium Amount:
+                <%=item.premiumAmount.ToString("N2")%></li>
+        </ul>
+        <br />
+        <%}
+                    }
+            }%>
+    </fieldset>
 </div>

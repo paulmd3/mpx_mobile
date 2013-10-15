@@ -1,106 +1,84 @@
 <%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
-<!-- HTML5 DocType --> 
-<!DOCTYPE html> 
-<html manifest="/AppCache/Manifest">
-<head runat="server">
-    <meta charset="UTF-8">
-    <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
 
+<!-- HTML5 DocType -->
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <meta charset="UTF-8" />
+    <title>
+        <asp:ContentPlaceHolder ID="TitleContent" runat="server" />
+    </title>
     <link rel="apple-touch-icon-precomposed" href="<%= Url.Content("~/Content/iPhone/orange.v2.png") %>" />
-    <link rel="apple-touch-startup-image" href="<%= Url.Content("~/Content/iPhone/orange.v2.png") %>">
-    
+    <link rel="apple-touch-startup-image" href="<%= Url.Content("~/Content/iPhone/orange.v2.png") %>" />
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
     <script type="text/javascript" src="<%= Url.Content("~/Scripts/jquery.md5.js") %>"></script>
     <script defer src="<%= Url.Content("~/Scripts/jquery.scrollto.min.js") %>"></script>
     <script type="text/javascript" src="<%= Url.Content("~/Scripts/jquery.history.js") %>"></script>
-
     <script type="text/javascript" charset="utf-8">
         if (navigator.userAgent.indexOf('iPhone') != -1) {
-            addEventListener("load", function() {
-                setTimeout(function() { window.scrollTo(0, 1); }, 0);
+            addEventListener("load", function () {
+                setTimeout(function () { window.scrollTo(0, 1); }, 0);
             }, false);
         }    
     </script>
-
-    <%var agent = Request.UserAgent;%>
-
-    <%if (agent.ToString().Contains(System.Configuration.ConfigurationSettings.AppSettings["Device"]))
-      {
-          Html.RenderPartial("~/Views/Agent/iPhoneAgent.ascx");
-      } 
-      else 
-      {%>
-    <link href="/Content/css/base.css" rel="stylesheet" type="text/css" />
-    <link href="/Content/css/jquery.alerts.css" rel="stylesheet" type="text/css" />
-    <%}%>
-    
+    <% Html.RenderPartial("~/Views/Agent/iPhoneAgent.ascx"); %>
     <script type="text/javascript" src="/Scripts/jquery.tmpl.min.js"></script>
     <script type="text/javascript" src="/Scripts/mpx-localstorage.js"></script>
     <script type="text/javascript" src="/Scripts/jquery.alerts.js" charset="utf-8"></script>
-  
 </head>
-<% //to address viewdata from jquery
-    var serializer = new System.Web.Script.Serialization.JavaScriptSerializer(); 
-%>
 <body id="<%= ViewContext.Controller.ValueProvider.GetValue("controller").RawValue.ToString().ToLower() + "-" + ViewContext.Controller.ValueProvider.GetValue("action").RawValue.ToString().ToLower() %>">
-
-<%var agent = Request.UserAgent;%>
-<div class="toolbar">
-    <h1 id="pageTitle">
-        <a class="forward" id="title1" href="/Dashboard/Index">
-            <%=System.Configuration.ConfigurationSettings.AppSettings["ApplicationName"].ToString()%>
+    <div class="toolbar">
+        <h1 id="pageTitle">
+            <a class="forward" id="title1" href="/Dashboard/Index">
+                <%if (Request.IsAuthenticated)
+                  {%>
+                <span style="background-image: url(/Content/iPhone/home.png); background-position: right center;
+                    background-repeat: no-repeat; width: 90px; display: -moz-inline-box; display: inline-block;">
+                    <%=System.Configuration.ConfigurationManager.AppSettings["ApplicationName"].ToString()%></span>
+                <%}
+                  else
+                  {
+                      Response.Write(System.Configuration.ConfigurationManager.AppSettings["ApplicationName"].ToString());
+                  }
+                %>
+            </a>
+        </h1>
+        <%         var url = Request.Url.ToString();
+                   string strBack = "";
+                   string strClick = "onclick=\"History.back();\"";
+                   if (url.Contains("BookmarkedDonors")
+                       && ViewData["donorId"] != null
+                       && !string.IsNullOrEmpty(ViewData["donorId"].ToString()))
+                   {
+                       strClick = string.Empty;
+                       strBack = "href=\"DonorInformation?donorId=" + ViewData["donorId"].ToString() + "\"";
+                   } %>
+        <a id="backButton" class="backwards button" <%=strBack %>>
+            <img alt="MPX" src="/Content/iPhone/icon_arrow_left.png" style="margin-top: 3px;
+                margin-left: -3px;" <%=strClick %> />
         </a>
-    </h1>
-    <%
-        if (agent.ToString().Contains(System.Configuration.ConfigurationSettings.AppSettings["Device"]))
-        {
-    %>
-    <a id="backButton" class="backwards button">
-        <img alt="MPX" src="/Content/iPhone/icon_arrow_left.png" style="margin-top: 3px; margin-left: -3px;" />
-    </a>
-    <% 
-        var url = Request.Url.ToString();
-        if (!url.Contains("Account"))
-        { 
-    %>
-    <!--href="javascript: history.go(-1);"-->
-    <a id="clear" class="clear button">
-        <img alt="MPX" src="/Content/iPhone/icon_refresh.png" style="margin-top: 3px; margin-left: -3px;" />
-    </a>
-    <% 
-            }
-        }
-    %>
-</div>
-
-
-    <% // we'll put everyting inside the page container for storage/recall %>
-    <%if (agent.ToString().Contains(System.Configuration.ConfigurationSettings.AppSettings["Device"])) {%>
-        <% Html.RenderPartial("LogOnUserControl"); %>
-    <%} %>
-    
-    <%
-        // if it's not an iphone, etc, and if it's authenticated
-        if (!agent.ToString().Contains(System.Configuration.ConfigurationSettings.AppSettings["Device"])
-            && Request.IsAuthenticated) 
-        { 
-    %>
-
-        <% Html.RenderPartial("NavWeb"); %>
-
-    <% } %>
-<div class="page" id="page">    
-    <asp:ContentPlaceHolder ID="MainContent" runat="server" />
-</div>
-
-<div id="logo">
-    <img alt="MPX" src="/Content/images/orangeleap.gif" />
-</div>
-
-<div id="loading" style="display: none;">
-    Loading...
-</div>
-<div id="dim" style="display: none"></div>
-
+        <% if (!url.Contains("Account"))
+           { 
+        %>
+        <a id="clear" class="clear button">
+            <img alt="MPX" src="/Content/iPhone/icon_refresh.png" style="margin-top: 3px; margin-left: -3px;" />
+        </a>
+        <% 
+           }      
+        %>
+    </div>
+    <% Html.RenderPartial("LogOnUserControl"); %>
+    <div class="page" id="page">
+        <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+    </div>
+    <div id="logo">
+        <a class="forward" href="http://www.orangeleap.com">
+            <img alt="MPX" src="/Content/images/orangeleap.gif" /></a>
+    </div>
+    <div id="loading" style="display: none;">
+        Loading...
+    </div>
+    <div id="dim" style="display: none">
+    </div>
 </body>
 </html>
